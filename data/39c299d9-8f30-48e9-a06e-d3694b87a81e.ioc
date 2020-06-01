@@ -1,0 +1,31 @@
+<?xml version="1.0" ?><OpenIOC id="39c299d9-8f30-48e9-a06e-d3694b87a81e" last-modified="2020-05-25T12:05:56" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_opendownloadmanager</short_description>
+    <description>
+        Family:
+            opendownloadmanager
+        SHA-256:
+            ff6988b1a2435871a7e379f643cd9cf9b388e7d6a9a4d5acb8afd3f54830a965
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=opendownloadmanager
+            https://www.google.com/search?q=opendownloadmanager
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:56</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="554760a1-29e2-4dc0-91a7-2186d3e989a8" operator="OR">
+      <IndicatorItem condition="matches" id="0017a718-f736-49a0-950e-ae75593069f5" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\folder\\Changelogpho</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="8277f957-a48f-4314-92ce-fc2279924fea" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\folder\\Changelogpho</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

@@ -1,0 +1,43 @@
+<?xml version="1.0" ?><OpenIOC id="666fe905-8964-4488-b859-efc9258c0b67" last-modified="2020-05-25T12:06:00" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_kpot</short_description>
+    <description>
+        Family:
+            kpot
+        SHA-256:
+            bd120517699a0101970da78c680b05aeb016eaa4ab42c350e722eee892889127
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=kpot
+            https://www.google.com/search?q=kpot
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:00</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="2f8178d7-0f64-4ae8-9af3-136e1e9135cb" operator="OR">
+      <IndicatorItem condition="matches" id="58396d11-adcd-4767-9461-43af72c332f7" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\VidBid\ Software\\VidBid\ 6\.2\.0\\install\\(?:decoder\.dll|holder0\.aiph)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="4858d7ec-8a52-4cda-a5b4-bad42796140c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\VidBid\ Software\\VidBid\ 6\.2\.0\\install\\29CE071\\32\-bit\\VidBit\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="6e19f354-9b4e-46f2-8afb-fafd11f91e68" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\VidBid\ Software\\VidBid\ 6\.2\.0\\install\\29CE071\\VidBit\.(?:x64\.msi|exe|msi)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ccf2086f-4f80-4a22-ac79-3cf1769df84c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\(?:trk\.exe|Caquodyq)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="7aba41fc-12c1-40ed-9339-a6f9bf359643" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\URL45F5.url\\URL45F5\.url</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

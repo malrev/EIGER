@@ -1,0 +1,47 @@
+<?xml version="1.0" ?><OpenIOC id="391c367b-f9e4-4fe7-8d42-cbad8013778a" last-modified="2020-05-25T12:05:57" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_upatre</short_description>
+    <description>
+        Family:
+            upatre
+        SHA-256:
+            f8fd905d187f2348d97487fc7f950ae133110423bdb6d9592a22941b529afcdc
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=upatre
+            https://www.google.com/search?q=upatre
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:57</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="b1f90fda-202e-4792-9444-13bcb5f08b54" operator="OR">
+      <IndicatorItem condition="matches" id="01fed50f-e338-49ca-86b3-fa134f75649e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\Initech\\Initech\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ebac3fc6-e0f4-48e3-a5af-694d8ba36689" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\[a-z]{3}[0-9A-Z]{4}\.tmp\\0\\setup\.exe\&quot;\ \/S</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ad578f5a-8e29-4dea-9611-41bc4d5524a1" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\(?:yaxkodila\.exe|famudit\.exe|antifahib\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d292b667-88f2-455b-ba73-61f9c0eab867" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\[a-z]{3}[0-9A-Z]{4}\.tmp\\SibC(?:lr\.dll|a\.dll)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="77d57b1d-c8a4-4a24-9568-0852e64c950f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\(?:d(?:enis\.exe|care\.exe)|z(?:bhnd\.exe|tdvl\.exe|aberpit\.exe)|p(?:dfmarks\.exe|jehc\.exe|apers\.exe)|quip\.exe|w(?:sace\.exe|eyjba\.exe|oodtoy(?:\.exe|s\.exe)|ujek\.exe)|erdou\.exe|l(?:egan\.exe|cboc\.exe|asma\.exe)|opera(?:_updater\.exe|updater\.exe)|misid\.exe|h(?:ummy\.exe|hcbrnaff\.exe|erewin\.exe|romi\.exe|cbnaf\.exe|tiof\.exe)|s(?:e(?:nca\.exe|bca\.exe)|zgfw\.exe|mcc\.exe|caip\.exe|amhe\.exe)|Ikavapit\.exe|gffos\.exe|b(?:cmzt\.exe|udha\.exe)|retro\.exe|k(?:dwco\.exe|gfdfjdk\.exe|bswl\.exe)|i(?:eupdater\.exe|oooj\.exe)|Anyname\.exe|j(?:ezxr\.exe|ustupdater\.exe)|v(?:ely\.exe|iewpdf_update\.exe|uzbz\.exe)|a(?:sih\.exe|ntifahib\.exe|kehpowsa\.exe)|y(?:kqie\.exe|axkodila\.exe)|f(?:f(?:engh\.exe|updater\.exe)|cbnaf\.exe|amudit\.exe)|upd(?:GA\.exe|ater\.exe|tool\.exe))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="53e45f04-5d63-4bcd-a9df-6608b9119578" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ \/k\ systeminfo\ \|\ findstr\ \/c\:\&quot;Model\:\&quot;\ \/c\:\&quot;Host\ Name\&quot;\ \/c\:\&quot;OS\ Name\&quot;</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

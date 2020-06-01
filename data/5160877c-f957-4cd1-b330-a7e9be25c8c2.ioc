@@ -1,0 +1,36 @@
+<?xml version="1.0" ?><OpenIOC id="5160877c-f957-4cd1-b330-a7e9be25c8c2" last-modified="2020-05-25T12:05:58" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_cryptoload</short_description>
+    <description>
+        Family:
+            cryptoload
+        SHA-256:
+            f8f4608f243299852db27b966d2ad2a4e89794b3cc94a88967deade9084aabfe
+            f67ff2d3f724ebb862a1012e1cf2fed8f3d2ee240dd627dd52b220413aae8afa
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=cryptoload
+            https://www.google.com/search?q=cryptoload
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:58</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="874fe1cd-6490-4902-9d11-f08aee828a37" operator="OR">
+      <IndicatorItem condition="matches" id="1950af14-6ff0-4e52-9206-1aa099f57616" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Program\ Files\\Internet\ Explorer\\iexplore\.exe\&quot;\ \&quot;http\:\/\/ltcoechf\.heliohost\.org\/help\/help2\.php\?UN\=001cc957\&amp;LineData\=(?:Y(?:zMwMTA1ZDYtZGE5My00M2QyLTkyNGItICAgICAgIDM1MiAgICAgIDc1NiAgICAgICAgIDY\=\&quot;|29uaG9zdC5leGUgICAgICAgICAgICAgICAgICAgMTQzNiAgICAgIDQ1MiAgICAgICAgIDI\=\&quot;)|U(?:HJvZ3JhbURhdGE9QzpcUHJvZ3JhbURhdGE\=\&quot;|FJP(?:TVBUPSRQJEc\=\&quot;|Q0VTU09SX(?:1JFVklTSU9OPTAzMDM\=\&quot;|0lERU5USUZJRVI9eDg2IEZhbWlseSA2IE1vZGVsIDMgU3RlcHBpbmcgMywgR2VudWluZUludGVs\&quot;)))|MjE2MiBTZWNvbmRzIFsgMCBEYXkgMDozNjoyIF0oU1Q6IDIwMTcvNC81LCA1OjM0OjQ3OjE5MiApCg\=\=\&quot;|d2lu(?:aW5pdC5leGUgICAgICAgICAgICAgICAgICAgIDQ0MCAgICAgIDM4NCAgICAgICAgIDQ\=\&quot;|bG9nb24uZXhlICAgICAgICAgICAgICAgICAgIDQ3NiAgICAgIDQzMiAgICAgICAgIDM\=\&quot;)|T(?:E9HT05TRVJWRVI9XFxUQVJPLVBD\&quot;|WluaUZpbHRlcjog(?:T(?:n(?:RmcyAJIFsgIF0gQWx0aXR1ZGU6IA\=\=\&quot;|BmcyAJIFsgIF0gQWx0aXR1ZGU6IA\=\=\&quot;)|mV0QklPUyAJIFsgc3lzdGVtMzJcRFJJVkVSU1xuZXRiaW9zLnN5cyBdIEFsdGl0dWRlOiA\=\&quot;)|c3J2IAkgWyBTeXN0ZW0zMlxEUklWRVJTXHNydi5zeXMgXSBBbHRpdHVkZTog\&quot;))|SE9NRURSSVZFPUM6\&quot;|c3ZjaG9zdC5leGUgICAgICAgICAgICAgICAgICAg(?:IDk(?:0OCAgICAgIDUxNiAgICAgICAgIDg\=\&quot;|wNCAgICAgIDUxNiAgICAgICAgMjM\=\&quot;)|MTA4MCAgICAgIDUxNiAgICAgICAgIDg\=\&quot;))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="dd2d1626-6df2-45eb-806b-38c781e62954" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\00000(?:1(?:01_C\;\;Windows\;system32\;Secur32\.dll|7(?:1_C\;\;Windows\;system32\;wpdshserviceobj\.dll|0_C\;\;Windows\;System32\;AltTab\.dll)|3(?:1_C\;\;Windows\;system32\;LINKINFO\.dll|5_C\;\;Windows\;System32\;gameux\.dll)|68_C\;\;Windows\;System32\;WINNSI\.DLL|5(?:0_C\;\;Windows\;system32\;stobject\.dll|8_C\;\;Windows\;system32\;es\.dll|2_C\;\;Windows\;system32\;PSAPI\.DLL|9_C\;\;Windows\;system32\;dxp\.dll)|1(?:0_C\;\;Windows\;system32\;CLBCatQ\.DLL|5_C\;\;Windows\;system32\;ntshrui\.dll)|9(?:8_C\;\;Windows\;system32\;Wlanapi\.dll|2_C\;\;Windows\;System32\;npmproxy\.dll)|28_C\;\;Windows\;system32\;ntmarta\.dll)|0(?:0(?:1_1886785|8_190\ 617)|3(?:7_svchost\.exe|2_svchost\.exe)|60_C\;\;Windows\;system32\;WindowsCodecs\.dll|1(?:0_320\ 472|4_32)|9(?:9_C\;\;Windows\;system32\;slc\.dll|2_C\;\;Windows\;system32\;MSCTF\.dll)|81_C\;\;Windows\;system32\;USER32\.dll|4(?:3_C\;\;Windows\;system32\;Dwm\.exe|5_C\;\;Windows\;system32\;kernel32\.dll|2_dwm\.exe)|27_winlogon\.exe)|3(?:1(?:1_C\;\;Windows\;system32\;CRYPTSP\.dll|3_C\;\;Windows\;system32\;CRYPTBASE\.dll)|0(?:1_C\;\;Windows\;system32\;msvcrt\.dll|0_C\;\;Windows\;system32\;USP10\.dll)|3(?:9_C\;\;Windows\;system32\;WINNSI\.DLL|5_C\;\;Windows\;system32\;NSI\.dll)|41_C\;\;Windows\;system32\;WINHTTP\.dll|2(?:1_C\;\;Windows\;system32\;kernel32\.dll|3_C\;\;Windows\;system32\;USER32\.dll|6_C\;\;Windows\;system32\;USP10\.dll|2_C\;\;Windows\;system32\;KERNELBASE\.dll))|2(?:7(?:6_C\;\;Windows\;SYSTEM32\;ntdll\.dll|2_C\;\;Windows\;system32\;MSCTF\.dll)|36_conhost\.exe|6(?:1_C\;\;Windows\;system32\;GDI32\.dll|5_C\;\;Windows\;system32\;ADVAPI32\.dll)|51_C\;\;Windows\;system32\;CRYPTBASE\.dll|1(?:8_C\;\;Windows\;System32\;drprov\.dll|4_C\;\;Program\ Files\;Internet\ Explorer\;ieproxy\.dll)|9(?:9_C\;\;Windows\;system32\;LPK\.dll|3_C\;\;Windows\;SYSTEM32\;ntdll\.dll|6_C\;\;Windows\;system32\;python27\.dll|0_C\;\;Windows\;system32\;apphelp\.dll)|8(?:8_C\;\;Windows\;SYSTEM32\;sechost\.dll|3_C\;\;Windows\;system32\;LPK\.dll|4_C\;\;Windows\;system32\;USP10\.dll|2_C\;\;Windows\;system32\;GDI32\.dll)|48_C\;\;Windows\;system32\;ole32\.dll|2(?:1_C\;\;Windows\;System32\;DAVHLPR\.dll|0_C\;\;Windows\;System32\;davclnt\.dll|8_C\;\;Windows\;system32\;WINBRAND\.dll|5_C\;\;Windows\;system32\;kernel32\.dll)))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="9a2e2139-eca6-4ad8-9946-f882d3cb05ef" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">_0(?:0(?:8_TWluaUZpbHRlcjogbHVhZnYgCSBbIFxTeXN0ZW1Sb290XHN5c3RlbTMyXGRyaXZlcnNcbHVhZnYuc3lzIF0gQWx0aXR1ZGU6IDEzNTA|3_TWluaUZpbHRlcjogYm93c2VyIAkgWyBzeXN0ZW0zMlxEUklWRVJTXGJvd3Nlci5zeXMgXSBBbHRpdHV)|7(?:0_c3ZjaG9zdC5leGUgICAgICAgICAgICAgICAgICAgIDkwNCAgICAgIDUxNiAgICAgICA|3_c3ZjaG9zdC5leGUgICAgICAgICAgICAgICAgICAgMTA4MCAgICAgIDUxNiAgICAgICA|6_c3ZjaG9zdC5leGUgICAgICAgICAgICAgICAgICAgMTUwOCAgICAgIDUxNiAgICAgICA|9_ZHdtLmV4ZSAgICAgICAgICAgICAgICAgICAgICAgMTgzNiAgICAgMTA0NCAgICAgICA)|3(?:9_UFJPQ0VTU09SX0lERU5USUZJRVI9eDg2IEZhbWlseSA2IE1vZGVsIDMgU3RlcHBpbmcgMywgR2VudWluZUl|3_TE9HT05TRVJWRVI9XFxUQVJ)|6(?:9_c3ZjaG9zdC5leGUgICAgICAgICAgICAgICAgICAgIDc2MCAgICAgIDUxNiAgICAgICA|7_bHNtLmV4ZSAgICAgICAgICAgICAgICAgICAgICAgIDU0MCAgICAgIDQ0MCAgICAgICA)|50_VEVNUD1DOlxVc2Vyc1x0YXJvXEFwcERhdGFcTG9jYWxcVGV|1(?:7_TWluaUZpbHRlcjogcmRic3MgCSBbIHN5c3RlbTMyXERSSVZFUlNccmRic3Muc3lzIF0gQWx0aXR1ZGU|4_TWluaUZpbHRlcjogTmV0QklPUyAJIFsgc3lzdGVtMzJcRFJJVkVSU1xuZXRiaW9zLnN5cyBdIEFsdGl0dWR)|8(?:0_ZXhwbG9yZXIuZXhlICAgICAgICAgICAgICAgICAgMTkxNiAgICAgMTc2MCAgICAgICA|7_aWV4cGxvcmUuZXhlICAgICAgICAgICAgICAgICAgMTE2OCAgICAgIDM1MiAgICAgICA|5_cHl0aG9uLmV4ZSAgICAgICAgICAgICAgICAgICAgIDc1NiAgICAgMTEwOCAgICAgICA)|4(?:9_U3lzdGVtUm9vdD1DOlxXaW5|3_UHJvZ3JhbUZpbGVzPUM6XFByb2dyYW0gRml|4_UFJPTVBUPSR|5_UFNNb2R1bGVQYXRoPUM6XFdpbmRvd3Ncc3lzdGVtMzJcV2luZG93c1Bvd2VyU2hlbGxcdjEuMFxNb2R1bGV)|24_QUxMVVNFUlNQUk9GSUxFPUM6XFByb2dyYW1)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

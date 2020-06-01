@@ -1,0 +1,27 @@
+<?xml version="1.0" ?><OpenIOC id="1b5c246c-2de9-4cf7-9e14-0e552ab49639" last-modified="2020-05-25T12:05:56" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_qmgdrtg6lkjay</short_description>
+    <description>
+        Family:
+            qmgdrtg6lkjay
+        SHA-256:
+            f9e279141c580882049d34383974924416a8daf14ed0418f0d7d7314a33efc5d
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=qmgdrtg6lkjay
+            https://www.google.com/search?q=qmgdrtg6lkjay
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:56</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="ad72ac00-581d-4b8a-942a-0ec237188306" operator="OR">
+      <IndicatorItem condition="matches" id="75306906-2372-40b7-97f6-85452110c6a0" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\yjs\\(?:\ç\\¹\å\\»\å\\¨\.exe|aJyaY3NELzk8e2V\.exe)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

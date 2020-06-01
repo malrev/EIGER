@@ -1,0 +1,75 @@
+<?xml version="1.0" ?><OpenIOC id="b48deae7-5f17-4142-82b8-3c18b2d76128" last-modified="2020-05-25T12:05:59" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_ageneric</short_description>
+    <description>
+        Family:
+            ageneric
+        SHA-256:
+            578f364b6468de4cad0dbf28624e566b1c7c141e06aebfe0e92585069260e732
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=ageneric
+            https://www.google.com/search?q=ageneric
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:59</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="3419e800-8be3-4f02-8dae-a888314b5745" operator="OR">
+      <IndicatorItem condition="matches" id="2f180b22-4b20-4b4d-aa17-4cc79ef45ebb" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ C\:\\Windows\\system32\\cmd\.exe\ \/c\ if\ exist\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\ytmp\\tmp[A-Z0-9]{4}7.exe&quot; del &quot;C:\\tmp80347\.exe\&quot;\ del\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\ytmp\\tmp[A-Z0-9]{4}7.exe&quot;\\tmp80347\.exe\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="0c8244b9-0845-40af-8f84-3244ebe2dcf5" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ C\:\\Windows\\system32\\cmd\.exe\ \/c\ C\:\\Users\\.*\\AppData\\Local\\Temp\\is64\.bat</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="9d118bb2-fe35-48be-9f11-01cc9e8349cd" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\is64\.bat</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="2a6e6a83-8633-42b1-8d7e-c616404db7f3" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ C\:\\Windows\\system32\\cmd\.exe\ \/c\ if\ exist\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\ytmp\\tmp[A-Z0-9]{4}7.exe&quot; del &quot;C:\\tmp30487\.exe\&quot;\ del\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\ytmp\\tmp[A-Z0-9]{4}7.exe&quot;\\tmp30487\.exe\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="3087bb31-06f0-4771-9e45-694400d4cb4e" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ C\:\\Windows\\system32\\cmd\.exe\ \/c\ echo\:0\&gt;C\:\\Users\\.*\\AppData\\Local\\Temp\\is64\.txt</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="14383bdc-9272-4963-bcf7-11f8e0985528" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ C\:\\Windows\\system32\\cmd\.exe\ \/c\ if\ exist\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\ytmp\\tmp[A-Z0-9]{4}7.exe&quot; del &quot;C:\\tmp52707\.exe\&quot;\ del\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\ytmp\\tmp[A-Z0-9]{4}7.exe&quot;\\tmp52707\.exe\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="5838d390-8373-4bf9-849d-1e86e04cf853" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ C\:\\Windows\\system32\\cmd\.exe\ \/c\ if\ exist\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\ytmp\\tmp[A-Z0-9]{4}7.bat&quot; del &quot;C:\\tmp90847\.bat\&quot;\ del\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\ytmp\\tmp[A-Z0-9]{4}7.bat&quot;\\tmp90847\.bat\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="413b6cd2-701b-4031-80fa-5030d628f0dc" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ C\:\\Windows\\system32\\cmd\.exe\ \/c\ if\ exist\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\ytmp\\tmp[A-Z0-9]{4}7.bat&quot; del &quot;C:\\tmp65597\.bat\&quot;\ del\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\ytmp\\tmp[A-Z0-9]{4}7.bat&quot;\\tmp65597\.bat\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="67a18800-1c52-4a14-8047-90247d5029b9" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ C\:\\Windows\\system32\\cmd\.exe\ \/c\ if\ exist\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\ytmp\\tmp[A-Z0-9]{4}7.bat&quot; del &quot;C:\\tmp61797\.bat\&quot;\ del\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\ytmp\\tmp[A-Z0-9]{4}7.bat&quot;\\tmp61797\.bat\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="6e3b9e0b-ebc0-4ff1-bdb7-b45f920a9ad4" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ C\:\\Windows\\system32\\cmd\.exe\ \/c\ if\ not\ exist\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\afolder\&quot;\ mkdir\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\afolder\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e5e8949b-d54a-47e7-8a81-978b27d68913" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\ytmp\\tmp[A-Z0-9]{4}7.bat\\tmp(?:90847\.bat|80347\.exe|30487\.exe|6(?:1797\.bat|5597\.bat)|52707\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="26accd28-729f-4486-8753-f52074857054" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ C\:\\Windows\\system32\\cmd\.exe\ \/c\ attrib\ \+h\ C\:\\Users\\.*\\AppData\\Local\\Temp\\ytmp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="7903351d-9eb2-4e79-8ceb-ed621b40981c" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ C\:\\Windows\\system32\\cmd\.exe\ \/c\ if\ not\ exist\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\ytmp\&quot;\ mkdir\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\ytmp\&quot;</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

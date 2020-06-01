@@ -1,0 +1,27 @@
+<?xml version="1.0" ?><OpenIOC id="b7c2b7c8-ff8a-4557-9435-e4f61fee723a" last-modified="2020-05-25T12:05:56" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_molock</short_description>
+    <description>
+        Family:
+            molock
+        SHA-256:
+            ff2e11604bac5b77a990e0c437e89be074f4cde9d812137f8f07df9ffde77002
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=molock
+            https://www.google.com/search?q=molock
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:56</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="7d67e233-57c6-440e-a19c-86d8e639cd69" operator="OR">
+      <IndicatorItem condition="matches" id="9b8d3c57-8286-49eb-b634-ec33ea9bf488" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\(?:jedata\.dll|\Æ\¤\·\ô\.she)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

@@ -1,0 +1,30 @@
+<?xml version="1.0" ?><OpenIOC id="d33f6c50-d600-436f-8743-9528c123ca2b" last-modified="2020-05-25T12:05:57" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_gandcrab</short_description>
+    <description>
+        Family:
+            gandcrab
+        SHA-256:
+            eca4b52bebb7f4c08827c110ac90bdc2276a344b9eac8dc7ab0806e96998124a
+            fc275c05060b6a2dae2a5692792fa3034a88143fbcae5423e6d38b21ce129559
+            edf0f8145f1532196b8109d9be27584b4902c73217a62a9363d30dd8da24b790
+            e84dae5642b2adaebfa09a6da208dc5e45186806696e817f9917edfad39d4a3a
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=gandcrab
+            https://www.google.com/search?q=gandcrab
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:57</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="3d104d57-5169-4903-ba93-796e60dad3e1" operator="OR">
+      <IndicatorItem condition="matches" id="d3e0032a-1369-4b2e-a798-845b4251c314" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">nslookup\ (?:zonealarm\.bit\ ns(?:1\.corp\-servers\.ru|2\.corp\-servers\.ru)|gandcrab\.bit\ dns(?:1\.soprodns\.ru|2\.soprodns\.ru)|emsisoft\.bit\ dns1\.soprodns\.ru|nomoreransom\.(?:coin\ dns(?:1\.soprodns\.ru|2\.soprodns\.ru)|bit\ dns(?:1\.soprodns\.ru|2\.soprodns\.ru))|ransomware\.bit\ ns(?:1\.(?:corp\-servers\.ru|wowservers\.ru)|2\.(?:corp\-servers\.ru|wowservers\.ru))|carder\.bit\ ns(?:1\.wowservers\.ru|2\.wowservers\.ru))</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

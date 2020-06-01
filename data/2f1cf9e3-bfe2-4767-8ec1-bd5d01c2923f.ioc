@@ -1,0 +1,31 @@
+<?xml version="1.0" ?><OpenIOC id="2f1cf9e3-bfe2-4767-8ec1-bd5d01c2923f" last-modified="2020-05-25T12:05:59" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_virtu</short_description>
+    <description>
+        Family:
+            virtu
+        SHA-256:
+            b8c003f847c1feaf652d8bf95cf99a497786a1874ba746525e7c7fe21ab46a6c
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=virtu
+            https://www.google.com/search?q=virtu
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:59</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="5100d82f-58d2-408e-9dc5-07da54d14d16" operator="OR">
+      <IndicatorItem condition="matches" id="a145ec17-fd84-4722-87d1-dc78bcec189b" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\cFos\\cFosSpeed\\trace\.txt</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="353ba97c-699a-42d3-96f6-a71f16914e00" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">(?:crash\.ChickenInvaders2\.log|ChickenInvaders2\.log)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

@@ -1,0 +1,35 @@
+<?xml version="1.0" ?><OpenIOC id="1cc1b4f3-682c-4fda-b9c1-1ffd0a6807dc" last-modified="2020-05-25T12:05:58" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_bunitu</short_description>
+    <description>
+        Family:
+            bunitu
+        SHA-256:
+            a6f2e93b7c2c2e5aafda51fe059212aec6b45aadecbfb43b8b406607513859a1
+            f88f0c1d869c3383053401ea42f58614674ddbab11e144360e140a6bf9f9be0c
+            e34164fd66250f79f0354febf25873aa671df61b8c445157380f7a1dac1de362
+            f9c1ca60512fdc6f36468bee7b67460b9cd93ca05531ce8eea4c468266083e70
+            c9ecefe0ec31adb6aa1e84135f1e88c668c748ba4a74cd979d9646f204f0a125
+            63fcb86367bc84c85c9feac06646519d2c48ca5b3a4df09871bb0953d1182b30
+            db3617b764e41c5bfefd80e0a32448114b74065350457375a1f73b643ef03d9d
+            e6fcd33eaa0022f8f3c330e3b0b253cd19f4678d267b11859bdc39278ab8f07b
+            e26cbf8d6654f0864efc46d4ec481d28055ff388a0a2ec105b6085389ca5c746
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=bunitu
+            https://www.google.com/search?q=bunitu
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:58</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="7f4ad5c6-b4ee-4675-86c0-00dbdb49d786" operator="OR">
+      <IndicatorItem condition="matches" id="78c80829-a623-4a95-ace9-9b0245521f36" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\(?:sfaret|flandi|vd19rb|a(?:ershi|irchy|hbilr)|wtchrs|oplikt)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

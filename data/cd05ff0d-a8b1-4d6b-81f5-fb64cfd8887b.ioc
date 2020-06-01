@@ -1,0 +1,39 @@
+<?xml version="1.0" ?><OpenIOC id="cd05ff0d-a8b1-4d6b-81f5-fb64cfd8887b" last-modified="2020-05-25T12:05:56" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_aspm</short_description>
+    <description>
+        Family:
+            aspm
+        SHA-256:
+            87e70efb8011399e537d3fbdd801c906a2ae1968a1ca7fb2abb07affc79b20ff
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=aspm
+            https://www.google.com/search?q=aspm
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:56</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="1217e71b-7ff9-4bee-894f-62700443a812" operator="OR">
+      <IndicatorItem condition="matches" id="0e144f4b-4c0c-439a-aa34-1dde8479fcb5" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\CLSID\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\InprocServer32\\(?:Assembly|ThreadingModel|RuntimeVersion|Class)?</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="a3f6a8fd-de5d-4914-a68f-201656f99d5c" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\\.kar\\(?:ContentType)?</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="432e3081-1e31-445c-a9c3-628addbf83b0" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\kar_auto_file\\Shell\\Open\\Command\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="0fd6cd83-e487-4279-9441-4bcf591c358b" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\\.mk1\\(?:ContentType)?</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

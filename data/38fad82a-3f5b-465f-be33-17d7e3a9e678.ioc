@@ -1,0 +1,27 @@
+<?xml version="1.0" ?><OpenIOC id="38fad82a-3f5b-465f-be33-17d7e3a9e678" last-modified="2020-05-25T12:05:57" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_qqware</short_description>
+    <description>
+        Family:
+            qqware
+        SHA-256:
+            8b6ba495c82c862f35d8504dae8be73e25b994b33f7d00ff2b962e45cb305ac6
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=qqware
+            https://www.google.com/search?q=qqware
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:57</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="9ac25d09-5acd-49dc-853b-0822a3532979" operator="OR">
+      <IndicatorItem condition="matches" id="5cad7b17-884c-4d71-9d75-6955e61d1632" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\(?:ssleay32\.dll|FiddlerCore4\.dll|efd\.dll|1\.bat|VerificationCode\.dll|libeay32\.dll|makecert\.exe|BCMakeCert\.dll|2\.bat)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

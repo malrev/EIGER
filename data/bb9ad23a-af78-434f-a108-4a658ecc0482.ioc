@@ -1,0 +1,120 @@
+<?xml version="1.0" ?><OpenIOC id="bb9ad23a-af78-434f-a108-4a658ecc0482" last-modified="2020-05-25T12:06:01" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_pyfatget</short_description>
+    <description>
+        Family:
+            pyfatget
+        SHA-256:
+            858152ebaf09b993351a36f51f77320896f7e4d66ae4f416490cd0530c9d6573
+            32aca9fc866dad7c3397e012941d052533c42df60e1a70ddbd665ff47403552d
+            e7c3fb5dab778d387f5ca8928cd17b291dc202a24624ae956c123c9a701207bb
+            0ef068360ac1304fd1e9da05a3599c86f2d50daad87f385cacc13dc2fdc6a50a
+            d4bf3abfae1553a8a1aed4da6776b8011345e95a14ec1a8f7251dabe0f4058d7
+            3ed124f9bfe145e717de526d0b752bd703f4a38d6bbef356589183b350ec02ee
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=pyfatget
+            https://www.google.com/search?q=pyfatget
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:01</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="2679513e-b390-4796-82e0-fd66646c6502" operator="OR">
+      <IndicatorItem condition="matches" id="deaba352-a13b-46be-a89f-b237c512651f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tk\\ttk\\(?:panedwindow\.tcl|vistaTheme\.tcl)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d0dff690-ebab-4708-b4e0-8bfaab7739b1" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\(?:_tkinter\.pyd|unicodedata\.pyd)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="634fc949-f4b9-4820-bac8-56dcb91b7647" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tk\\comdlg\.tcl</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="20d01845-e19e-47d0-875a-7cb7fc3653ba" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\tzdata\\US\\Eastern</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="138df8ec-a6e5-4379-b8ae-fc2965649e97" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\tzdata\\Asia\\(?:A(?:shkhabad|mman)|Rangoon|Irkutsk|Ula(?:n_Bator|anbaatar)|Muscat|Oral|Du(?:shanbe|bai)|Vientiane|Gaza)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d319f362-9d0e-4e23-b637-57eb7da60f31" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\tzdata\\(?:Libya|EST5EDT|GB)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b23846da-d2a8-4b87-a013-e282ab3c1015" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\lib2to3\\tests\\data\\README</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="7986d25b-b4b7-42d0-9da4-821648745c60" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tk\\msgs\\(?:es\.msg|hu\.msg|da\.msg)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c8b67a89-3878-4ba9-a884-a5c5dcaadcb3" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\tzdata\\Etc\\(?:Universal|GMT(?:\-(?:3|4)|\+(?:8|4)))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="92f68841-7aee-4e46-90c9-b776f682969e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\parray\.tcl</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e59d5818-3e6f-4c64-a428-2c8faa2e378a" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\tzdata\\Europe\\(?:Andorra|Brussels|Dublin|Vilnius|Chisinau)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="16b98420-8b61-42b2-8145-244e49eb2731" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\encoding\\(?:mac(?:Turkish\.enc|Iceland\.enc|Ukraine\.enc)|cp(?:125(?:5\.enc|2\.enc)|874\.enc)|iso(?:8859\-(?:8\.enc|2\.enc)|2022\.enc))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="08b29398-d43a-4af2-938f-a87577fbbe36" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\msgs\\(?:ga_ie\.msg|bn\.msg|e(?:s(?:_(?:ec\.msg|mx\.msg|cr\.msg|bo\.msg)|\.msg)|n_(?:sg\.msg|bw\.msg)|l\.msg|u\.msg)|nb\.msg|ko\.msg|ar(?:\.msg|_lb\.msg)|te\.msg)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="953dff1a-f767-4dd5-92a0-7072b64a610a" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\tzdata\\Indian\\(?:Kerguelen|Mahe|Christmas)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d219c1a0-0bf8-486f-a1ed-e5cb4b32203a" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\opt0\.4\\optparse\.tcl</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="0b621bb1-f4fd-4ea1-8d7a-e4cd1ae78911" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\tzdata\\Atlantic\\(?:Azores|Reykjavik|Stanley|Faeroe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="502d7596-06a6-46e9-9736-d307eadc1e0b" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\tzdata\\Africa\\(?:Luanda|Juba|Blantyre|Dakar|Kinshasa|Gaborone|Ceuta)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="48459d6a-c6ac-4bb8-9370-1851fed5d85b" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tk\\images\\pwrdLogo\.eps</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="782f2c7c-da93-4fa6-9ee9-a10300e8c696" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\tzdata\\Antarctica\\South_Pole</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="a6a512d8-2781-4648-8f31-b8352c110cb2" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\tzdata\\America\\Argentina\\Tucuman</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="60f5eba5-cf12-462b-bdb7-275f657ab2ed" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\tzdata\\America\\(?:Paramaribo|N(?:ome|ipigon)|Winnipeg|M(?:on(?:cton|t(?:serrat|evideo))|iquelon)|Los_Angeles|Thule|St_(?:Lucia|Thomas)|Barbados|Guyana|Chihuahua)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d2330115-f3e7-4f2b-b11e-3724a41e20be" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\tzdata\\Australia\\Broken_Hill</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="cbdec074-4df5-4767-a554-93c18facdf02" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\tzdata\\Pacific\\(?:Pa(?:lau|go_Pago)|Tahiti|Niue|Galapagos)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

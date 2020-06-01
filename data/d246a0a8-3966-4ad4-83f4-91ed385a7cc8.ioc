@@ -1,0 +1,27 @@
+<?xml version="1.0" ?><OpenIOC id="d246a0a8-3966-4ad4-83f4-91ed385a7cc8" last-modified="2020-05-25T12:05:55" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_mwpm</short_description>
+    <description>
+        Family:
+            mwpm
+        SHA-256:
+            64990c81eed9f299dabd238531860c5ea3836ce49d2e427edb173c9112844c25
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=mwpm
+            https://www.google.com/search?q=mwpm
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:55</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="bfdaff0d-d13d-4ced-af9b-9c24c67ef01c" operator="OR">
+      <IndicatorItem condition="matches" id="6bf2838e-576e-413f-a1fc-f52c04492554" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}.exe-up.txt</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

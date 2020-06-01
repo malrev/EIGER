@@ -1,0 +1,131 @@
+<?xml version="1.0" ?><OpenIOC id="7362de00-521f-42dd-b4eb-840b1a26b9d8" last-modified="2020-05-25T12:06:04" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_ursu</short_description>
+    <description>
+        Family:
+            ursu
+        SHA-256:
+            2ca8272cc75e3b0ef94305808ec5d5bdaba65aa1af22d662a5de2e8cc44d0773
+            89cdde47dcc90920aa74c45659016a59cb558405a5a531d875518f56c5e68644
+            e600005c8af511e75c44d3e45cf05f044c4b51c10337e5586fe66188e8d2aa38
+            a0cd550b87c4db73b511eb576427315ec849693a940c31ed643eab7f13eff132
+            95099972b4a90d3df21881f8f9b0d08e1560d2fb4a3e6dbd8cec698442ac1d43
+            e85752bd682fe228d5b26e801b144a619d7027099c579474bb4f4d7cfb9f4eba
+            54aac2495bddb5c2cf2d104efb0ab84abc4a7034366f44d3e017b5ca1fb63c64
+            4c92286b49169b98ebf4f833331778ead60abf0da2f0155b12f3ee8661906aee
+            e5dd858b8645adce0d98745612448a852b55a9270183d0e28590ee8b9a5259dc
+            a05a1faa1286a170a07672950bcad39b448be1c2926fff0fee18845ea7d71276
+            f53fe10e7a587814aa395b7c29e6861b054c4c21a6d1e108b960f590c619d6d9
+            d1a36fb3a2768cfa119bcc3386d41f3ef6c2a94c91e7e02d5017d4923e2fd43d
+            ea5e1edf0ab64e3fa15622048003deabf1e4b502b2dace4add1ebf99563644ba
+            510898d0ec10d1ab1a808037dd751eb84810328df74a959d9f633b3214c12f69
+            14b858979507f70c245852cd8dcce60ea51ec905fc60250941694b46045507ec
+            be69f74412deefb278b943bc1031ea53a1f6816e782add0ddff2882e5d7aa680
+            fdee8abd5c2f626caa5082cce56a81a34c693780c450d87ae196439076cd3a56
+            34711f8bcfe099b2504b306de5947fa0a13dd2bca8f38ec1e279653debad61c5
+            c0fe61b064d0ce9fb99e6ccd6cc0144cffff1132daac68ffd01f3c4185b0f7d1
+            d84a4071ced1ee16e1ddf674399c58e79d28ba55f0495a8511b9e3061ad8c0d5
+            83a5431b8b6608b6a7c6fac87b4f3ba1918322b6688939c04f2d7f2f7f7bbb0e
+            afad97bd134989c36e46f4f5f2b52c9d3c4c9db145f72d5b1e7cb2a1a5d8c5cb
+            e464e5be31c119b04d02fb0bc5cac476b71767c4f569d101b75504a5203c27fd
+            15bff9029bb461d23d82d7dd57d2930f6199e9f87c7af23f808a707f5d18c071
+            9d01a213441829f50b4877a3bda6ca7bfab1c4683140e3aad1b493b29d059fb3
+            dbe83217183395b0ef109357bde272413bf0bba54201bc6500d010b24e19dd6a
+            d99ea29e84723ba64b39f7dc75a8018dce99a9bc855008724e77f7bde8c14666
+            6169a9d519cf73e23282818acd8fce19088d07c980c8a751718c5ad295de06ac
+            1a5c822acad185e777ef88582f2db3503252c06a2a69c1cef2f2e63de6943a6f
+            c578cf9456d631aa13829bc908875b4bc649c194eaba9bfc436f7770d7db8a77
+            c5cf8d09c2e025798a2ab1d9f6a60244e993758c4f21c2f5fd7ec7fbb142b161
+            8167b6ef6258086e8050eb92b02f12e62466bc23c54caabbd4eca0c7d349187d
+            56280ec19dbfb3b1dba1ff3746c0c5707cc4350a9d062593fd8f99daba188f85
+            ba5a65a9c376288cd35181c49663d50e27d453a66c0ef5e3a0e4d6dd91180ed0
+            b535427ebf4e3c10a7aed5c487c94de013c45cc5cd80232144dd4a42b9d47a2d
+            e4267c3a1b1905f68785b4bd0e1623f63ad4498f1476f1ab697078d0103bf928
+            c2e35f966d75c8d1529de235449debe03e4f3180e1f2c02260cd275852d82dc5
+            9df29123094e6e0d66fabd0e5a40b585a215b4369b16af9dc2519b81e4083259
+            be37a262f15bdcc6b3e1dcfb0992f2cf4406d8ed6cb6b9453a79304e9b5437f3
+            ff1df8363dee33a6fb8a66341781b3a5dd50422e5eb8f971f39865eb94f07b64
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=ursu
+            https://www.google.com/search?q=ursu
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:04</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="3dbffcf8-aeb8-413f-9c15-839276da26fe" operator="OR">
+      <IndicatorItem condition="matches" id="f64f9f2c-4c81-4ed6-99b6-9a14b1d3d478" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\Data\\Bot\.Farmex</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="86ab7b9f-9d4f-44f5-9bc5-7f543b64e7f1" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">\\DEVICE\\NETBT_TCPIP_{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="26f84db5-b13a-42c8-9030-9d76298f43b5" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\Software\\MaxPlugs\\Emmail\\InternalSettings\\(?:ProgramPath|InstallDir)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="14e2f81d-c97f-4f73-b6d9-f15c48307607" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\Data\\ST\\Game\.bnb</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="7787c997-468d-45ef-b0b5-9e7327d5202d" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\(?:_(?:ssl\.pyd|hashlib\.pyd|bz2\.pyd)|select\.pyd|python37\.dll|api\-ms\-win\-c(?:rt\-(?:string\-l1\-1\-0\.dll|process\-l1\-1\-0\.dll|runtime\-l1\-1\-0\.dll|heap\-l1\-1\-0\.dll|environment\-l1\-1\-0\.dll|locale\-l1\-1\-0\.dll|filesystem\-l1\-1\-0\.dll|math\-l1\-1\-0\.dll|conio\-l1\-1\-0\.dll|utility\-l1\-1\-0\.dll)|ore\-(?:sy(?:sinfo\-l1\-1\-0\.dll|nch\-l1\-(?:1\-0\.dll|2\-0\.dll))|d(?:ebug\-l1\-1\-0\.dll|atetime\-l1\-1\-0\.dll)|process(?:environment\-l1\-1\-0\.dll|threads\-l1\-1\-(?:1\.dll|0\.dll))|rtlsupport\-l1\-1\-0\.dll|handle\-l1\-1\-0\.dll|errorhandling\-l1\-1\-0\.dll|namedpipe\-l1\-1\-0\.dll|file\-l(?:1\-1\-0\.dll|2\-1\-0\.dll)|memory\-l1\-1\-0\.dll|libraryloader\-l1\-1\-0\.dll|timezone\-l1\-1\-0\.dll))|base_library\.zip|VCRUNTIME140\.dll|u(?:nicodedata\.pyd|crtbase\.dll))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="27672b1a-ee08-43f8-8f7f-6d7c817a81bc" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\Software\\MaxPlugs\\Emmail\\Settings\\(?:IsDisplayPacks|CurrentPack)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="a56eb36d-f2a6-4fa3-b1df-bebe4ea587fa" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\Data\\US\\Game\.bnb</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="77bff3b6-54dd-4c89-99dd-efbe727f0982" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\Software\\Spark\ Industries\\Babble\-On\\Stats\\Client\\(?:LastRun|TimesRun|Version|FirstRun|Copyright)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="00aced85-adba-4936-89e4-7233f5c23dde" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\/start\.vbs</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="3a6fda6f-0b89-4aa2-939b-a229286c2a28" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\FarmexUpdate\\(?:Bot\.Farmex|Control\.ini)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="5cb464e3-ed43-4d02-83f3-2fd4ed35b1dc" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\FarmexUpdate\\(?:ST|US)\\Game\.bnb</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d7dec048-6b3d-448c-b2e3-ee4fd0d57a4f" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\Software\\MaxPlugs\\Emmail\\Packs\\General\\(?:Pack(?:Position|Name|SelectedCategory|RootDir)|ImagesSite)</Content>
+      </IndicatorItem>
+      
+      <IndicatorItem condition="matches" id="9de88690-b728-44f5-ae4e-87e3bd33f246" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\ProxyVan\\unins000\.dat</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="be1b83b8-51ad-45e5-af97-8532016a0860" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Program\ Files\\Emoticons\ Mail\\emomail\.exe\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b64f71d8-d3a4-485e-9872-49036b588076" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">c\:\\programi\\Podrska\\AnyDesk\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="a5dd54e1-8de6-436f-a9c8-8b4a91382d7f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Emoticons\ Mail\\unins000\.dat</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="f0be31b2-a7f2-4de5-8801-42850f21a5f0" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\DisableTaskMgr</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

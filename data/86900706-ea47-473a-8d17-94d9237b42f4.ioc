@@ -1,0 +1,47 @@
+<?xml version="1.0" ?><OpenIOC id="86900706-ea47-473a-8d17-94d9237b42f4" last-modified="2020-05-25T12:06:00" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_dropback</short_description>
+    <description>
+        Family:
+            dropback
+        SHA-256:
+            a654d584acde2fac5cf12352620e7aa9f2d54f659493d173137ae5565ab6e1da
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=dropback
+            https://www.google.com/search?q=dropback
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:00</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="48e826a5-c464-4009-ba51-3ee1dd5b886e" operator="OR">
+      <IndicatorItem condition="matches" id="a13d0e8b-8a0f-4984-91df-02949f16e3d4" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\install\.vbs</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="0df7dcf3-0410-4831-aae1-8452abee74e8" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\RarSFX0\\(?:UrbanVPNo\.exe|tabbed\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="3be22560-9319-4f58-bdcd-3f8ac63ef827" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\Runtime4\\xlogs9\.dat</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c8b07e12-1615-470f-bf2e-e8075363cf00" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\\\MServices</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="27be2eeb-da0f-4ada-80ab-62d784f09626" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\remcos\-TKI02Q\\\\(?:exepath|licence)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d3c5c84f-01c4-428b-b5d3-818a4dfa4ac9" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\Urban\ Security\\UrbanVPN\\2\.1\.5\\install\\(?:decoder\.dll|holder0\.aiph)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

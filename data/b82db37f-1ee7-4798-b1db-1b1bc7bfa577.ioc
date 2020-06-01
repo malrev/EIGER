@@ -1,0 +1,33 @@
+<?xml version="1.0" ?><OpenIOC id="b82db37f-1ee7-4798-b1db-1b1bc7bfa577" last-modified="2020-05-25T12:06:00" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_bodegun</short_description>
+    <description>
+        Family:
+            bodegun
+        SHA-256:
+            ac4bf8807420d482fb66a0ee3c8294e01b1a0872cf1fbe4101cdfd965530753d
+            b09da21faa9a4390e7b7fcf769b596a7008efa4fa53ebb2b6aaded94f1ba2f20
+            2a2d68d75391e766ac795c8706a87f5bf65cda01c477df8843744624b56cb9c7
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=bodegun
+            https://www.google.com/search?q=bodegun
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:00</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="9fe0e41a-83d8-45e3-ad00-11723cb92ade" operator="OR">
+      <IndicatorItem condition="matches" id="ca592766-61e1-4c9c-b8a5-81dc7da7bbc0" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">1\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="4ebd5e09-1097-47cb-be44-59bf16202dae" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\MyService\.Log</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

@@ -1,0 +1,39 @@
+<?xml version="1.0" ?><OpenIOC id="82ce7c7c-7e96-492a-a746-fe0e2516b388" last-modified="2020-05-25T12:06:00" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_zegost</short_description>
+    <description>
+        Family:
+            zegost
+        SHA-256:
+            eb6478f051ae5b16921ed95f6a2f761512c79787ac2b54f0d00742ad526c34b8
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=zegost
+            https://www.google.com/search?q=zegost
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:00</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="8707226e-ba11-455f-915f-8a281fd4d371" operator="OR">
+      <IndicatorItem condition="matches" id="d45cef41-6826-4163-af9d-e0476f22017b" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\.\\setup_\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="012100b1-00cf-48ff-89b7-7c84bfd47a98" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;war3\.exe\&quot;\ \-classic\ </Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c6d85636-4617-44ca-9899-5d35edb699b8" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\7ZipSfx\.000\\KEYTEST\\KEYTEST\.EXE</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="0a743e54-3826-4a9c-927c-c43325431bd9" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\7ZipSfx\.000\\start\.cmd</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

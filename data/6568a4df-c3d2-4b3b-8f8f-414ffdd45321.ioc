@@ -1,0 +1,27 @@
+<?xml version="1.0" ?><OpenIOC id="6568a4df-c3d2-4b3b-8f8f-414ffdd45321" last-modified="2020-05-25T12:05:56" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_fusioncore</short_description>
+    <description>
+        Family:
+            fusioncore
+        SHA-256:
+            eec36871e157e6e7d61388909434e3c00836211afc234208abcbc6c86f5da878
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=fusioncore
+            https://www.google.com/search?q=fusioncore
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:56</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="772ea42d-6da1-4511-920d-3842cdfe1ec6" operator="OR">
+      <IndicatorItem condition="matches" id="d5be2a4c-bf23-4aab-b4f9-392ded4719db" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\is\-[A-Z0-9]{5}\.tmp\\(?:libcurl\.dll|uexper\.dll)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

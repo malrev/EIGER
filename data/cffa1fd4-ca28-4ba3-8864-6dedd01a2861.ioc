@@ -1,0 +1,36 @@
+<?xml version="1.0" ?><OpenIOC id="cffa1fd4-ca28-4ba3-8864-6dedd01a2861" last-modified="2020-05-25T12:05:59" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_clipbanker</short_description>
+    <description>
+        Family:
+            clipbanker
+        SHA-256:
+            abee4e46052a7308912def3005d1b0aa81bf189b929f4858e2f367af3a8f76ce
+            58cc436eca4bcd46f86ae6beeb79774987cd07ee1d759f87d2f166fcfe15edba
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=clipbanker
+            https://www.google.com/search?q=clipbanker
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:59</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="4f09ef6d-2436-46c9-9903-abb4ab16c3e5" operator="OR">
+      <IndicatorItem condition="matches" id="99980293-6cc6-4a98-b0a9-f733db775901" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tk\\(?:palette\.tcl|text\.tcl)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="3a104c73-3aad-4a47-884f-1a68d3db93d1" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tk\\msgs\\(?:e(?:s\.msg|n\.msg|o\.msg)|ru\.msg|it\.msg|cs\.msg)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e363e68a-beca-428e-89ac-70b2d092ea5f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\tzdata\\Australia\\Yancowinna</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

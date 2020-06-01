@@ -1,0 +1,31 @@
+<?xml version="1.0" ?><OpenIOC id="e6e1e9c9-7643-487b-9e78-6ad4dd1445f7" last-modified="2020-05-25T12:05:56" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_wapomi</short_description>
+    <description>
+        Family:
+            wapomi
+        SHA-256:
+            02d2642115184a7843c1451e43b687cd1e228aa99d7e33f999541ad8e1e9303e
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=wapomi
+            https://www.google.com/search?q=wapomi
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:56</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="7a6c7929-4420-4a33-a0b6-034ba7a8a4f3" operator="OR">
+      <IndicatorItem condition="matches" id="a2376fc0-0a7b-45e5-9183-640663842215" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\(?:65162072\.bat|aRqfIw\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="8b06a85e-251f-41c0-97cb-adea01ca6aba" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\yoyoro\.dat</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

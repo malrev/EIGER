@@ -1,0 +1,83 @@
+<?xml version="1.0" ?><OpenIOC id="dfe136ef-dd5a-4d2d-a048-b56313aa8626" last-modified="2020-05-25T12:06:01" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_poison</short_description>
+    <description>
+        Family:
+            poison
+        SHA-256:
+            67b644a8647dbc3d83ea58fc89f70897e84c017e3af6b554e07269be629dd50a
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=poison
+            https://www.google.com/search?q=poison
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:01</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="1dc9d139-e0df-40af-ad0f-46bb60f27a54" operator="OR">
+      <IndicatorItem condition="matches" id="3dfa5c33-482c-473c-949a-f990123a91d8" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\App\\KoolMoves\\Virtual\\MODIFIED\\\@PROGRAMFILES\@\\KoolMoves\\(?:Leon332\.dll|zlib1\.dll|Dav332\.dll|Bin|koolmoves\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="f2436155-de95-409d-8ec3-d0153300dc5e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\App\\KoolMoves\\Virtual\\MODIFIED\\\@PROGRAMFILES\@\\KoolMoves</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="6e63eca4-faef-4cd9-b005-a9cf5f0bb57a" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\App\\KoolMoves\\Virtual\\STUBEXE\\\@PROGRAMFILES\@</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="41e6f4fb-a56c-4637-ac25-9475558d43a0" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\(?:Server\.exe|cat\.gif)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="4f369e86-7200-470b-a31e-5bd35caf04f1" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\App\\KoolMoves\\Virtual\\STUBEXE\\\@PROGRAMFILES\@\\KoolMoves</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="092f91cd-04a9-46fd-b54a-2dd2da95689d" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\software\\LuckyMonkeyDesigns\\KoolMoves\\MainWinPos\\(?:s(?:how|aved)|bottom|left|flags|m(?:inpos(?:x|y)|axpos(?:x|y))|right|top)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="905f6acc-84cf-4d59-ae26-91e54266a2ee" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\App\\KoolMoves\\Virtual\\MODIFIED\\\@PROGRAMFILES\@\\KoolMoves\\Bin\\excludefonts\.txt</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b403a970-94f7-464a-a643-03b2c71f82d6" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\KoolMoves\\Bin\\excludefonts\.txt</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="411979c0-6c33-4e6c-b913-277a1ced8e0c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\App</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b25325e0-f7d7-4cf6-9f8a-16939f34b4bf" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\RarSFX0\\joined\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="708f20b8-3733-4db7-8f20-15440b4a7cb0" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\App\\KoolMoves\\Virtual\\(?:STUBEXE|XRegistry\.tmp|MODIFIED)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="1456ffb1-cc82-43c2-a28c-9ea51be9a80e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\App\\KoolMoves\\Virtual\\MODIFIED\\\@PROGRAMFILES\@</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="fbdf0a45-c86b-4fe2-a51b-0ce7c9081640" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\App\\KoolMoves</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="eb953539-f9b1-4550-b451-792458f532e3" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\App\\KoolMoves\\Virtual</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="81e73015-6657-4c54-aeb3-90a0000bc473" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\App\\KoolMoves\\Virtual\\STUBEXE\\\@PROGRAMFILES\@\\KoolMoves\\koolmoves\.exe</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

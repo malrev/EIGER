@@ -1,0 +1,117 @@
+<?xml version="1.0" ?><OpenIOC id="a56cf9a8-f7d4-4de4-963a-32d85a9d288b" last-modified="2020-05-25T12:06:02" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_swrort</short_description>
+    <description>
+        Family:
+            swrort
+        SHA-256:
+            b49f83c62b07d125f2f3b72a8ff43053303f772021cff21a1d7b15ad39c8a023
+            dfaa121a5071ac96a0c170ac1b8bf5815ff7a64337c3d38bf5bbfd3867814b38
+            feb498b58b9dfce0f148b306a51e96cc3898e94b4f9de87bad611fe35af6ca8f
+            a31e77438495c9ee4cb1a5b2c7e44a9fb5e4081e43a8a2d145cedd06c04139c1
+            ab197914fbf5f4d21a0bc755ede2cd61876cdf778a42700339ee3ad6e8915c05
+            674cf35c231263ed17b051301043d7f323b8531744d70a204a874f9fe3ef8817
+            dd2041d356e5999b3f9e482305eb578287ee95ed89607ebf72a716ae8c84d6f5
+            e4e80547d0e3c07ab0f545010d3a332c2ce91e220e346e413e1731a80008e091
+            e4dca318e5bf281fed5d1bb1e63f077b2bbf0cbabf879f4a2a4a62e36daccc05
+            e5fb6b82dd65c8f9fcab7bdef6f936ad667008e71d3835fae5084cf48eb8323d
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=swrort
+            https://www.google.com/search?q=swrort
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:02</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="0514499b-fd48-4b6e-9ea4-f407a39e1423" operator="OR">
+      <IndicatorItem condition="matches" id="fde611db-f506-4bec-8bcc-8236bd890669" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\AppDaKaila\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="35873350-776e-4602-87a2-282946f2d9bd" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\RarSFX0\\(?:test\.exe|addr_file\.html)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="40030658-c9a5-4bce-9778-b50e9ea61081" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\ku\Å\\.jpg</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="2c2996ba-cc2a-4f91-81fc-6fa819daf174" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\FreeAlarmClock\\(?:is\-7K1LB\.tmp|unins000\.dat)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="1227c90f-e16a-47c7-a6c0-aa1b439a7b31" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">c\:\\windows\\temp\\asw\.9b6ca3f7eaa486cc\\ecoo\.edat</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="de6afa86-28fe-4c4b-a576-324ec23faacc" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\7z[A-Z0-9]{9}\\(?:sciter32\.dll|BundleConfig\.json|DevLib\.(?:dll|Services\.dll)|Carrier\.EXE|GenericSetup\.(?:exe|dll)|2017\.04\.04_22\.34\.11\.140400_installer_pid\=1952\.txt)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="6e7f30ee-b9b4-4101-9afa-0bf9a82afdd9" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\IIIQF\\7z\.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b15d81a8-96ba-4320-9c16-ab64367957e9" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\7z[A-Z0-9]{9}\\res\\(?:opera_(?:swe\.png|ger\.png|eng\.png|rus\.png|nor\.png|tur\.png)|img_product2\.png|final_img\.png)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="efac4484-176e-4635-ad0c-5592d6326c54" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\Panda\ Security\\PSLogs\\Stub_exe\.log</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="5b0dbb1c-0a79-48ca-8358-22eef359fc27" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\Applications\\[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}.exe\\IsHostApp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="0eaf73fd-0253-492d-8a9b-1a87f2916dc5" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\FreeAlarmClock\\Langs\\is\-[A-Z0-9]{5}\.tmp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b26ce2fa-b485-487c-a0f0-bddf6398d332" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\bz2\.pyd</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="5c663328-f630-4918-8f18-6ecabd24e1d7" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\(?:\{(?:A118603B\-E644\-4FC3\-8203\-9392DCFFEE2D\}\.exe|290BF1FB\-9DE9\-4499\-A42A\-4CA7C6E149DB\}\.png)|mbsetup\.log)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="1743328e-bc81-4b85-984f-05f64fae3915" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\Panda\ Security\\PSLogs\\5725\\CloudAvBootstrap\.xml</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="785b7fcf-1729-45da-98f6-37463f4c6cb2" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\mia1\\(?:start(?:menu\.dfm\.miaf|installation\.dfm)|destination\.dfm|pr(?:ereq\.dfm\.miaf|ogressprereq\.dfm)|licensecheck\.dfm|re(?:gistrationwithserial\.dfm|adme\.dfm)|maintenance\.dfm\.miaf|installaware\.png)</Content>
+      </IndicatorItem>
+      
+      <IndicatorItem condition="matches" id="72746e16-37d9-47ca-9ca6-eb64dc480c7a" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}_is1\\(?:NoModify|InstallDate|U(?:ninstallString|RLUpdateInfo)|MajorVersion)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="fc5ba1f0-d28c-4ca6-9e88-8caf018302ab" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\7z[A-Z0-9]{9}\\(?:PSINanoRun\.exe|Stubinstaller\.ini|msvc(?:r100\.dll|p100\.dll))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="81cda55a-edff-4d16-9bf8-9cfce8b789b6" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\7z[A-Z0-9]{9}\\Resources\\images\\DefaultLogo\.png</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="9d76d0ed-ddac-4d15-af6c-0aa9681ab111" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;\.\\Stub.exe&quot;  \/c &quot;[A-Z0-9]{4}05&quot; \/u &quot;http://acs.pandasoftware.com/Panda/[A-Z0-9]{4}AV/[A-Z0-9]{4}05/[A-Z0-9]{4}AV.exe&quot; \/a &quot;[A-Z0-9]{4}[A-Z0-9]{4}[A-Z0-9]{4}16&quot; \/p &quot;[A-Z0-9]{4}&quot;\\Stub\.exe\&quot;\ \ \/c\ \&quot;181305\&quot;\ \/u\ \&quot;http\:\/\/acs\.pandasoftware\.com\/Panda\/FREEAV\/181305\/FREEAV\.exe\&quot;\ \/a\ \&quot;CNTPZFPR1M1016\&quot;\ \/p\ \&quot;4252\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="70e75a1b-0ee3-4385-8535-3c6441d39dbd" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\7z[A-Z0-9]{9}\\Resources\\tis\\(?:Log\.tis|Config\.tis)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="3414d3c6-19f2-429e-aa1d-aa7fe56971ce" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\/Users\/.*\/AppData\/Local\/Temp\/7z[A-Z0-9]{9}\/GenericSetup\.exe\.config</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

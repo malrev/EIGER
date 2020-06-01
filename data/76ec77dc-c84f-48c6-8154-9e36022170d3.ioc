@@ -1,0 +1,31 @@
+<?xml version="1.0" ?><OpenIOC id="76ec77dc-c84f-48c6-8154-9e36022170d3" last-modified="2020-05-25T12:05:57" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_fujacks</short_description>
+    <description>
+        Family:
+            fujacks
+        SHA-256:
+            f2104836da357e0218c68a2f553fd27f63ee61facf2e39ec95419f5ef9f91b65
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=fujacks
+            https://www.google.com/search?q=fujacks
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:57</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="42c6a5a0-b604-4e3d-a247-8a10af2d1b43" operator="OR">
+      <IndicatorItem condition="matches" id="10767533-e895-4639-ad8d-774774241550" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\\\Maple\ Sakura\.zip</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="1cef0f12-9442-43b7-bf97-60f730c3ed26" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\cudart\.dll</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

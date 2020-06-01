@@ -1,0 +1,58 @@
+<?xml version="1.0" ?><OpenIOC id="530bcbe6-779d-4883-8df3-0b4116c25bad" last-modified="2020-05-25T12:06:01" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_darkkomet</short_description>
+    <description>
+        Family:
+            darkkomet
+        SHA-256:
+            e51dc249ce58f3f56aafd976109579ef5c85ab84ade3f7b68ab256ac2cb3cdf8
+            e3e127f15e72b61bf49cedf36b4ead9a79f34753647c1391e3e5bf23abc617fa
+            a472d5a293e12c19a073080290d1f3cc8d1d3ff4cbc5a2d34dfb61b4fd17c340
+            bf5e6f7f0ad88e6f0ea063cc05139f195207ce6d6fd422025fb5545eb12ab94b
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=darkkomet
+            https://www.google.com/search?q=darkkomet
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:01</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="67836135-84a7-4b3b-8f54-e8cb88654565" operator="OR">
+      <IndicatorItem condition="matches" id="7b464f17-844f-469f-8e77-b799b1fe345b" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ C\:\\Windows\\system32\\cmd\.exe\ \/c\ attrib\ \+h\ C\:\\Users\\.*\\AppData\\Local\\Temp\\(?:ytmp|ztmp)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e3f37067-5b52-4b80-9116-50090521f0b4" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ C\:\\Windows\\system32\\cmd\.exe\ \/c\ if\ exist\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\ztmp\\tmp[A-Z0-9]{4}7.bat&quot; del &quot;C:\\tmp99947\.bat\&quot;\ del\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\ztmp\\tmp[A-Z0-9]{5}.bat&quot;\\tmp[A-Z0-9]{5}\.bat\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c3229374-5dac-4c8c-93ef-f58999e821bc" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ C\:\\Windows\\system32\\cmd\.exe\ \/c\ if\ not\ exist\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\ztmp\&quot;\ mkdir\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\ztmp\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ba753c88-9610-4bc8-9bf0-1860a912cabc" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\ztmp\\tmp[A-Z0-9]{5}.exe\\tmp[A-Z0-9]{5}\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="9758aedd-d90c-4bdd-bbd8-3e81182ac174" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\MSDCSC\\msdcsc\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="568a8bcf-f6c1-4e72-80b0-ffd5de9f56c8" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ C\:\\Windows\\system32\\cmd\.exe\ \/c\ if\ exist\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\ytmp\\tmp[A-Z0-9]{4}7.exe&quot; del &quot;C:\\tmp32397\.exe\&quot;\ del\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\ytmp\\tmp[A-Z0-9]{5}.exe&quot;\\tmp[A-Z0-9]{5}\.exe\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e2687381-2ea9-4612-a16f-7fe067e2de72" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ C\:\\Windows\\system32\\cmd\.exe\ \/c\ if\ not\ exist\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\ytmp\&quot;\ mkdir\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\ytmp\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="592841ab-6fcc-45a9-81e5-1cba7642b8ad" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\temp\\(?:Header_ColorCheats\.png|cool\-background\.png)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

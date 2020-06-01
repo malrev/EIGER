@@ -1,0 +1,36 @@
+<?xml version="1.0" ?><OpenIOC id="bead145c-1327-4d8e-a316-73817acab603" last-modified="2020-05-25T12:05:59" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_waldek</short_description>
+    <description>
+        Family:
+            waldek
+        SHA-256:
+            b1be9e42bc2c4a0fccef19e1ecebd4895f2910f2ad4c97bf190b4800d37b7cf1
+            bd6bc154b8b69535b423b3c5a95b0ebb6b29ed59193dd54aeb18b086bcddb306
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=waldek
+            https://www.google.com/search?q=waldek
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:59</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="4bfb284b-cc04-4e70-94a7-68cfb18f76dd" operator="OR">
+      <IndicatorItem condition="matches" id="03d440ed-af1a-407f-b382-c437980a8f73" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\System32\\winlong\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="18b0bf64-a6d4-45d5-903a-58315ca38c3f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\install\.vbs</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="fa47d19b-5905-4561-8a1d-36da86ceed86" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\[a-zA-Z0-9]{7}</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

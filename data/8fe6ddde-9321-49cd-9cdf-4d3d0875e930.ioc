@@ -1,0 +1,28 @@
+<?xml version="1.0" ?><OpenIOC id="8fe6ddde-9321-49cd-9cdf-4d3d0875e930" last-modified="2020-05-25T12:05:59" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_passview</short_description>
+    <description>
+        Family:
+            passview
+        SHA-256:
+            ad458a1447ce441d5c640c5310959bc9328135938b3e985497b3b3c67b1fbfe3
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=passview
+            https://www.google.com/search?q=passview
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:59</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="9ea2857b-f213-4281-8507-8a892c199d59" operator="OR">
+      
+      <IndicatorItem condition="matches" id="cccd066e-658d-4786-9e96-907fa73d94ac" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">VPN\\tmp[0-9]{9}</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

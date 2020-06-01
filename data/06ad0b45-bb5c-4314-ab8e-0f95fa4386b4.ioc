@@ -1,0 +1,27 @@
+<?xml version="1.0" ?><OpenIOC id="06ad0b45-bb5c-4314-ab8e-0f95fa4386b4" last-modified="2020-05-25T12:05:58" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_duote</short_description>
+    <description>
+        Family:
+            duote
+        SHA-256:
+            39f5b281a3e1ceafe7e8df7a17137f20186ba6d3de3cbc3d57c8b60123a46247
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=duote
+            https://www.google.com/search?q=duote
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:58</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="c88de5f7-bead-4211-8e4d-cb4156cdd3ed" operator="OR">
+      <IndicatorItem condition="matches" id="3abb9fe9-0b4f-457b-b68e-7a7dcae52ff0" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\temp\\(?:steup\@wangyyun\.exe|cloudmusicsetup2\.7\.1\.198242\.exe|wangyyun\.ini)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

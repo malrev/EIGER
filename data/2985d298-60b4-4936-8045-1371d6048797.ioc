@@ -1,0 +1,43 @@
+<?xml version="1.0" ?><OpenIOC id="2985d298-60b4-4936-8045-1371d6048797" last-modified="2020-05-25T12:06:00" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_hupigon</short_description>
+    <description>
+        Family:
+            hupigon
+        SHA-256:
+            9245ddb87ccafc8fa4472e2c6c17f288929e82b60906a745647fbbddbc07a83b
+            da0742eb4a9204a645c4f0ce52d6e9587e60fbb4b19675aa183369a290c36b88
+            a18d1ecf45b824dfab7d26caa0cd40dc8b7c395c9ba00c55c5265cc811bab1f6
+            14f3be1f1e8bbd24918fbcd48a749dceb7eb88abf3b6fa9b8b9321edc8ce1121
+            a29f310ca691fcc4d7dc4d49bd21be7c31c5a2888c0add96cea8e43ecb8eefd9
+            a9c53eda789df7af1a6ea94c511de83d3e9f6be7f0958818cf3b9c92b374490a
+            cc17e727b070aac8cc332729691f3005c05c27767ae2e2067abad2f317037a0e
+            6fa55b3506a8e4ca39527caff464aff2dcdbe1ffe378947ee2ec7ee641393b86
+            a284d0cabcd176541030f6519163f93fe0dedd46499a6c2c3fa40f64609412e1
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=hupigon
+            https://www.google.com/search?q=hupigon
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:00</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="94a31bbd-79ee-4d44-ad9f-b45b7ed905c2" operator="OR">
+      <IndicatorItem condition="matches" id="8e4bb746-3398-4ba6-8c7a-7379e2aa65e4" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\plzj(?:\.wav|0\.wav)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e8176eb2-88b6-4a08-a95b-6e3283950b3a" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\is\-[A-Z0-9]{5}\.tmp\\HzzInstaller\.exe\&quot;\ \/stopsll</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="17407ddb-8584-42c0-855d-05b8b83ac042" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\RavTmp\\SETUP\.EXE</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

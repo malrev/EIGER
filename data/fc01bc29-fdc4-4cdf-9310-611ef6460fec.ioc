@@ -1,0 +1,49 @@
+<?xml version="1.0" ?><OpenIOC id="fc01bc29-fdc4-4cdf-9310-611ef6460fec" last-modified="2020-05-25T12:05:59" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_genericrxkj</short_description>
+    <description>
+        Family:
+            genericrxkj
+        SHA-256:
+            ca1d344783faeca15a9e6d9008a76bef727afb49c5f39b21d5a496655a7cfbc1
+            9fe123ed7d7b6e4c5b7f435207a6e2237cb26596e362863cc4610409ec2b49ff
+            5524a0ec026d889a344a9b8224dcfe4303f810d68d5399224fbd7fa289bf2857
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=genericrxkj
+            https://www.google.com/search?q=genericrxkj
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:59</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="085a867c-182b-4101-97b6-a9a8651e1136" operator="OR">
+      <IndicatorItem condition="matches" id="a7b2ae2d-5210-48a6-8127-f465e256d8bd" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\Opera\ Installer\ Temp\\[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="91c77138-7496-4928-adda-c57e98231adc" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\Opera\ Installer\ Temp\\[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}.exe&quot; --version</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="726eac1f-f78d-40d0-ab80-5c945f00f961" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Opera\ Software\\Last\ Stable\ Install\ Path</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d0cbf4de-97c8-44be-a6e0-c4db2ebb2605" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\Opera\ Software\\Opera\ Stable\\Crash\ Reports\\(?:settings\.dat|metadata)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="2f967ab8-0b2c-4b72-aefe-fcda25368b2e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\debug\.log</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="70de1851-642e-46f5-86d6-6d363942c6e3" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\Opera\ Installer\\opera_installer_[A-Z0-9]{4}[A-Z0-9]{4}[A-Z0-9]{4}[A-Z0-9]{4}4.log\\opera_installer_20170404223(?:101584\.log|228320\.log)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

@@ -1,0 +1,62 @@
+<?xml version="1.0" ?><OpenIOC id="d711424a-ae1f-43f3-8e58-6c95d0f46d4c" last-modified="2020-05-25T12:06:01" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_lockscreen</short_description>
+    <description>
+        Family:
+            lockscreen
+        SHA-256:
+            9904d48c67e0ff669c160054389786b61dc0743bc7ae7ffd8653a31103b5549a
+            a246e38affd057fb0ed57e3bcc3e3f3bc93dfdfc64f1791b8816592068b0c738
+            da6e3a7c773cbe43f223e5082a6ecc0ed4cb5157c42dd890e0a7e8b4fdb55d8d
+            7be2cc89d22d43869a3829693899760419840e8f46b4368b1cb4555f3b624be6
+            6f89a1070bd94f93674191afa42d82ae96b20dcc03f7baa9e33e77ae6083be8d
+            bae486ec49d8df4f3076b8b172f2ac18f81da13d7de855e328adaa20482b8f5b
+            b366e5e7251792c5c0f56b3ddc7a6ac6e5335bce6df951e6b92c593195038905
+            9c42cccdf445831c1e45b4b98e6de0f7f78c92c18d81e88b9a535d5fab381a73
+            7f62685cc8bbb6416bd43bbe347b72356f528af3af39e4766ecd018011c9f26a
+            be3758b1715e6c5e8b1ade1eef88aab0cfb3d0b594bfc3799a40066db4994759
+            c76bed447e315b1004dd2d85e71821af5e14376b93b6d78f5997beee3939f5d4
+            7e071a85460328784be65fe31650af2cbf7dbbf78d40d1b0d3bd763a7185cd0e
+            fb2e31279e3b7ab4db57de1385dcb1f90e7e89187394ab178616df3da72cfacf
+            9c94fbb449238399b8ade4348c9f14b11e8737193332173d6f1d49738ff48ce7
+            c6e080cf3d4fdf796f47a54c1c1cbc9323145a94f323a3eb8a931d94508695cc
+            cc6b6b3584f2bfcb25effc85056f6d8d0991baba729c7a2a5ec67dd89bee1b81
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=lockscreen
+            https://www.google.com/search?q=lockscreen
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:01</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="89e22604-e192-4330-8341-5ac7deb4a7bd" operator="OR">
+      <IndicatorItem condition="matches" id="adcb1c6e-1507-4da3-9089-6bc4c7a4dad6" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\fsi\\del\.bat</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="cc73c69e-6cb7-4fec-b432-6ed164055b61" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Control\ Panel\\Desktop\\\\(?:TileWallPaper|Wall(?:Paper|paperStyle))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="1b303522-adcb-42bf-967d-d14637a0ca7c" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ C\:\\Windows\\system32\\cmd\.exe\ \/c\ C\:\\Users\\.*\\AppData\\Local\\Temp\\fsi\\del\.bat</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="194775d7-6194-42d0-bbaf-09c19c13bc16" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\Microsoft\\Windows\\Start\ Menu\\Programs\\Startup\\1\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="7d8c68d4-049f-4a73-8210-b32ef8dc0318" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\\\PSE20\\9f93492e155d1bf27b8077e991e6a5a0\\php\.ini</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b6389f7e-acb1-4875-93e2-2ed19ce3d93d" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\App\.exe</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

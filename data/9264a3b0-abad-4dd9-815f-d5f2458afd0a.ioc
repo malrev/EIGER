@@ -1,0 +1,27 @@
+<?xml version="1.0" ?><OpenIOC id="9264a3b0-abad-4dd9-815f-d5f2458afd0a" last-modified="2020-05-25T12:05:57" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_zaxar</short_description>
+    <description>
+        Family:
+            zaxar
+        SHA-256:
+            5c55fc5172ccdcc56739f5745478b0011188fd199461a1fe7fe523aab872f1e8
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=zaxar
+            https://www.google.com/search?q=zaxar
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:57</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="ab049779-2d2d-432e-a661-48b58b6b80da" operator="OR">
+      <IndicatorItem condition="matches" id="5f8a769a-a7d9-4a10-9c1c-9c476356694a" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\gamesdepurtupdate</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

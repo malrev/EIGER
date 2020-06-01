@@ -1,0 +1,31 @@
+<?xml version="1.0" ?><OpenIOC id="df3f1d2b-65b3-428a-b6fb-dc2c8def84e0" last-modified="2020-05-25T12:05:56" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_vbkryjetor</short_description>
+    <description>
+        Family:
+            vbkryjetor
+        SHA-256:
+            b2ad6267db3492ff74b9fdeb6a29d85ad9fad04906baa0b0c3e380bd21cca62e
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=vbkryjetor
+            https://www.google.com/search?q=vbkryjetor
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:56</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="010b9130-17ab-48cd-b2db-58783afb110d" operator="OR">
+      <IndicatorItem condition="matches" id="37292e34-2173-4de0-8920-4bcef4d37219" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\\º\þ\±\±CA\Ö\¤\Ê\é\Ö\ú\Ê\Ö\\hbca_install\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="6ebe2d43-c674-4c43-8967-5dad7cebe016" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\hbca_install</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

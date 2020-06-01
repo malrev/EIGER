@@ -1,0 +1,95 @@
+<?xml version="1.0" ?><OpenIOC id="a8c9c713-0bbc-4253-954c-778735968036" last-modified="2020-05-25T12:05:59" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_virlock</short_description>
+    <description>
+        Family:
+            virlock
+        SHA-256:
+            e5a32d5a470c8beba1a56e0e94488b09e087bf1868a9772ee1a8d22194bbc757
+            f27adf55496ae7011803f41c10675e5e5c8e07b783231b26d5d9340ff91abede
+            f8aaead9d0672c6d69ce8a536b64818b5da99709d4374ab194172ebc269caa47
+            f442a2377fa834f64ede65ba0091fd7d0e9355e49aa3c0bd98a5b411a3d8b470
+            f638bb8e3c9548e7c5e36a98c99c489eb0cc1075a8649fecb9d7eb2534e6c702
+            f1fca53b5a6887ea18450ac34f9d76b9229b8b131cc0c9a3e16567556b1e721c
+            f1c9b249383a4684b5b3dbbadacaaaa00425f374ff3cfc9920cdcf8a28ec0116
+            f39d24a712db9db82350152aa0fdd0bf310a0fe3a9ba71ac16064329f38c868e
+            fc8d320d303aee3055c9ba9d09c7428ba6246decb65a80effaf5e8fc5b131052
+            f95f8f06a6e22e338e87c4dd3384e5d1e1905bb5791f1a122e3e75a4fbf34f3d
+            e83eaafb53e27305f6c61ac854449e04257ff745dc868e40c5db40661e303f59
+            f908bdf6f7925e54261494b27007dcc418b74aa997c7d423794805c73ff76647
+            f6597cb0765c9ce341179cf2974cf429863ff9e2b5857f2f0ff4b3270812d86e
+            e93ccab2649e70707b815376537510880f417a8ffe170bfe3869bd59bee18f40
+            fa9a332cbf7773019c56dfd34aa35104dd5378eb30cad6a6701f0990d9e9b2d1
+            f41dbb4d5f5131b94485a640d1a6eb07953c15084648eef8746f96a923e6f683
+            e7d019c6c864b30304b327b1614d9c4ad29062940cbf2111ed202ca6a7a50867
+            f0c669f2da4cc1463c297b9bacfbe524181e13d31b1edd7fe1c5612032bb11fc
+            ff3e02ed130319fb313214ae96304ae9d47e7dfb8a2b6d1ee7e73c3651f9b433
+            f0412becadde2927612afd67779c9d60f84aa2379dbe71ccde3bea2e241d9107
+            ef88e8cca8fb58bac862e124b984604a4aa235672425ac6f6b5a2c52c734b743
+            f6dbb24a47b409774929d7ebfdce6cc4851728688625e07629de05359209af2e
+            e94210ba878213b75a335a546eaeac7caccbaab4071705ad34dabc52e3e36b4a
+            fceb7edf89171a65abf7fdf578dc47b28a76693a0f4dfcea0d26518fde1e0c6a
+            f3220102d6a3f12d7bcc3b1297d5dcb25d88f79bde33d4c7be1ca9cc0a93eaa1
+            f744784970f205ca664dce490a84ecf031645142c5507fda4a75c4a62685c039
+            fca891496192bb97870a5cb3b798f460ee6e97a4a95c87761404bcfd0a0101aa
+            fea92dc499d5ada3566299f22669892871b76ac836782ec42ba2f6efc8680df9
+            f4a1e24b8651c642bc5e4867adb800772f3bd7edf747463d02bce7cd467aaa3c
+            e3dea7c04526984c7f9b09bc0a0de3304051c47bd20dab9939252acd68eb1eb6
+            e9a68f2115e153bb825782d0510a2b1cf8b2489b5c527cb5faff7464f095c1b9
+            ea3a768e7f5d633031b6015756f0fb833fa95a79b66489f25381709a88c24d25
+            f928948a024f7a6198924339e36982229727236097e0cb1c55817fc5644a8ca1
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=virlock
+            https://www.google.com/search?q=virlock
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:59</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="4c6e58d1-fd96-41b5-87ec-e8db04259afa" operator="OR">
+      <IndicatorItem condition="matches" id="27f741b1-f886-4aa1-a5a3-3b5532a77326" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\fuIc\.txt</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c73d4963-e963-453e-a3b8-2170e41d246a" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\[a-zA-Z]{8}\\[a-zA-Z]{8}(?:\.exe)?</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="70ba3711-ab50-43d4-97a2-7d77958448b6" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\(?:setup\.exe|Setup\.exe|c(?:p(?:ack\.exe|ush\.exe)|ver\.exe|hoco\.exe|list\.exe|inst\.exe|uninst\.exe))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="9fcff1bc-849c-4389-bf90-3da2ce96372f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\Macromedia\\Flash\ Player\\macromedia\.com\\support\\flashplayer\\sys\\settings\.sxx</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="9f34a538-4c34-41b9-90e8-7ce3ac1f192c" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\[a-zA-Z]{8}\\[a-zA-Z]{8}\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="a3e46540-f45e-479f-b493-d9c97b8584fc" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\[a-zA-Z]{8}\\[a-zA-Z]{8}\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c67acc04-bf45-422a-a6f5-b08a61844317" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\[a-zA-Z]{8}\\[a-zA-Z]{8}(?:\.exe)?</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="af7d69e3-f2a5-458e-8a4e-d056ee7aa5b8" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\config\\systemprofile\\[a-zA-Z]{8}\\[a-zA-Z]{8}</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="34d7347a-dcad-4248-9023-b61a67071d9b" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\\\[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="fd57b313-3987-4036-99fa-5dd4483a694e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\[a-zA-Z]{8}\\[a-zA-Z]{8}\.exe</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

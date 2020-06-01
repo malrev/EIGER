@@ -1,0 +1,43 @@
+<?xml version="1.0" ?><OpenIOC id="fed64e43-a344-47cb-894e-c64929b7f2a2" last-modified="2020-05-25T12:05:57" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_zenpak</short_description>
+    <description>
+        Family:
+            zenpak
+        SHA-256:
+            c7dae67ba88bbd3cbdeabaecfc12669198e6f5616463773ff10233615fa2c812
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=zenpak
+            https://www.google.com/search?q=zenpak
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:57</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="7f082c02-3a73-4398-9a39-df05c3cc8e36" operator="OR">
+      <IndicatorItem condition="matches" id="711d60d4-a488-4876-9893-d19d9ec946ff" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\CommandLineEx\\[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d8c1d92c-db00-428c-9bc5-86c0ac1d7190" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\CommandLineEx\\[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="7817b108-6c3e-421a-9ce6-29a98b58ce74" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\setup\.bat</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="f6a65a52-436d-4412-8451-5e70abfec94c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\\\installer\.msu</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="3bd5ecb0-9d11-4fee-95e6-0f888059fb8c" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\Software\\7\-Zip\\Path32</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

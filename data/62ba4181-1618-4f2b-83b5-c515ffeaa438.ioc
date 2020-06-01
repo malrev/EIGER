@@ -1,0 +1,35 @@
+<?xml version="1.0" ?><OpenIOC id="62ba4181-1618-4f2b-83b5-c515ffeaa438" last-modified="2020-05-25T12:05:57" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_mybot</short_description>
+    <description>
+        Family:
+            mybot
+        SHA-256:
+            dd9f64af88c8329fed586d296ed7b19ff9a98014ddea500803be1d267a643c87
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=mybot
+            https://www.google.com/search?q=mybot
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:57</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="0e7a7736-f4d9-4352-9024-0ee491d35809" operator="OR">
+      <IndicatorItem condition="matches" id="656f09a0-2e6c-4929-b20e-e57b3734814c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}.exe-up.txt</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="dc391de8-b091-4555-a31e-51cd4399d5cc" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\Tibia</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="eaefd015-03f3-4bd5-af92-278082832937" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">Software\\Microsoft\\DirectDraw\\MostRecentApplication\\(?:Name|\ä\\\ä\¤\)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

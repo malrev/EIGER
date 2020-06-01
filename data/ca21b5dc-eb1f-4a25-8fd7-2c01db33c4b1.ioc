@@ -1,0 +1,27 @@
+<?xml version="1.0" ?><OpenIOC id="ca21b5dc-eb1f-4a25-8fd7-2c01db33c4b1" last-modified="2020-05-25T12:05:58" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_grand</short_description>
+    <description>
+        Family:
+            grand
+        SHA-256:
+            c5924c5d5386e8edd9de07286ad02060bce19d014c3c9521fa4290fe5a0a6db6
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=grand
+            https://www.google.com/search?q=grand
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:58</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="bc4107dc-b592-4293-a704-321da809e0fd" operator="OR">
+      <IndicatorItem condition="matches" id="24a14697-ba33-4dca-9181-641b5d4dfd11" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\(?:1\.(?:exe|bat)|2\.exe)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

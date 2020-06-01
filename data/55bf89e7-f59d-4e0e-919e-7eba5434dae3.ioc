@@ -1,0 +1,59 @@
+<?xml version="1.0" ?><OpenIOC id="55bf89e7-f59d-4e0e-919e-7eba5434dae3" last-modified="2020-05-25T12:06:05" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_fareit</short_description>
+    <description>
+        Family:
+            fareit
+        SHA-256:
+            40bd87b1148720c3da063a9d537634ae7bcdb4f9101cd2fd53f7c7b174e98167
+            bb7c29be3684dce97f70dd79c7900955cdb9409c668e195defa5fa2b9a8174aa
+            c883d98772c36063c3048fb7f601a48dbcf693790eeb3667c362110a6d3c47a5
+            e1472ddc8cad905361aa27e90349220af1d69156b54981d139a62b5d40a5c319
+            7c5b327d188a655497e80251abf2e25951e3eee6a73ce59e5e4404e320d8c78e
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=fareit
+            https://www.google.com/search?q=fareit
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:05</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="fab9cc5c-fc3e-48ce-8942-c4105ef95f7b" operator="OR">
+      <IndicatorItem condition="matches" id="5fee1dd0-d8c3-497c-8783-a6689b23d145" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\Documents\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\(?:domains\.log|Grabber\.zip)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="21147c19-124e-4aad-baff-a56195624116" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\Documents\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\Browsers\\passwords\.log</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="31a74478-1273-419b-8144-dd13a670d856" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\All\-In\-One\ Password\ Recovery\\is\-[A-Z0-9]{5}\.tmp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c873e0b2-87b9-4b85-af99-1070dccbb18f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\remcos\\remcos\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="6dbaa4f6-b26a-4089-b189-feb0080ee2a8" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\is\-[A-Z0-9]{5}\.tmp\\st\.cjstyles</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="62556f91-416a-4692-8262-dd9481c6b3e9" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\(?:lJS5\.tmp|IMG00618731_jpg\.jpg)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="772d499b-d064-4468-a071-004170a6e614" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\\.cmd\\shell\\drbatcher\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="3406e063-baa6-48de-9046-1a369b0eb08a" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\\\remcos</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

@@ -1,0 +1,31 @@
+<?xml version="1.0" ?><OpenIOC id="dc7bdb55-16fb-45a2-a110-5417f2f20338" last-modified="2020-05-25T12:05:56" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_networkworm</short_description>
+    <description>
+        Family:
+            networkworm
+        SHA-256:
+            602d053c33aa6c6c88667d10fd2e780341a9ef72f1445526cb856bf4ac63d7a4
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=networkworm
+            https://www.google.com/search?q=networkworm
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:56</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="3b4ecce2-6c8e-4144-86ca-364d302bc704" operator="OR">
+      <IndicatorItem condition="matches" id="cccbad76-666b-46e6-9f35-b64bf8c1c44d" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\[a-z]{3}[0-9A-Z]{4}\.tmp\\ns[A-Z0-9]{4}.tmp&quot; &quot;c:\\ns393B\.tmp\&quot;\ \&quot;c\:\\temp\\7za\.exe\&quot;\ a\ \-tzip\ \&quot;c\:\\pv\-i\\pv\-i_log\.zip\&quot;\ \&quot;c\:\\pv\-i\\Privacy\-i\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="4a0bcfa9-4ff8-4ccf-8bdd-4aaf52ddbb0d" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">c\:\\temp\\7za\.exe</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

@@ -1,0 +1,45 @@
+<?xml version="1.0" ?><OpenIOC id="ad144bd9-a06b-47c1-9bcc-3b19541f8d6d" last-modified="2020-05-25T12:05:58" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_ponystealer</short_description>
+    <description>
+        Family:
+            ponystealer
+        SHA-256:
+            d43e16061fae6ae9a1bd4ef5182aebb8bbb4909913fd35e778a5eb877fee223d
+            f6e23bce007cd6b5cba09f1b866a54d59fdfd81d46c42b7aebbfe0c4abd546aa
+            df0a13b775109ca5e5d2c3294717274c532774805205590e596b5f27343108df
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=ponystealer
+            https://www.google.com/search?q=ponystealer
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:58</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="470d02ca-3a88-4f46-a315-504dc17062a7" operator="OR">
+      <IndicatorItem condition="matches" id="fb47f91f-3cc9-48c1-8086-cc48e7381559" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\[a-z0-9]{18}\\Anglogaean3\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="47eefa19-c9d4-4a70-b7a5-2294238b3c89" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\subfolder1\\filename1\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="17a15a34-d58d-4c3c-933f-cb112ae8ebee" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\Microsoft\\Windows\\Start\ Menu\\Programs\\Startup\\Winlogon\.vbs</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="a242e715-c945-465f-b527-a3cc2cbfbcd9" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\test\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="584652b0-2e4d-40f2-806e-b39871b393a6" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\\(?:Startup\ key|Unittens9)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

@@ -1,0 +1,115 @@
+<?xml version="1.0" ?><OpenIOC id="7eac14cc-4f01-4677-9078-cf1bafd4ccdc" last-modified="2020-05-25T12:06:04" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_presenoker</short_description>
+    <description>
+        Family:
+            presenoker
+        SHA-256:
+            e665d9f8e572932b750302a6a97d821b0ae2cbf5fd180c44ee006ce0e33e9886
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=presenoker
+            https://www.google.com/search?q=presenoker
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:04</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="88dfe702-52ee-4e6e-95be-b1780d474a79" operator="OR">
+      <IndicatorItem condition="matches" id="779ad98b-84d1-4606-b781-0e54d86b193c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\is\-[A-Z0-9]{5}\.tmp\\_isetup\\_RegDLL\.tmp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ed591cee-135c-490d-acdb-d1ae465f2507" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Naiky\\PCIMC\-Lambda\\config\\3Cylinder3Spinder\\ncstudio(?:\.dat|\-0000\-00\-00\-00\-00\-00\.dat)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="f38722f5-4931-47d7-924f-ce686305f7f0" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\WinRAR\ SFX\\C\%\%Windows\%Temp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e850e75a-7749-4209-99b7-2601a2304940" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Naiky\\(?:setup\.cfg|AxesErrEditor\.exe|NcHelper\.exe|WriteProtectTool\.exe|FirstRun\.exe|InstallDrv_x64\.exe|zip\.car)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="47a50a9a-4c3a-4735-bf1b-65401603e3e2" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Naiky\\PCIMC\-Lambda\\Lang\\eng\\Cylinder\.txt</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="9680ed5d-64b8-47f7-b7ba-b9e011687103" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Naiky\\PCIMC\-Lambda\\config\\2Cylinder2Spinder\\(?:ncstudio\-0000\-00\-00\-00\-00\-00\.dat|public\.dat|a(?:xeserr\.dat|mend\.dat))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="88dbcf55-417b-4442-ac4a-ab59c53a9c87" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Naiky\\PCIMC\-Lambda\\config\\Lambda_3S\\(?:ncstudio(?:\.dat|\-0000\-00\-00\-00\-00\-00\.dat)|public\.dat|a(?:xeserr\.dat|mend\.dat))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="6cd3246c-87f6-4c39-aba1-28e22c9d936d" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Naiky\\PCIMC\-Lambda\\config\\4Cylinder1Spinder\\(?:ncstudio\-0000\-00\-00\-00\-00\-00\.dat|a(?:xeserr\.dat|mend\.dat))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="671ee8c6-d1ec-44af-ab56-5167d55c6663" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Naiky\\PCIMC\-Lambda\\config\\2Cylinder1Spinder\\(?:ncstudio\-0000\-00\-00\-00\-00\-00\.dat|a(?:xeserr\.dat|mend\.dat))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="64f2dde3-2cac-4607-b654-1ea5a569c7c7" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Naiky\\PCIMC\-Lambda\\config\\Lambda_4S\\(?:ncstudio\.dat|public\.dat|Ncpm\.pmt|a(?:xeserr\.dat|mend\.dat))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e52447b3-2c70-4dc5-9584-69a10a6e5f92" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\Temp\\Install[A-Z0-9]{4}gent\\InstallUDPAgent\\(?:AgentProcessList\.txt|OfficeService\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="9389b4e5-7ac9-433e-aaa2-c415b9a58789" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\is\-[A-Z0-9]{5}\.tmp\\VclStylesInno\.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="0f5ff5f1-fa59-4ac2-a5c4-d71b815ce38e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Naiky\\PCIMC\-Lambda\\config\\3Cylinder1Spinder_4s\\(?:ncstudio\-0000\-00\-00\-00\-00\-00\.dat|public\.dat|a(?:xeserr\.dat|mend\.dat))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="62f1b1d7-639a-4526-a204-f48483559303" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Naiky\\netsh\\install\.bat</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="10f57e1f-86a4-4657-9ca4-6f647148ff8a" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Naiky\\PCIMC\-Lambda\\Lang\\CHN\\(?:splash\.bmp|ShortCut\.txt)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="3fb59f6f-1a2b-4834-829f-1cb9332fdcde" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\Moscii\\Logs\\OfficeService\.log</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="5e6a0d92-bfec-424c-aacc-1d625682b51a" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Program\ Files\\WindowsPowerShell\\Configuration\\Driver\.Booster\.Pro\-7\.4\.0\.721\.exe\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="bab17cc7-3569-497d-b7eb-7fc98e3ca3ec" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Naiky\\PCIMC\-Lambda\\(?:PmParser\.dll|Nc(?:studio\.(?:exe\.manifest|fmt)|Packer\.exe|Lib\.dll|Task\.dll|Studio\.exe|uiBase\.dll|C(?:ore\.dll|trl\.dll))|W(?:HNCLambda(?:_64\.sys|\.sys)|hatsnew\.txt)|M(?:icrosoft\.VC90\.CRT\.manifest|FC90ENU\.DLL)|Tips\.txt|DrvSimu\.dll|msvcp90\.dll)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="fa6f43c2-9fef-463a-bd80-7dafde761aad" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\is\-[A-Z0-9]{5}\.tmp\\(?:Arc\.ini|UnArc\.dll|English\.ini|IS(?:Done\.dll|Skin\.dll)|Settings\.ini|cls\-(?:diskspan\.dll|lolz_x86\.exe(?:\.Win32)?)|C(?:LS(?:\.ini|\-SREP\.dll)|oncave\.cjstyles))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="a32aeb9f-60f9-4d91-a394-c6079afec946" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Naiky\\PCIMC\-Lambda\\config\\4Cylinder4Spinder\\(?:ncstudio\-0000\-00\-00\-00\-00\-00\.dat|public\.dat|Ncpm\.pmt|a(?:xeserr\.dat|mend\.dat))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="77c32d85-7dca-4c54-9cef-880c2d7a1d22" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Naiky\\PCIMC\-Lambda\\config\\3Cylinder1Spinder\\(?:ncstudio(?:\.dat|\-0000\-00\-00\-00\-00\-00\.dat)|amend\.dat)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="875da296-5254-4d2d-8d5f-afac07f3f37c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Naiky\\netsh\\system32\\(?:dgnet\.dll|eappcfg\.dll|reg\.exe|fwcfg\.dll|mqutil\.dll|ip(?:xmontr\.dll|v6mon\.dll|montr\.dll))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="bbd7dc8a-2739-47cb-80ce-c59ad665ad47" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Naiky\\PCIMC\-Lambda\\config\\Lambda_3l\\(?:Ncpm\.pmt|public\.dat|amend\.dat)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

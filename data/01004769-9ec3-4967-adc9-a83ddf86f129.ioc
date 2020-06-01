@@ -1,0 +1,58 @@
+<?xml version="1.0" ?><OpenIOC id="01004769-9ec3-4967-adc9-a83ddf86f129" last-modified="2020-05-25T12:06:04" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_ramnit</short_description>
+    <description>
+        Family:
+            ramnit
+        SHA-256:
+            e5a5cf9086fff66bbd84116ad6d31cf7291c3b0c0432a7344656dc4eb5e6d9f0
+            f37d3021ebe72eebb400b02bb636b4ec9d6fe0bfa2df32d14a4a14da2e7ed69b
+            ec1cd87c750353228d9d7a41049fed187192097165f1820dd49d465ee586ff01
+            f77ca5f2d616bc55b5dc39951cb5f4197d4e0be6516adccf0492cbd020711b0f
+            f260efcfe0d90d082292a53767b22ffb0c812fd6b553e09f5ac8287203fbecd3
+            fbd860604c6930b1cb818cd4edce00bd3ce31d23e4e3f9c72718064649c8296b
+            e68ea44a52a0053ccff500cf3b9bf17e53695d17cfab2287de854285ced383f4
+            f69ba2b137702abcd9f58cfe139e7596da93879586ea6866be79bb222dd02e71
+            f907023f0a2d0be8628f917f9df59b879cfdd029e095b1cfc62359fee14e62cf
+            f906b1ae6047c8b5e345e489dbefa97d20a8e042ca1d8cfa78832ae044c2d6e2
+            e5c32330c10700f6dec5b7a721c42d65306096c7575e69c40dea8bb4a0cfe8f4
+            e9251ca265de8e4b8f350c22997389419246cb7757068bddc68a933774af6238
+            e94b4aae3a17e6ca6d27297a51951ba9341ffcba858ef0d78e82048bf49eb06e
+            ea4c3824970fe2d797271ad6189f0607881acb2bc8691a71c7df22f1b00ecdcf
+            f9068a1599855a68bc0492b2fa781b96ca90db915c4936022ae346229dbbd2df
+            fb55b5d32acb2e75e5684f128b846287f333f2ceb13196bd9d8872b7c04f7ee1
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=ramnit
+            https://www.google.com/search?q=ramnit
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:04</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="ad49478b-cd30-4eb8-a2f5-1b833d6724b4" operator="OR">
+      <IndicatorItem condition="matches" id="72760355-5739-4865-87d9-a00feb63d80f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\MuThanhCong\.Com\\Data\\Customs\\Glow\\blur_vp\.cg</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="fb7acc78-d5f7-4fc8-b0cf-5c0d1f503caf" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\\.pwn\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="5e0c439b-932e-4f2f-9464-3bc6a180535d" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\MuThanhCong\.Com\\(?:m(?:svcp100(?:\.dll|d\.dll)|essage\.wtf)|zClient\.dll|v(?:orbisfile\.dll|comp100(?:\.dll|d\.dll))|Mu\.exe|wz(?:_zp\.dll|Audio\.dll|Cipher\.dll))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b897b0e6-9442-4072-9e7f-275e3bd4a20e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\MuThanhCong\.Com\\Data\\Customs\\Interface\\CardPhone\\(?:Button(?:Down\.ozt|Close\.ozt)|vinaphone\.ozt|CardInput\.ozt)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="56f237d4-7e42-4d9a-9e52-ee3da9fa4180" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\WinRAR\ SFX\\C\%\%MuThanhCong\.Com\%</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

@@ -1,0 +1,31 @@
+<?xml version="1.0" ?><OpenIOC id="4de89ad7-cd0e-46ff-b422-2ef3633fa59b" last-modified="2020-05-25T12:05:56" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_daws</short_description>
+    <description>
+        Family:
+            daws
+        SHA-256:
+            cdb81201fb1b21eda168a995de383b65cec1c489c5c1559f29b313b5bc22c9b5
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=daws
+            https://www.google.com/search?q=daws
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:56</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="e9b53e2c-10ee-470e-9cde-867ec5bad508" operator="OR">
+      <IndicatorItem condition="matches" id="792cbd65-91d8-40fc-a552-d629dd76a2ad" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\[0-9A-Z]{7}\.tmp\\(?:rescue\.log|params\.txt)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="36dd06e6-808e-40c4-80f8-c714c9adf4f1" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Windows\\[0-9A-Z]{7}\.tmp\\lmi_rescue\.exe\&quot;</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

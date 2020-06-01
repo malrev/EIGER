@@ -1,0 +1,35 @@
+<?xml version="1.0" ?><OpenIOC id="7ab64d92-3aed-45fd-9a07-ed856bbb8935" last-modified="2020-05-25T12:05:58" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_therat</short_description>
+    <description>
+        Family:
+            therat
+        SHA-256:
+            63304e8d4ae72b958af64fc1f8833148e554a42c54bdaaf60789a6d1aab132d7
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=therat
+            https://www.google.com/search?q=therat
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:58</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="a1785def-d3b5-4ece-af14-bac0af89945b" operator="OR">
+      <IndicatorItem condition="matches" id="a7cd92aa-64c6-4bdf-bc31-42376db87fe5" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\svcc</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="874eadea-4720-4c3d-a412-f60ceb40ab7a" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\AppPatch\\x64\\NS-[A-Z0-9]{5}.tmp\\NS\-[A-Z0-9]{5}\.tmp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="83409d32-761d-4e55-980d-7b8b9e4dae7a" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Users\\.*\\AppData\\Roaming\\AppPatch\\svcc\.exe\&quot;</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

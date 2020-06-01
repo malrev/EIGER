@@ -1,0 +1,30 @@
+<?xml version="1.0" ?><OpenIOC id="9493c221-8b07-4df2-a9ff-9443c4023c0e" last-modified="2020-05-25T12:05:57" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_molebox</short_description>
+    <description>
+        Family:
+            molebox
+        SHA-256:
+            bb8137c8ec88e270050716afdb1432d86ab30a743baf01fbcf5a7c714ea07a3c
+            0c036de2c66d4f4781c4c1e6b133bca454ebf15e1b17c81b7954281b1b86ee1a
+            c10ee67e27d406fdf2f5e207fc43a90d2959b2b128cde62b2d81d71702ee7f48
+            3ac49dd95f6ab8715153bb2edd6dccc19d2daa494d12510397e268770073d995
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=molebox
+            https://www.google.com/search?q=molebox
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:57</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="5cfaf3c0-bb6c-4f9b-8aa8-8c42769afe1e" operator="OR">
+      <IndicatorItem condition="matches" id="982b87e4-b3b8-4438-8cd3-30444d1d74e0" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}.exe-up.txt</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

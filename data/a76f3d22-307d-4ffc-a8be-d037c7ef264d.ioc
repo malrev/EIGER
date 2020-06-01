@@ -1,0 +1,32 @@
+<?xml version="1.0" ?><OpenIOC id="a76f3d22-307d-4ffc-a8be-d037c7ef264d" last-modified="2020-05-25T12:05:56" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_hosts</short_description>
+    <description>
+        Family:
+            hosts
+        SHA-256:
+            d695ee38ab2358bc70efa9c29f3e5fc61b84ae19f0b61ad63373a0c9f53fbcab
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=hosts
+            https://www.google.com/search?q=hosts
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:56</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="ff705464-cb74-4977-affd-eac498a6b976" operator="OR">
+      <IndicatorItem condition="matches" id="43d30351-704f-4b65-9e0e-5003b8e3d513" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\(?:95abb759a|4MHP625M\.bat|txfuck\.dll|0310C0BL\.bat)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="66bb90eb-0024-4d83-a8b6-56856e5169cb" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;http\:\/\/dazonia\.xyz\/files\/zwsy\.jpg\&quot;</Content>
+      </IndicatorItem>
+      
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

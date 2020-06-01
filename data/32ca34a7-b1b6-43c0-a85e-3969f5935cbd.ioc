@@ -1,0 +1,31 @@
+<?xml version="1.0" ?><OpenIOC id="32ca34a7-b1b6-43c0-a85e-3969f5935cbd" last-modified="2020-05-25T12:06:00" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_chimoz</short_description>
+    <description>
+        Family:
+            chimoz
+        SHA-256:
+            cdce658b1494713efcd6395980b94042f4d1b85e45eca24d5458b05cd97414fd
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=chimoz
+            https://www.google.com/search?q=chimoz
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:00</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="368726c9-7723-4081-a465-6a7c72764ff9" operator="OR">
+      <IndicatorItem condition="matches" id="4f74b81d-7e53-414e-a55a-f37a08e231cd" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\zhezi\\config\\u\.data</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="7db9a2a1-4935-477e-863c-44494f44286c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\Taoli\\(?:log\.dll|msvc(?:r80\.dll|p80\.dll)|Microsoft\.VC80\.CRT\.manifest|ZheziServiceMgr\.exe)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

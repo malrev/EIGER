@@ -1,0 +1,60 @@
+<?xml version="1.0" ?><OpenIOC id="f14c6509-8db3-482f-9314-423cecda74d6" last-modified="2020-05-25T12:05:59" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_cerber</short_description>
+    <description>
+        Family:
+            cerber
+        SHA-256:
+            742aa299cc90e57cb0ace77eac9d39d3221111505563d4d5ba605c68212504fc
+            fe706f905691c9a4275225556e40cfe02b29cbf7511934fb82e139331657e96c
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=cerber
+            https://www.google.com/search?q=cerber
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:59</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="85926ab6-dc87-40e0-933a-abc3f7b7dbd4" operator="OR">
+      <IndicatorItem condition="matches" id="a27da6b9-785d-4712-b6b3-bb4d1ccd9b31" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\itrus\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="3a9a473d-eea2-4fee-b0b7-554ad9eeb660" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet\ Settings\\ZoneMap\\Domains\\itrus\.com\.cn\\\*\\\*</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d6b0f896-721c-4a3e-ab50-d9f7da91a00c" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Internet\ Explorer\\ProtocolExecute\\itrus\\WarnOnOpen</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="451dc9f4-c4a6-4a53-a821-12058753ca92" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\iTrus\\iTrus\.exe\ \-\-fix_chrome_itrus</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="050575db-e3f4-495b-a0b7-15fff2b41219" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\i(?:TrusUI\.dll|truscsputil\.dll)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="3ef18ae4-68ba-48e0-afe2-5480e7cb6ad3" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Microsoft\\Internet\ Explorer\\ProtocolExecute\\itrus\\WarnOnOpen</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="289a1737-b13a-4ca1-9097-e997638ad1a6" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SOFTWARE\\iTruschina\\iTrusUKEY\\KeyType\\itrus\\(?:_(?:Name|Height|URL)|SN)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="37de4064-72fc-4fee-9ec7-fe40a2f32e3e" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SOFTWARE\\iTruschina\\iTrusUKEY\\KeyType\\ningbo\\(?:_(?:Phone|ShowCert)|SN)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="24d0e98a-8f17-48b2-a088-e606bf102fe6" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet\ Settings\\ZoneMap\\Ranges\\itruschina_tea\&amp;ta\\(?:\:Range|http)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

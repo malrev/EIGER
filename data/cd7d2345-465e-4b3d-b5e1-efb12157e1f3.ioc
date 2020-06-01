@@ -1,0 +1,87 @@
+<?xml version="1.0" ?><OpenIOC id="cd7d2345-465e-4b3d-b5e1-efb12157e1f3" last-modified="2020-05-25T12:06:02" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_ekstak</short_description>
+    <description>
+        Family:
+            ekstak
+        SHA-256:
+            c65f0d8123cff6bb8476bcdd14517ca0d11f16c6b44b95922114368e1c0a5d2f
+            1fe9f7c717c9171ceb5f23fb03805598fbf6ea0bbca372ce8056d8877e05fec9
+            1476d3cee42c4cdc6b173a888f70f10ec4baa7e77d847fadc1ae3711ddd1a45f
+            35abeb9226ba22b9164fdd2f1b1b307ee965a0097d585fcae8cf3638a7437937
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=ekstak
+            https://www.google.com/search?q=ekstak
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:02</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="f28a3c64-2f03-4e78-8b0d-5910841ae6a8" operator="OR">
+      <IndicatorItem condition="matches" id="294458b5-1163-4b6f-a76e-08cd9f6a5955" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Genie\-Soft\\Outlook\ Express\ Backup\ V6\.5\\(?:is\-(?:0(?:SKKI\.tmp|CKFF\.tmp)|R7RHI\.tmp|U(?:BCM5\.tmp|GL36\.tmp)|V6J5S\.tmp|EN85I\.tmp|QQJ51\.tmp|852GI\.tmp|S(?:I5VT\.tmp|CSVL\.tmp)|N(?:E3KQ\.tmp|6EQM\.tmp)|G2CCD\.tmp|7(?:OCMN\.tmp|HAF9\.tmp)|FJREB\.tmp|9TIPT\.tmp|O70SB\.tmp|TT6H9\.tmp|H1JK4\.tmp|JL53M\.tmp)|unins000\.dat)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="025a8067-5526-419b-ac95-1bd7b5ef450a" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\[A-Z0-9]{4}ideoMedia\\DVDVideoMedia\\Free\ MP3\ Cutter\ Joiner\\is\-[A-Z0-9]{5}\.tmp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b59827b5-7e48-4c4d-9f3b-03a511aadb48" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Genie\-Soft\\Outlook\ Express\ Backup\ V6\.5\\Sounds\\is\-[A-Z0-9]{5}\.tmp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="7490111a-84c2-41e8-8e2f-275ba53dca15" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}}_is1\\[A-Z0-9]{4}pdateInfo\\URLUpdateInfo</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="4ab2ee5e-a606-4878-a652-27723c706b48" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Outlook\ Express\ Backup_is1\\(?:Publisher|No(?:Repair|Modify)|Display(?:Name|Icon|Version)|U(?:ninstallString|RL(?:InfoAbout|UpdateInfo))|M(?:inorVersion|ajorVersion)|EstimatedSize|QuietUninstallString|In(?:stall(?:Location|Date)|no\ Setup\:\ (?:Language|App\ Path|Icon\ Group|Setup\ Version|User))|VersionM(?:inor|ajor)|HelpLink)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="915ac3fa-f174-40d7-9cc8-2fe34a8f3bba" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\EditPlus\ Text\ Editor_is1\\(?:Publisher|NoRepair|DisplayIcon|URLUpdateInfo|MinorVersion|QuietUninstallString|HelpLink)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="7879e177-5498-49c3-a40c-0ae3a0c3b4e0" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\\\ndis_[A-Z0-9]{4}20.dat\\ndis_040320\.dat</Content>
+      </IndicatorItem>
+      
+      <IndicatorItem condition="matches" id="50eee354-a8cd-489b-8b60-5265acad0589" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\is\-[A-Z0-9]{5}\.tmp\\GOzXjWSMr\.exe\&quot;\ 0d74186cf202e3808b01622b60962f2c</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="70842575-b263-43e6-bfd4-667afed8aec5" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Genie\-Soft\\Outlook\ Express\ Backup\ V6\.5\\htmlpages\\is\-[A-Z0-9]{5}\.tmp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="1474f7aa-92f2-4b15-94ae-994e64c2c0a0" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Smart\ Defrag\\is\-[A-Z0-9]{5}\.tmp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="53207770-6f9f-41b5-bd03-c1775211145e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\is\-[A-Z0-9]{5}\.tmp\\_isetup\\_iscrypt\.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="47311c27-2da4-46fe-9977-1f483ab10236" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\is\-[A-Z0-9]{5}\.tmp\\_isetup\\_RegDLL\.tmp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="629eb9db-3682-486e-9a8d-ad01a81dbc0e" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Program\ Files\\Genie\-Soft\\Outlook\ Express\ Backup\ V6\.5\\OEBackup\.exe\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="345010f0-7091-49f5-ac59-0ebed7769fb9" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\[A-Z0-9]{4}ideoMedia\\DVDVideoMedia\\Free\ MP3\ Cutter\ Joiner\\languages\\is\-[A-Z0-9]{5}\.tmp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b42da60e-4b3b-41fc-b8d0-6ea72912601a" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\is\-[A-Z0-9]{5}\.tmp\\(?:BackgroundImage1\.bmp|rus\.bmp|innocallback\.dll)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

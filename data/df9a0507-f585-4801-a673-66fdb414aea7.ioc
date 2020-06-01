@@ -1,0 +1,58 @@
+<?xml version="1.0" ?><OpenIOC id="df9a0507-f585-4801-a673-66fdb414aea7" last-modified="2020-05-25T12:05:58" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_gamehack</short_description>
+    <description>
+        Family:
+            gamehack
+        SHA-256:
+            d7e7278f988c882baff0fcebe61a2e12d091517f119b848b87b2263bd276afe1
+            d004fdf9d430c458078bb9d18d6d668bfce38f2015a75475a82f2b7845c739d6
+            989f05cec3a3abc7273857c092e49cba4278bdee778d9060e50aa1e6bede6187
+            f673f22ed070f2f8a6b9e6e0b297ba6f176bd40fabb04bd8b424d7bf0693f057
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=gamehack
+            https://www.google.com/search?q=gamehack
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:58</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="16f76dac-bc30-45fc-a6f9-34bfa4b0071a" operator="OR">
+      <IndicatorItem condition="matches" id="d421900f-88cd-4137-b093-d05cddbe7cf0" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\Cheathappens\\Work\\Runtime\\(?:cheathappens\.net|inetcheck\.dat)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="1e714d85-f60b-4ef3-9a20-b0e16ef77741" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">(?:TheWorldsOfBilly2\.exe|NGPlain85\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e9809c8f-b35e-4ec0-91cf-c2b97b94235e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Electro\\(?:Electro\.exe|Bunifu_UI_v1\.5\.3\.dll|Uninstall\.exe|uninstall(?:_l\.ifl|\.dat))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="f932ee0d-db18-4b63-ab14-5bd9952fe797" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ C\:\\Windows\\system32\\cmd\.exe\ \/c\ pause</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="be62506c-bb5a-4f50-b85d-fe169e951605" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\(?:0\.(?:ogg|mp3)|3\.(?:ogg|mp3)|6\.mp3|5\.(?:ogg|mp3)|1\.(?:ogg|mp3)|4\.(?:ogg|mp3))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="fd69f37e-0a6c-4f28-abdc-625730d3c6da" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Electro\ Installer\\Monaco\\(?:classfunc\.txt|Monaco\.html|base\.txt|global(?:ns\.txt|f\.txt|v\.txt))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="686989b0-49ad-403c-98a6-dd2d99a738ea" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\IF{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\(?:Setup\.cab|Variables\.dat|icon\.dat|Commands\.dat)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b415e550-724b-4aa9-9b87-40f4616920dc" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Electro\ Installer\\(?:Electro\.exe|Bunifu_UI_v1\.5\.3\.dll|MetroFramework\.(?:dll|Fonts\.dll)|Uninstall\.exe|uninstall(?:_l\.ifl|\.dat))</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

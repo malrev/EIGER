@@ -1,0 +1,37 @@
+<?xml version="1.0" ?><OpenIOC id="8d78dbf1-c88c-4d23-96e0-f9150623b038" last-modified="2020-05-25T12:05:57" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_scriptkd</short_description>
+    <description>
+        Family:
+            scriptkd
+        SHA-256:
+            7e75e5541e184602d38368b1bed1be04584d2e1000bf3dd337a45f13ea50fa7d
+            560728784109cb7e84489dcecb566777827f4cc180ebb170ca110b0bdad479ba
+            f76bdc2472636758ca4460119e906de9571f9c2b2cbc9d7688caf40a83fc1bff
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=scriptkd
+            https://www.google.com/search?q=scriptkd
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:57</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="c9cb0db3-1951-4745-9760-09514d3c88d3" operator="OR">
+      <IndicatorItem condition="matches" id="b71a4356-b4fe-4881-a743-26d23cffc0fc" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\RarSFX0\\nyomtatasi_sor_torlo\\(?:elevate\.vbs|nyomtatasi_sor_torlo(?:\.(?:ico|bat)|_elevate\.bat)|prn(?:mngr\.vbs|qctl\.vbs))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="5372076b-6d61-4d9f-bbfa-4400e78ea1a5" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\RarSFX0\\(?:start\.bat|Nyomtat\Ã(?:\³k\.lnk|\¡si\ sor\ t\Ã\¶rl\Å\\.lnk)|asztalra\.bat)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="609bd994-64b7-433b-848a-ef7afa619193" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\(?:1\.vbs|a\.bat|broot\.exe|LibraryFiles(?:1\.exe|\.exe)|image\.jpg|tlrrdpvdjvbmjynr)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

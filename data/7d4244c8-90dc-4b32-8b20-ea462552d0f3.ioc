@@ -1,0 +1,39 @@
+<?xml version="1.0" ?><OpenIOC id="7d4244c8-90dc-4b32-8b20-ea462552d0f3" last-modified="2020-05-25T12:05:57" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_bifrose</short_description>
+    <description>
+        Family:
+            bifrose
+        SHA-256:
+            bd6bc154b8b69535b423b3c5a95b0ebb6b29ed59193dd54aeb18b086bcddb306
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=bifrose
+            https://www.google.com/search?q=bifrose
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:57</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="c09cbede-5c4d-4204-9478-90dd18409bab" operator="OR">
+      <IndicatorItem condition="matches" id="67a40fc5-21c5-4144-8f97-9cea1da30798" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\/bkpsgp\\(?:Actualizador\.mdb|DetieneProceso\.bat|Sgp\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b4d7281a-7ccb-4db1-900d-dd8dc53124ec" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\/Extracted\\anon\.ico\.PNG</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="a765815d-ea7d-4aff-b451-2e449d499315" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">MuError\.log</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="1515354f-d1b0-4454-9c07-c0cc53bb3dc1" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\GameGuard\\npgl\.erl</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

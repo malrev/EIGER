@@ -1,0 +1,109 @@
+<?xml version="1.0" ?><OpenIOC id="e44734c2-3220-4de6-b879-14edf845baf5" last-modified="2020-05-25T12:06:02" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_tiggre</short_description>
+    <description>
+        Family:
+            tiggre
+        SHA-256:
+            19ec4f045482a79604b91c0ecb85af7823d868fe76971d9482a9f82ee142ac9e
+            7cd9ee538ae969288287c5e7e7370a58ca47ac1b0d0aec2c9d04c50c73da30d6
+            8f53872a7e0ee40838f7859719d6e7b33fbe5281ecc12382b56b02c7f6a594d6
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=tiggre
+            https://www.google.com/search?q=tiggre
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:02</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="739c71b6-0b46-4801-8ffb-926e5308e4c6" operator="OR">
+      <IndicatorItem condition="matches" id="f1667be0-e3e9-433d-887c-3163dc2567a8" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\ir_ext_temp_0\\AutoPlay\\Plugins\\sb_Chrome\.png</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b06ae8b3-b646-4742-88ce-c19d6a7d3c17" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\DriverMax\ 11\\(?:Registry\.(?:rw\.tvr(?:\.(?:lck\.TARO\-PC\.ffffffff\.6ec|transact))?|tlog(?:\.cache)?)|SKEL)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="924f59b2-1c98-403d-bc75-4ff9a657cbf7" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\LogMeInInc\\GoTo\ Opener\\UUID</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="cb18f689-4e45-4dfa-a1ce-db581dc3d457" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\ir_ext_temp_0\\AutoPlay\\Buttons\\Kapat\-4\.Btn</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="5ce568c3-df2f-4482-9f3b-a89db23b0af8" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\DriverMax\ 11\\SKEL\\(?:knhsmqptrvkqtqtppkmrtouuprjqrtojuokosliv\.Tls\-624\-1680\.Tls|418fd4459a54a9c1580b0ab4f101e4b3bfe82ea7\.SharedTA\.6ec\.194)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="40357de8-0909-41c9-b06c-87a4ed0ddb4c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\Revo\ Uninstaller\ Pro\ 4\.2\.3\\SKEL\\ohoshmtprsmhsnnokiqtrivnjkkktsuphrtrqsrn\.Tls\-1012\-1964\.Tls</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="f53704c0-7eb1-4934-848c-5a9c6556e4b8" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\LogMeInLogs\\GoToOpener\.log</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="3891e6e3-d58b-4c1b-b768-323362a3640b" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\ir_ext_temp_0\\AutoPlay\\Docs\\ZyGuard\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="26d122e8-8313-4e55-8a5a-b9a64381c26e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\Revo\ Uninstaller\ Pro\ 4\.2\.3\\(?:Registry\.(?:rw\.tvr(?:\.(?:lck\.TARO\-PC\.ffffffff\.68c|transact))?|tlog(?:\.cache)?)|SKEL)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b8c6dd28-2799-44e8-af4e-f0e7626d8e85" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\ir_ext_temp_0\\AutoPlay\\Icons\\icon\.ico</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="6356ad01-d693-4507-87f4-9bece6ad774b" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\VueScanPro\\(?:Registry\.(?:rw\.tvr(?:\.(?:lck\.TARO\-PC\.ffffffff\.610|transact))?|tlog(?:\.cache)?)|SKEL)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="58e841f3-e18e-4b5b-aa1d-1927f523a93e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\Photo\ Stamp\ Remover\ 5\.0\.0\\\%drive_C\%\\work</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="1137c138-d2d2-4db8-92da-8d9435c91761" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\VueScanPro\\SKEL\\jkutnqkqriojslslgtgkmgoruolrhtpsnghtqnjg\.Tls\-1376\-988\.Tls</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="36784dd5-ccf1-4b54-8d9c-5464ed5897b4" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\\\bassmod\.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="fe40bac1-0349-4bd4-acc7-715bf3276452" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\Photo\ Stamp\ Remover\ 5\.0\.0\\(?:\%drive_C\%|Registry\.(?:rw\.tvr(?:\.(?:lck\.TARO\-PC\.ffffffff\.6f0|transact))?|tlog(?:\.cache)?)|SKEL)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e8c9f195-4704-479d-bb7b-07f295c8dddd" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\ir_ext_temp_0\\(?:lua5(?:1\.dll|\.1\.dll)|icon\.ico|autorun\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="79778a1f-1f83-4724-b744-f94652d069fe" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\ir_ext_temp_0\\AutoPlay\\Images\\Protect\.bmp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="470264e9-6ca5-4834-b9cf-34f0b3b47870" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\(?:Photo\ Stamp\ Remover\ 5\.0\.0|Revo\ Uninstaller\ Pro\ 4\.2\.3|DriverMax\ 11|VueScanPro|4a917ebc\-447a\-42fa\-8002\-b0fef51369ad\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="359ab38f-b253-4ae6-b010-d7af5f427c4d" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\ir_ext_temp_0\\AutoPlay\\autorun\.cdd</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d8a71fff-9e6e-46a4-a1ad-0814dc296785" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\ir_ext_temp_0\\AutoPlay\\Audio\\(?:High1\.ogg|Click1\.ogg)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="9e2fe7fc-8490-4611-8c69-1180a3ab8e3a" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\Photo\ Stamp\ Remover\ 5\.0\.0\\SKEL\\(?:lrjrkqtgqsqmrmtgugjhtgjimmmmhusotuvrrvon\.Tls\-1516\-1472\.Tls|j(?:oqvssnotnsprhujntgjmjttiqhgsijgkovuuunq\.Tls\-1516\-1472\.Tls|poosiuuunpmumpquiunmimliijjqtmlhtuvusqm\.Tls\-1516\-1472\.Tls|gpkmgshqjpuupghguuvrlkqpljtjrstthtmsmpq\.Tls\-1516\-1472\.Tls)|t(?:prrvhqjvmvhgsqnuvikikhqsmhogltogsppvnqs\.Tls\-1516\-1472\.Tls|vhhihpnpmmvlrlnvquhmtporhkvsqhturnvqgkg\.Tls\-1516\-1472\.Tls|iiosngqolvilgogprughlnnjsugrolsopkvhuou\.Tls\-1516\-1472\.Tls)|irlunjjhunitnhshrvrkqsqvvoptvooknumqpuqm\.Tls\-1516\-1472\.Tls|u(?:rvqqvmjtukunogghltrupnurrggisntujupslhk\.Tls\-1516\-1472\.Tls|hllikrkrqqtqpopjlimnvpnoqlmkgvtktpgutoj\.Tls\-1516\-1472\.Tls))</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

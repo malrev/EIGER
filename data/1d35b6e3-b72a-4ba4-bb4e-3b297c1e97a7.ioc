@@ -1,0 +1,43 @@
+<?xml version="1.0" ?><OpenIOC id="1d35b6e3-b72a-4ba4-bb4e-3b297c1e97a7" last-modified="2020-05-25T12:05:57" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_vmprotbad</short_description>
+    <description>
+        Family:
+            vmprotbad
+        SHA-256:
+            eb7db2097510971e0987cf8313c51567af37dbd5f2730a02cbc47ced4beb2d26
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=vmprotbad
+            https://www.google.com/search?q=vmprotbad
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:57</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="54abb652-8a29-4cf8-9f70-541a36e0a6a8" operator="OR">
+      <IndicatorItem condition="matches" id="449c9fb0-1a46-45a4-a3a8-0dcf510a3166" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\RarSFX0\\(?:iClient\.exe|usp20\.dll)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="be70ba67-400d-4ebf-9394-9b3dc439fc5a" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">cmd\.exe\ \/C\ WScript\ \&quot;C\:\\ProgramData\\kydudqtYtV\\r\.vbs\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="3affa971-ec9d-4123-b26a-96db5e50abe3" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Windows\\System32\\wuapp\.exe\&quot;\ \-c\ \&quot;C\:\\ProgramData\\kydudqtYtV\\cfg\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="f5d8f442-90a3-4c9e-b110-55e6d9f81100" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\SkinH_EL\.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="687b20b2-86b5-48d7-8004-68ba15723be2" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\kydudqtYtV\\(?:skinsunlocked|r\.vbs|cfg(?:i)?)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

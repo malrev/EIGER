@@ -1,0 +1,29 @@
+<?xml version="1.0" ?><OpenIOC id="062cb031-9459-4e8f-ae96-0f2850397281" last-modified="2020-05-25T12:06:00" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_barys</short_description>
+    <description>
+        Family:
+            barys
+        SHA-256:
+            c85e2ba611dcef0bf99ad0791b18255d8f83d4d994706164f2427c8eacabc1e9
+            ddd76ba037242965fdcf662fb34aff3a1ff1bc470c9ea1337194fa21ea735a41
+            cd85ea36ac3650a3586cafeb1ef617d1ea1a1e817cff1b4cf37e794b628f7344
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=barys
+            https://www.google.com/search?q=barys
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:00</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="33ed212f-0914-453c-9d04-b34bbc0ed520" operator="OR">
+      <IndicatorItem condition="matches" id="ec46e3ca-7a9e-4be5-b7ee-e0f7c35d6c99" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\tmpfile0\.bat\&quot;</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

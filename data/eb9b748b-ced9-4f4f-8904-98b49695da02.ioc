@@ -1,0 +1,102 @@
+<?xml version="1.0" ?><OpenIOC id="eb9b748b-ced9-4f4f-8904-98b49695da02" last-modified="2020-05-25T12:06:01" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_gamarue</short_description>
+    <description>
+        Family:
+            gamarue
+        SHA-256:
+            f8b179f0ec4e513947080b955d5655f1f4d537b29667b0413c9ba407fc6ad563
+            e176019480e167f902daedde574eedc84c5bf8b95ad2172483a35bd227929d86
+            e6c68851c72d811c831381b0b89fe508ebcb3e212c9440ad94c74a2ecbaac7dd
+            edb61d239d5b1860eebdf375ca60deb7df0907ea72b9383874b3a54d1be22095
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=gamarue
+            https://www.google.com/search?q=gamarue
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:01</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="c04e5607-d35e-44f7-bf16-595fe50c3755" operator="OR">
+      <IndicatorItem condition="matches" id="943d2482-45e0-4a43-9ff6-0aedce6c86c1" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\SafeBoot\\Network\\LMIRescue_[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="0fc49380-874f-4919-9d76-740f4d3fc753" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Users\\.*\\AppData\\Local\\LogMeIn\ Rescue\ Applet\\[A-Z0-9]{4}[A-Z0-9]{4}[A-Z0-9]{4}.tmp\\LMIR13CA9001\.tmp\\LMI_Rescue\.exe\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="7679536d-371d-4965-a44f-f4f6c943321f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\LogMeIn\ Rescue\ Applet\\[A-Z0-9]{4}[A-Z0-9]{4}[A-Z0-9]{4}.tmp\\LMIR13C8D001\.tmp\\(?:session\.log|logo\.bmp|r(?:escue\.log|a64app\.exe)|chatlog\.dat|params\.txt)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="49daf8ee-46aa-4191-8eb5-00d9faab1124" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\LogMeIn\ Rescue\ Applet\\[A-Z0-9]{4}[A-Z0-9]{4}[A-Z0-9]{4}.tmp\\LMIR13CAA001\.tmp\\(?:session\.log|r(?:escue\.log|a(?:hook\.dll|64app\.exe))|params\.txt|chatlog\.dat)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="61821be3-7401-4f01-b726-f2263ea07728" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\LogMeIn\ Rescue\ Applet\\[A-Z0-9]{4}[A-Z0-9]{4}[A-Z0-9]{4}.tmp\\LMIR13C78001\.tmp\\(?:session\.log|rescue\.(?:log|i(?:nfo|co))|params\.txt|chatlog\.dat)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d93c00f0-5b56-406b-9ff0-9c37235a7698" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\LogMeIn\ Rescue\ Applet\\[A-Z0-9]{4}[A-Z0-9]{4}[A-Z0-9]{4}.tmp\\LMIR13B5F001\.tmp\\(?:session\.log|RescueWinRTLib\.dll|params\.txt|LMI_RescueRC\.exe|logo\.bmp|rescue\.log|chatlog\.dat)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="5ab21278-a50b-42f9-b28e-0997579031a1" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Users\\.*\\AppData\\Local\\LogMeIn\ Rescue\ Applet\\[A-Z0-9]{4}[A-Z0-9]{4}[A-Z0-9]{4}.tmp\\LMIR13B58001\.tmp\\LMI_Rescue\.exe\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="8537968f-a084-478a-9495-ae34a24dc8a5" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Users\\.*\\AppData\\Local\\LogMeIn\ Rescue\ Applet\\[A-Z0-9]{4}[A-Z0-9]{4}[A-Z0-9]{4}.tmp\\LMIR13C7A001\.tmp\\LMI_Rescue\.exe\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="2a1d4c9f-6912-4ad3-8243-bd8b252c1e32" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\\\*LogMeInRescue_(?:1708226388|3802377919|4198674441|550326520|2(?:119241406|7(?:14103012|36776836)|661702057))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="bbb881c6-b2bf-40ea-a873-8ef736fbd029" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\LogMeIn\ Rescue\ Applet\\[A-Z0-9]{4}[A-Z0-9]{4}[A-Z0-9]{4}.tmp\\LMIR13C7B001\.tmp\\(?:session\.log|rescue\.(?:log|info)|params\.txt|chatlog\.dat|RescueWinRTLib\.dll)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="30a0d65c-cb17-45e6-9c8c-62d22fded461" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\LogMeIn\ Rescue\ Applet\\[A-Z0-9]{4}[A-Z0-9]{4}[A-Z0-9]{4}.tmp\\LMIR13B58001\.tmp\\script\\alarm_win8\.bat</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="088aa394-d3b9-422d-a68e-ad8e10c89b14" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\LogMeIn\ Rescue\ Applet\\[A-Z0-9]{4}[A-Z0-9]{4}[A-Z0-9]{4}.tmp\\LMIR13CA9001\.tmp\\(?:session\.log|params\.txt|LMI_Rescue\.exe|logo\.bmp|r(?:escue\.(?:log|ico)|ahook\.dll)|chatlog\.dat)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d1777390-54d2-46b4-b6f9-f73c27b7947c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\LogMeIn\ Rescue\ Applet\\[A-Z0-9]{4}[A-Z0-9]{4}[A-Z0-9]{4}.tmp\\LMIR13C7A001\.tmp\\(?:session\.log|LMI_Rescue\.exe|rescue\.(?:log|ico)|params\.txt|chatlog\.dat)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="02d5c22c-8516-4bec-a154-88af2f17861d" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\LogMeIn\ Rescue\ Applet\\[A-Z0-9]{4}[A-Z0-9]{4}[A-Z0-9]{4}.tmp\\LMIR13C7F001\.tmp\\(?:session\.log|r(?:escue\.(?:log|info)|ahook\.dll)|params\.txt|chatlog\.dat|RescueWinRTLib\.dll)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="bb8cf730-bf46-463e-8345-eccce1adfa8b" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Classes\\Applications\\LMI_Rescue\.exe\\IsHostApp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="1026d95d-7747-4e10-bec9-3cdc43cb53aa" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Users\\.*\\AppData\\Local\\LogMeIn\ Rescue\ Applet\\[A-Z0-9]{4}[A-Z0-9]{4}[A-Z0-9]{4}.tmp\\LMIR13C7B001\.tmp\\LMI_Rescue\.exe\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="4176d304-b9f5-40a2-9d94-e3ac50f8fe1b" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\LogMeIn\ Rescue\ Applet\\[A-Z0-9]{4}[A-Z0-9]{4}[A-Z0-9]{4}.tmp\\LMIR13B64001\.tmp\\(?:session\.log|RescueWinRTLib\.dll|params\.txt|LMI_Rescue(?:_srv\.exe|\.exe)|r(?:escue\.log|ahook\.dll)|chatlog\.dat)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="620d1b8d-7b5a-4e58-ae3d-201da889a503" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\LogMeIn\ Rescue\ Applet\\[A-Z0-9]{4}[A-Z0-9]{4}[A-Z0-9]{4}.tmp\\LMIR13C7C001\.tmp\\(?:session\.log|params\.txt|LMI_Rescue\.exe|logo\.bmp|r(?:escue\.(?:log|ico)|ahook\.dll)|chatlog\.dat)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="604bddba-e739-4328-bd69-074965521e7d" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\LogMeIn\ Rescue\ Applet\\[A-Z0-9]{4}[A-Z0-9]{4}[A-Z0-9]{4}.tmp\\LMIR13B58001\.tmp\\(?:session\.log|RescueWinRTLib\.dll|params\.txt|LMI_Rescue(?:_srv\.exe|\.exe|RC\.exe)|logo\.bmp|r(?:escue\.(?:log|i(?:nfo|co))|a(?:hook\.dll|64app\.exe))|chatlog\.dat)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

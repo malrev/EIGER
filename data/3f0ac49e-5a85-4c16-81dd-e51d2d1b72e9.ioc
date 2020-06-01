@@ -1,0 +1,39 @@
+<?xml version="1.0" ?><OpenIOC id="3f0ac49e-5a85-4c16-81dd-e51d2d1b72e9" last-modified="2020-05-25T12:05:58" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_farfli</short_description>
+    <description>
+        Family:
+            farfli
+        SHA-256:
+            f6dbffe458a1b2b0e6ab67793a3a80a75db40a1bc5dd300168e34c04c0fc5149
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=farfli
+            https://www.google.com/search?q=farfli
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:58</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="ced0914e-a60b-4460-b218-2792ad10d624" operator="OR">
+      <IndicatorItem condition="matches" id="0758bca7-6d5a-4781-aad7-18df8f5ee531" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Rsrxuj\ bgpjckvk\\(?:MarkTime|ConnectGroup)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b27f4587-9d8a-4848-9bc6-f2fc5d7b7fb2" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Microsoft\ Iqieyq\\Vyxzrkc\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="4c0ea203-517f-444f-bacd-46a79b0081cc" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\win\\(?:help\.exe|arphaDump\.dll)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="6c682b5d-dce1-439c-a9b6-2edfa3f61e97" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\win\\help\.exe\&quot;</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

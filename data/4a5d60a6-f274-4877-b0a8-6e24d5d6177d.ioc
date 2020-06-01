@@ -1,0 +1,164 @@
+<?xml version="1.0" ?><OpenIOC id="4a5d60a6-f274-4877-b0a8-6e24d5d6177d" last-modified="2020-05-25T12:06:03" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_autoit</short_description>
+    <description>
+        Family:
+            autoit
+        SHA-256:
+            e20c9313c7b3bd0ae0ccfca6aa95d520ea325fb3e50a837311f30d7146c74588
+            f8e96fcb20ac57ab95cf839d17914719a0cba18aeed1e3727247f94556fe9926
+            d4632c7287238b545259d68fc4c0918686c851151bc215934f43c75df6c5ae81
+            9bf00370d7ce501407903b0435920664abc86712b94263575e72ad9aa98022de
+            d4d70d7bc859a86233d96a08e63ca482093c7d0ba742698f02de7efc6c5e81da
+            57907846f9228af7f0e31b338a372e4548cd6f791b6fbd6eaaae57b3e55e5ae2
+            b0cdda51c726715f06cbc8f3782181701886fe931263724c116f37ecff5f3281
+            c3438d5ed0e1e34cb327aef6f1bd3ed1765165c74bc9070c3429feec677951e7
+            fc513109a1f0c4d55e68332abd3a70f1e10acdd4c10bf35c7a2028f514200991
+            f790dda3b92a30439730fe719e3d421bba22b82985b63c5b9868ee8fa676a660
+            fed6f0c1905a972771bb449194cbd2e0ec33258dda492caab2b368c563e4a29c
+            ad4a3f57192ff22b2302fe8257c25d8a14ecff134cd557b28b7e6c635802393a
+            fc511f8a7166de17dfb4941566c3995e30ba08091b43101bd8130acb7722ef05
+            cb0a3504bf404124f83e0f9db5453ba1f1943f73dd19196a5b7d780ad2213bec
+            d54cf16071a2c7b3c52c0d2acd93fe8ddb6306a4612e37d56f50c215119047e9
+            ab593827ab92fe1958d8621cedabcbd9aa8a9574364c2752454b92f113651728
+            f4fb39e017255da413bbe3db66a8713ebde2cd902fe0361717fa9c4e3f94684a
+            f79f3e478f781ebaae8d7b7765ebea56cc803341d39a6a0af46c48c3482910e7
+            bbb5dd61a5040eb1bbfb3f486d1f10bfe955a999d1797abf7eda06de7a5a5296
+            efaa604f6ac3cdcd8c94858825d8d23adafa1bb911b3beebc13480837f3cef69
+            e10c3d194f83561ef076dffe58224407ee30e93d2c4a739385e17fd0fb153d64
+            b6423a90227ed2d30952943cdfc63e4f31b2c79a15f80e5f2fb6aa9efb75dcbe
+            bb97767842be4149a37ebd09d678d50653f313c277344b3368cedec2de0481eb
+            af5fa7a074f512f417d94f5fcb463dc0c5feff4224602659355a6002b24cfdc0
+            c51d3c8be3936b476ac729e5ddc15eb4dcd5dea18dbcf8200f0767b33ab0b076
+            be50c2edc79fc8c09fa4419c7e3971bf11ed92be13f9baa6442b4922db677a0e
+            bd26fa9983c02b5f73668e0831cb26844fc030456f6c093b612c65e323a0def8
+            cb307016b4f3a19f62f0cbd5d35fe63a6a322d21b4cecf4bb20025a59d70877a
+            b11297ccdc36a277df52b8952f8e880103bbce07e79a5bb402fc70738dc45b01
+            8697ed89ac8612c5aa426195a1d551d1c7a43860592502834100f5f46ffc6e41
+            d2a596f69c37855d269cea2499f20fc582019622386a42dbe62e042cd0728863
+            cc97aead574e90b280800af9e694d01261a2760b931eda18f04c43bd455e4167
+            c584e587c6ad57fc48bc35c4fa3e729591b1494c5f145bc9ef1e38c65845218d
+            ad9ea5b167903ef8e96c630a6425b71c23113b59a11bed12c824a32b9e587051
+            a3505650aa37cc2892edfe3f53f5cc52dd5ff4a67cbf10de1cf4eb8efe709c7f
+            e15ac2e5b227dadc88f20241ae0e54be7b38043037d792e301e323d13cead29a
+            01e1e59067dc79707de6b83ebcdee33bd178af9a3ca7fd4bf0aca8a7c88e3768
+            c21f90f37202d84d9fc1b2a35d7e4121a9f095713d1a4c4bfe80f3dba418c703
+            2a384d615ad11ca6372dc56d03670c21f65b85555aaa11a20c0ff9c4a70f6cb9
+            e67f60c9bfcbae3d3525889797f08855a3ecb8aaf8df8787800c8a14c72722c2
+            aee2eb25625189022dbca177cd003ec5c874d519c750c8ae8d5815d58d2da0db
+            d4350a56f8556d51cb0a4b253cbff63ca9496c93bbe5f3236e07acb48c22a4cb
+            b91d28d90958d7681010390174b35f59689f416ad8220a7c74f20c578cc93a3a
+            fee924f94c868d15816c118311214e0e6d10c6e11316b490e50d151bc2d261ab
+            ed432e4739b054aeb9d0765e4b47708d5cff5f4903603a08b44bd04cb80f26f9
+            8fa02426d84cb3a378173d6e07ba26e747783c9224f32a151a1a46eb74e79a92
+            e4d6ddf2982443cd16d5fc678fd3c7a771393d51bef1b7240de49b6dcedb9131
+            dbcf167b52c31570f181068caf8905f3bb21b173feab77468ef1112443e8c505
+            485f897573d1c2cb3a8b8d7b36a6e3b40f1c57f7c36232e5f9676d08382f42c3
+            fcde661a96a6352ae04e5127c9d1844079dbd05980564cef93bdd96069fce8a0
+            3e8f328bce260a099b0d4d9e0aac17ac6f7afd76f92876edc6416004146e4724
+            8b7d8f5878675f971291c46c3c1af895b0bf3fd36d7b838ecf9ab0094594c64d
+            5a92891ef481f56e4f8fbaeecaca1de5b2ae9b96ece41335b47fdf39227eeb55
+            e0a13209a5733476472c9fec57774e5d238eb2aa1ddf588d4f64457de4cefaa8
+            f7934042c0406e3c10c5f44661319998ac722b4183a3e0c2b236f89cca97c404
+            f04029e2c0bac55ec62cad2090d80fccc5f3a8de919565f2f4c8275d1d3d40c5
+            ba63ddc747bb10ab90f714892b6a06a8c7a558b634d0156be8ad204cf4ced334
+            c198a6d100f23fc993ba73de09190c24ec3fc83c5a3126d81c980fbf2438ebdb
+            be6de79eb2fa8e1338b8c8feb874f3e7164ad561737bf41b9183322843d7b039
+            f0f491f2ac7cd43ab869034b44716b4d66b998ccb21b894c80ca71b7baf7c9e7
+            6ebc49b4c74bad7a64b3da515fcb713571490dcb905885cb52354fa7eadbf446
+            1b92f6c743e96c5aca95c768e64f80dc33e6a6aefd8361f25a6c5edaf8645e94
+            d3c9c658f9496fc4a3d7a548d2f3dc127e2eaecd9aaf633db93e370c3cd5eef1
+            beab732cea2740815a6bc9f6bbcff06301290c86ab112cd15fc566ccec6dc399
+            fbcf7e5f73d868de22fe00080d825cfa9ce9641a92a66f5883d3bad5a8db25d9
+            c0243377c847ffd7f292a3ccc931d6e44da1ef2e4186f387e70f24cf69342d57
+            d412c19152a4aeb9dd6bc12f6af13152ed98f2b217c3202177881a999076a6dd
+            dd40ebf12571b9958ddd0b858969b8f1dc79dbed5bc6aa3ac83990976e9d192d
+            a637399ba60bff972e936f8d8ef26e25b0274eafbf85a9c37ebe4740a19dbd53
+            7caf081d7e060a181a5d40705e91020d2b5bb90160ff3f3b8472a46827afaefc
+            33318539cfd16ce1d6f1cd45885d39c5534b8ccc6a81a64b53fb890b96fd9cee
+            ea12e8397d1e8afb620094bdb30d803b2f667b15fc8e415c94b8c6c3c6c403f4
+            d59f87b213fd809d2e02717d5ad1b76acc924705de0228d20ea293d25e25baa9
+            52eea9648859db409d3fb8ffd537c6aacacdddc224fa4b1673a0e5ce6eec2b08
+            9c15dd1851ef80cb5368ba8d4a3b1b8bcc250bebe5d74934365dbdbb8bfc8406
+            fb5d2fbaab7b2933a16a31b14567d81db8d0df0f6efe506322d6b5811c18a43e
+            b0044c63bdc45be2ba0536ccc3e97236ca335469e9bf83c0b894dbc3796afa6d
+            953b471d155fb2d5baa7c3a959793e06d93fe63e402369b215d9ef473519aed4
+            a79ef69a5bad94fa3ac3a3d3804bd4c5a7c9cec63245665c5b66bddf6941c423
+            38f0f37ad601bb1434aaec1d786ee58213ead0e877e90ae656c6a7e6461d1129
+            c919ec54980c11d415579d990d00df36d3a7e12641d15f24e0d5cdaf76d0123a
+            fec3a5211a2bc12056e13af67aa1c32b571a49d6fd6a6e9a5f9e25eca1757c5e
+            b4886f78fff72d7845c451da3aaf00d63c391e8caa018e3beab3e2124a891685
+            836bca1b088b17be6bcd7cd680c3303f049f31f2df499f4d5a49b66663d33306
+            874bb80f39b752fd5d31e69e43fcf1362f276e217d37c8ea5158068fa5d9b9b6
+            50ef6a1c22c5b9923f292da2ca419d60c5dbc20a861b641ec144700a2d6c66e6
+            ea6e45a2d637d72be517327d2b0f45ce71517b032651c582dca388f4f53c9cfc
+            e6f718d821db1dcc4e928546cafa29c6261dad3907d68f7ef89bc3b13076ed3d
+            a0cf63dcce3e1f36b37aee28ab3e31c84c3ba22bbbad74392b037f8023622600
+            90a719a98df4b5b0eecc9ad872871855f155d2117d96afdd655372e8bcd1cac2
+            b5a3c08872e6ab272bb5f5fb4e0bf91eac9a99baad844e6fa28c0ea328d9bc5b
+            8570d10a23e23c84478fb3c4fd4d298a4b6b5ed2c768bb3725bd06ee2e0494dc
+            eaf8294c976f8110f10d3abbd5dc3a4047363b14783cf856c6cd334d5e7f6dac
+            d229082c5889bd9746a341d836fa6f60dd80a4909d7934491c0b6e7a8c64a66c
+            fdae0592821ba41120dca0987a68af03deaed48f17a0dfb8490eb331d25f772b
+            f6dbf3fef114ca6058918bfc0d065a427ef4d9bc94efceb06c442a880bf8aeaf
+            fd0694a0c4c343019e818d9259b36137694ccc45c248b29f52aaee275c96d241
+            e9728eb0f0e75969ff53f0b28044669f546dfcedb72f43595c54667f34d493b6
+            9be92057e30ead43e78236032c3d29a59fde1c3a17d6e2efcd777ba3d2d9657d
+            ace45615714cbb2806053d38f1f6a760bfe310715aaac404e21e46611f018b3c
+            81a96ccadfc24f5c492aa18884d4aa79fda8a5456469e5cb7bf9b226d6fef68f
+            fa48237e6d2c0c1be50e29cbe33be94ed37fcd71c8ba3d8e4792d565162a12de
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=autoit
+            https://www.google.com/search?q=autoit
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:03</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="1456f648-55aa-48ae-b631-40424c8f1979" operator="OR">
+      <IndicatorItem condition="matches" id="93a35790-91bc-41f2-9a7d-48956322107f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\Microsoft\\Windows\\Start\ Menu\\Programs\\Startup\\(?:System\.url|bitsperf\.url)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="3c88a127-aafa-4c08-bd64-1f0eb3a6735f" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\at\.exe\ at\ \ 9\:00\ \/interactive\ \ C\:\\Windows\\svhost\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="752dcd7b-a54a-43c3-8305-5ebbe72d7f90" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">commander\.exe\ \/C\ at\ 9\:00\ \/interactive\ \ C\:\\Windows\\svhost\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="728737f0-7e40-489f-9735-084ff9e32088" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\IXP000\.TMP\\TMP[0-9]{4}\$\.TMP</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="08cf08e4-d996-4a8a-b6f6-ab996f80c5f6" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">schtasks\ \/Create\ \/SC\ ONLOGON\ \/TN\ \&quot;Windows\ Host\ Service\&quot;\ \/RL\ HIGHEST\ \/TR\ \&quot;C\:\\Windows\\svhost\.exe\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="0e94a162-2b9b-4275-85a6-45cb4924973d" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\bitsperf\\BOOTVID.exe\\BOOTVID\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="96b8efa3-daaa-4ecd-aa42-086adb03e898" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\(?:Startup\ Name|Utorrent|MicroUpdate)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ed09bf8b-a753-4318-b4f4-ddd34888639f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\(?:commander\.exe|history\.log)</Content>
+      </IndicatorItem> 
+      <IndicatorItem condition="matches" id="8d40e82e-82ce-49eb-a6e6-a4ed4fcdae3b" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\(?:32\.exe|UuU\.uUu|asacpiex\.dll|1\.resource|C(?:L_Debug_Log\.txt|R_Debug_Log\.txt)|XxX\.xXx)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ecc63e1d-dcd7-4c06-a0a5-c439084c7c0f" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">(?:schtasks\ \/Query|notepad|commander\.exe\ \/C\ schtasks\ \/run\ \/tn\ at1)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

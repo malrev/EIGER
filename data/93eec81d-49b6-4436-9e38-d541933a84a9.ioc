@@ -1,0 +1,53 @@
+<?xml version="1.0" ?><OpenIOC id="93eec81d-49b6-4436-9e38-d541933a84a9" last-modified="2020-05-25T12:06:02" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_enigmaprotector</short_description>
+    <description>
+        Family:
+            enigmaprotector
+        SHA-256:
+            66c5e248e8fd411149ac417c0355b4a57a7a962c558c52182dd2adc459ddc9cf
+            7d4f1f57b0c0892d8004290b2cb05b2b3adaba1cd5f9e1a9e2a57274968c666d
+            eb92cfed1ec5ab1d0b3e56a0867a9059321a08de543f7966c04f433983209b9f
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=enigmaprotector
+            https://www.google.com/search?q=enigmaprotector
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:02</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="2760df81-b332-4207-aeb6-c86859caac6b" operator="OR">
+      <IndicatorItem condition="matches" id="f80170a1-ac4f-4b42-af82-921c42b2820c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">c\:\\work\\Ojee</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="3917e3a7-d379-49bb-8897-5a0298854ed1" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\[a-zA-Z]{11}\\mo(?:ff\.db|cc\.db(?:\-(?:shm|wal))?)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d912b880-8f86-486f-86f8-dcd113eb3101" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\Dcs\\ivm3(?:1_protected\.exe|2_protected\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="9f3ab8a8-8eeb-44cd-beb7-73421603272a" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Enigma\ Protector\\[A-Z0-9]{16}-[A-Z0-9]{16}\\[A-Z0-9]{16}-[A-Z0-9]{16}\\[A-Z0-9]{8}</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="3e5d80eb-f511-4867-9c19-7d8b80d7c9df" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\(?:\è\ã\ð\à\.exe|coloring\-book\-the\-gigantic\-turnip\-child\-vegetable\-pencil\-others\-removebg\-preview\.png|H2W_x64\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="9066d55e-c70f-4da0-b994-a158c7331e68" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\Dcs\\ivm3(?:1_protected\.exe|2_protected\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e92b204b-478f-403f-821f-56148aba5b6e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">c\:\\work\\Ojee\\p\.li</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

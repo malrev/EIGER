@@ -1,0 +1,48 @@
+<?xml version="1.0" ?><OpenIOC id="e820e23c-91ab-40b0-b364-be48fef59cb7" last-modified="2020-05-25T12:05:58" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_chapak</short_description>
+    <description>
+        Family:
+            chapak
+        SHA-256:
+            cfc8a226a3f7530089cd0ef97544d57af0be45e64b3e48f818182625b321634a
+            8de6d8cc9764b19a481c9b662d7951ae4a90a4a960e854b8d1905b77420b8b85
+            b635a45f97ff2cab520fe1a1541897e57af9bf376b9afb48adf57075cbd2b580
+            7656af388783101587999fa282d5420905da05169b7e0d1144131b0e103e31fd
+            f844dafa85cf3ba3ba45d83a401c98a6f648d617e25aaf8b679562540ff96af4
+            74210a31b7d58ff672e4635fa317f0c587aed378c19bae5cac046ac5b3767024
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=chapak
+            https://www.google.com/search?q=chapak
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:58</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="30121f80-fdfd-47e5-af67-49d8c2d5cdb9" operator="OR">
+      <IndicatorItem condition="matches" id="6071c5e9-09cf-462b-a27a-e106f7474b4d" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\\*\\shellex\\ContextMenuHandlers\\7\-Zip\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="888aec48-3edd-4658-a2bc-56cf6fd09f8b" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\Folder\\shellex\\ContextMenuHandlers\\7\-Zip\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="5f7099b3-fa6e-4bd9-9538-e80b51111c70" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\7\-Zip\\Path</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="bda2b021-af88-417d-a48e-ee3055599c67" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\Software\\7\-Zip\\Path(?:32)?</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="42b95862-2038-44ed-addf-37fcb305b74d" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\7\-Zip\\Lang\\(?:s(?:q\.txt|a\.txt|v\.txt|l\.txt|k\.txt|r\-spc\.txt|i\.txt)|d(?:e\.txt|a\.txt)|zh\-(?:cn\.txt|tw\.txt)|p(?:s\.txt|a\-in\.txt|t\-br\.txt)|h(?:y\.txt|e\.txt|r\.txt|i\.txt|u\.txt)|b(?:e\.txt|n\.txt|a\.txt)|n(?:e\.txt|l\.txt|b\.txt)|k(?:y\.txt|k\.txt|u(?:\.txt|\-ckb\.txt)|a(?:\.txt|b\.txt|a\.txt))|it\.txt|c(?:o\.txt|a\.txt)|ja\.txt|u(?:z\.txt|k\.txt|g\.txt)|a(?:st\.txt|n\.txt|z\.txt)|yo\.txt|e(?:s\.txt|u\.txt|l\.txt|o\.txt|n\.ttt|t\.txt)|l(?:v\.txt|t\.txt)|f(?:ur\.txt|r\.txt|i\.txt|a\.txt)|m(?:s\.txt|n(?:\.txt|g(?:\.txt|2\.txt))|k\.txt|r\.txt)|r(?:o\.txt|u\.txt)|t(?:r\.txt|t\.txt|h\.txt|a\.txt)|g(?:l\.txt|a\.txt|u\.txt))</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

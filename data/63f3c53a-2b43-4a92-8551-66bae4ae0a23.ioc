@@ -1,0 +1,49 @@
+<?xml version="1.0" ?><OpenIOC id="63f3c53a-2b43-4a92-8551-66bae4ae0a23" last-modified="2020-05-25T12:06:02" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_startun</short_description>
+    <description>
+        Family:
+            startun
+        SHA-256:
+            edb591d2eb46daf1013e501bd98db478e3c5b1f72add5a7d1b38b1416f3607a9
+            e72177f724dd22c733ce5d01bc543df5e1220a1fd88fa5a896461abe97deface
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=startun
+            https://www.google.com/search?q=startun
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:02</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="3ad2e9c1-c8d9-453c-b8e6-e3d151608e15" operator="OR">
+      <IndicatorItem condition="matches" id="f1c4b7ca-3999-4868-a282-acb53986acd2" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\Temp\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\\.ba\\(?:BootstrapperCore\.dll|Janus\.dll|Microsoft\.Deployment\.Compression\.dll)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="5083a3b6-b979-4f23-a916-9721816706e1" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\Package\ Cache\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\\\state\.rsm</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="362ebbaa-3804-423e-acaa-f7692b5309fb" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\Temp\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\\.ba\\[0-9]{4}\\mbapreq\.wxl</Content>
+      </IndicatorItem>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="3571e444-b819-4b3f-badf-ec584eab31c9" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\Package\ Cache\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\LabTechRemoteAgent\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="819547ee-75a1-46fb-b58f-a51b57d03916" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\Temp\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\RemoteAgentInstaller</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="005605ae-4568-4146-baf9-a0f1428bcd0b" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\Temp\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\\.be\\LabTechRemoteAgent\.exe</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

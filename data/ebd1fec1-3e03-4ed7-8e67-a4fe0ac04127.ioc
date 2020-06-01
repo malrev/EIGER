@@ -1,0 +1,85 @@
+<?xml version="1.0" ?><OpenIOC id="ebd1fec1-3e03-4ed7-8e67-a4fe0ac04127" last-modified="2020-05-25T12:05:59" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_mikey</short_description>
+    <description>
+        Family:
+            mikey
+        SHA-256:
+            7dee9a25e122326482baae9f226569750416935d3f45aa021a9f9ae674acf765
+            cef865c2c84a57b88c6d9f617beb534c5a565bd2c9f4a6a51bb006f9b75adeb9
+            ecf3d8c6ffd10c3869945797032683d9308c23a492eed664f269393232373193
+            fad36e5f6487a3136ab8ba57e0cf095592089edb6f44de82930de5a4e5b4853f
+            283f5bea767e5e9e279ffbb4d7c453ada2b37f3b752b1ad1cc2c2bfa879fa11d
+            b63423af4f255c23ee1e9935338528e3d457095e06ae452fc5ea2d7e8b6f55d2
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=mikey
+            https://www.google.com/search?q=mikey
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:59</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="14382a24-f891-427d-bc25-76ec9120c36c" operator="OR">
+      
+      <IndicatorItem condition="matches" id="8fa2ca18-0742-44a0-9c31-03a57467d232" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ \/c\ \&quot;reg\ add\ HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\ \/v\ winexplorer\ \/t\ REG_SZ\ \/d\ \&quot;C\:\\Users\\.*\\AppData\\Roaming\\Windows\ Explorer\.exe\&quot;\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="4ddcd297-c9bc-4fe6-9b07-e4979576f90d" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\Include\\pyconfig\.h</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e30036e3-2dca-4545-90c6-7b97b71ffd3b" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\(?:_(?:s(?:sl\.pyd|ocket\.pyd)|hashlib\.pyd)|select\.pyd|python27\.dll|virus\.exe\.manifest|bz2\.pyd|unicodedata\.pyd)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d628ee29-f9f0-4a53-9a35-e4dd20ae11bd" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\7F4987FB1A6E43d69E3E94B29EB75926\\downloader\.(?:676\.log|2044\.log)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="da7b1b55-9d56-47fa-aaf9-86dc5747b99b" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\h7336i5356\\(?:reabcurqnv\.huh|mwniwcurkp\.dat)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="13a3fd31-9c04-40e8-b512-bea97ee23a5d" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\Avast\ Software\\Persistent\ Data\\Avast\\Logs\\Clear.log.tmp.[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="43c1c1df-997c-4e19-9444-054926faecb2" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\sfaret</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e47ec70f-e861-479b-b02c-2191be7e22dd" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\AVG\\Persistent\ Data\\Antivirus\\Logs\\Clear.log.tmp.[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="aabb0484-8b1a-4ce7-8b68-c09a42df1ec1" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\\{D27PLA72\-DCA2\-5JIA\-B8CB\-D165ZHUOA25\}\\setup\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="0971dad0-1b99-42bd-9e55-d31479e4e1ad" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\(?:_hashlib\.pyd|unicodedata\.pyd|select\.pyd|python27\.dll|Microsoft\.VC90\.CRT\.manifest|bz2\.pyd|m(?:svc(?:r90\.dll|p90\.dll|m90\.dll)|ain\.exe\.manifest)|time_script\.exe\.manifest)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="f696ca2a-174f-426d-82ce-cab1a2893e5c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ab29a6ad-891d-40ff-9882-e894656a7a3b" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\(?:_(?:s(?:sl\.pyd|ocket\.pyd)|hashlib\.pyd|ctypes\.pyd)|select\.pyd|py(?:expat\.pyd|wintypes27\.dll|thon27\.dll)|win32pipe\.pyd|bz2\.pyd|HelloWindows\.exe\.manifest|inventory\-3\.exe\.manifest|unicodedata\.pyd)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="60b0ae94-0800-4605-9c8a-fde8e1e90e8d" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ C\:\\Windows\\system32\\cmd\.exe\ \/c\ color\ 06</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="f4a16dd9-d409-4876-b55e-4283d48d930c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">\.\\patcher\.id</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

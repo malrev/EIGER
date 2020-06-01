@@ -1,0 +1,64 @@
+<?xml version="1.0" ?><OpenIOC id="e6b45e22-7d83-47e6-8217-c986fd97c6d0" last-modified="2020-05-25T12:06:00" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_msilperseus</short_description>
+    <description>
+        Family:
+            msilperseus
+        SHA-256:
+            afa8ad042ec09ed1fe6ad73feb4c22b33bf5d3d038d31de049523c733902c2a1
+            d2d66a44ad09ace46cab9a408c07c08204829dd3c422da2ae06b5af8f04f3fab
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=msilperseus
+            https://www.google.com/search?q=msilperseus
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:00</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="712559db-985a-43fe-adcd-aa4f1b3a3109" operator="OR">
+      <IndicatorItem condition="matches" id="7e5a3434-428a-47ee-9383-85bd286d612b" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\GDKTemp\\(?:In(?:stallScanSoft\.exe|terop\.(?:NetFwTypeLib\.dll|IWshRuntimeLibrary\.dll|WUApiLib(?:_01\.dll|\.dll)))|wsm\.exe|M(?:yStartup\.exe|icrosoft\.Win32\.TaskScheduler\.(?:xml|dll))|logo_gcs\.ico|DetectScanSoft\.exe|SetupScanSoft\.exe\.lnk|ByHand\.txt|G(?:MS\.exe|\-Desk(?:1\.lnk|\.exe(?:\.config)?)))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="eb4575a7-078c-4aff-a484-8137b2ea368c" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">https\:\/\/www\.fullrecoil\.com\.br</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="fad27d6b-7321-4915-b436-1e180e2bd986" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}_is1\\(?:Publisher|No(?:Repair|Modify)|Display(?:Name|Version)|U(?:ninstallString|RL(?:InfoAbout|UpdateInfo))|M(?:inorVersion|ajorVersion)|EstimatedSize|QuietUninstallString|In(?:stall(?:Location|Date)|no\ Setup\:\ (?:App\ Path|Deselected\ Tasks|User|Language|Icon\ Group|Se(?:lected\ Tasks|tup\ Version)))|VersionM(?:inor|ajor)|HelpLink)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c1b12605-a1ea-4588-a4d7-792a10715f5b" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\RarSFX0\\(?:sedChat\.exe|2sedChat\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="f9761182-3dc1-4ebb-8be5-0063a0e61297" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Program\ Files\\PowerISO\\devcon\.exe\&quot;\ remove\ \*scdbusDevice</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="6e02b76b-ace8-4cc4-ad2f-32526aa18a7e" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Users\\.*\\AppData\\Local\\Programs\\EGHACK\\[A-Z0-9]{4}CK exe.exe&quot;\\EGHACK\ exe\.exe\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="07136824-aca2-450c-8da9-12fc3d0fd04d" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\RarSFX1\\(?:1sedChat\.exe|mg\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="7b70dd73-8313-4474-bdf2-7310e6703c43" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">regsvr32\.exe\ \/s\ \/u\ \&quot;C\:\\Program\ Files\\PowerISO\\PWRISOSH\.DLL\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="93fc5bfa-3c17-4ac1-9f69-0369b7c60112" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Programs\\EGHACK\\is\-[A-Z0-9]{5}\.tmp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="90f94be9-13f0-4f51-9dfd-5ce222798853" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\RarSFX(?:3|2)\\(?:sedChat\.exe|mg\.exe)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

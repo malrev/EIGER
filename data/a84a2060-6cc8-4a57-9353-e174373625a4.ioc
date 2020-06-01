@@ -1,0 +1,31 @@
+<?xml version="1.0" ?><OpenIOC id="a84a2060-6cc8-4a57-9353-e174373625a4" last-modified="2020-05-25T12:05:56" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_everad</short_description>
+    <description>
+        Family:
+            everad
+        SHA-256:
+            c40c0a094395f28aa2e791a337fa2d668d730652ac2d605ee1aba08b4e6ae080
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=everad
+            https://www.google.com/search?q=everad
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:56</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="77c1cd69-d4a6-43a2-a5d2-eafae1b99384" operator="OR">
+      <IndicatorItem condition="matches" id="ce288d00-e279-416a-994f-fa8ef3f833bb" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\\EverAd\ Server</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="eb081192-36e1-438e-aea3-17213d19527c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\EverAd\\EverAdSv\\everadsv\.dat</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

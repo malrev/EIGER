@@ -1,0 +1,58 @@
+<?xml version="1.0" ?><OpenIOC id="2fceefee-4b36-48ab-b4e7-1bdbb06448f0" last-modified="2020-05-25T12:05:59" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_trickbot</short_description>
+    <description>
+        Family:
+            trickbot
+        SHA-256:
+            eacbf729bb96cf2eddac62806a555309d08a705f6084dd98c7cf93503927c34f
+            fe2a40b9613b2cae152f2ba4846beaac3d220d1448604f187b5ee402bc5f6982
+            d6374a2957d2890d4f17cce0f6db221d896610fd8c053cc37b395dd0716368a9
+            d57ca13a57824b935906c0e6e6e43d2ae73c2dc64cdf4015f1625cf4cceff560
+            b5cd59c1539d95f6ee13a37194befe3e821bc8baf500e79e341daf12e7fae82f
+            b763bff60493ab89cbb26746251c1d22886ef4cb2fee4695e1f3c870f1fce1da
+            e08205e6d7a581fb7bf3668335cf250d1eba33db607ae1d0a7174ccf4826f3f6
+            b2e6b2c2f4893d11b9c92bb676d29797597487d4da83089c4e8642e3d2f988c1
+            9fe22bb9b9f3d69061cc52e6928bbb3cebed219b98dbd00bede1aabd533061b6
+            91abcfb135b4b2a1475ac1fc815167efaef94c7809dee692d55bc0d787f017ac
+            66e68cbd2ede7094f8e2087ca96a2a73da8024d348511d9ec6d39f4f362cf58a
+            a21198f88ab85bb52ff9f89f3cab35e6a7990f0d0734e4e9e1a954b58a766e67
+            8570c8d58f8a8fc0763333064e1ee06b98983f83d497bf5df62bf426c94e2af1
+            ba826572aaf0c4d75689c8ecf253df0f757168445ab4716c564ea0ef4a20a1e6
+            f090571ed737bed65c2e77c5f563eba694a8421e8fbc34340667a3029da6e2aa
+            b1c62ad1f26986093c656fe4e1385f4e2132f56c826e323aa88d44ac90b6038a
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=trickbot
+            https://www.google.com/search?q=trickbot
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:59</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="0eb82e8b-e887-4080-a796-f7791f5a7413" operator="OR">
+      <IndicatorItem condition="matches" id="7be6a98d-90a5-47af-84c3-a97c5f3fe539" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\PwrSaves\\(?:serviceworker\.txt|LICENSE\.txt|S(?:ecurityPreloadState\.txt|iteSecurityServiceState\.txt)|extensions\.ini)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="fd3a9d68-b800-403e-825f-aae014856c88" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\CommandLineEx\\[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="1d6270ee-ccbc-4704-b306-e9441285fb75" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\ExStreamApp\\SiteSecurityServiceState\.txt</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ad6171b2-72fb-40b9-97b8-98643b48a7e0" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\CommandLineEx\\[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ad79e3d5-58e0-4ced-8ed4-2fea7fd25e19" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\CmdValidate\\[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}\.exe)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

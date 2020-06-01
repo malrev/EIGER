@@ -1,0 +1,27 @@
+<?xml version="1.0" ?><OpenIOC id="e5a12856-97fb-4b15-a662-9f254d950aaf" last-modified="2020-05-25T12:05:55" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_bebloh</short_description>
+    <description>
+        Family:
+            bebloh
+        SHA-256:
+            8841e9b153222ebd79368f3a743824c6dbf01422b2b25cf2929ecb742164f95f
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=bebloh
+            https://www.google.com/search?q=bebloh
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:55</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="4c3d5a22-9afc-48f4-a4f5-9265a7873274" operator="OR">
+      <IndicatorItem condition="matches" id="b4f45a23-3d3f-4437-bd6c-18342c8d4b60" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\Software\\PaloAlto\\PanCar</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

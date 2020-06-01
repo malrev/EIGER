@@ -1,0 +1,27 @@
+<?xml version="1.0" ?><OpenIOC id="b3d37434-84fe-4688-9207-5e8e0c5677ae" last-modified="2020-05-25T12:05:56" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_uwasson</short_description>
+    <description>
+        Family:
+            uwasson
+        SHA-256:
+            f8f4608f243299852db27b966d2ad2a4e89794b3cc94a88967deade9084aabfe
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=uwasson
+            https://www.google.com/search?q=uwasson
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:56</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="bbd3a0b4-4de0-475e-bfa5-666c1469da25" operator="OR">
+      <IndicatorItem condition="matches" id="15ad6f0f-a5f1-42e2-bc37-33acc0843aeb" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Calamari\\PlayAudio</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

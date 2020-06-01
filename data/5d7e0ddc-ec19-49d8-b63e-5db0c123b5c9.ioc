@@ -1,0 +1,40 @@
+<?xml version="1.0" ?><OpenIOC id="5d7e0ddc-ec19-49d8-b63e-5db0c123b5c9" last-modified="2020-05-25T12:06:00" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_makoob</short_description>
+    <description>
+        Family:
+            makoob
+        SHA-256:
+            cdb81201fb1b21eda168a995de383b65cec1c489c5c1559f29b313b5bc22c9b5
+            ce6925218a0afecec0a939a3ff447faa2f0463b6e8dd224e62b07eb806a164ea
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=makoob
+            https://www.google.com/search?q=makoob
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:00</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="a26d24ea-bcd6-42d2-bdc2-3d4875f53dda" operator="OR">
+      <IndicatorItem condition="matches" id="92090e4c-de4a-4a76-aa11-f79aca73f6fb" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\deletecomment\\recipient\\np\\(?:officewordautomatingtablesdata01\.gif|mapicode\.h)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="0b440e92-6273-4a3d-9f41-bba32b644207" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\ad\\(?:s(?:duidgetdisplay\.3|cflowchartshapes\.flowchart\-connector\.png)|EditorOptions\.Designer\.cs|pgort80\.dll|Suffix\.vjsproj|XDCMake\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="96a0d6f9-c562-4608-86d7-37e3e92e6289" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\Software\\Clients\\Media\\distortions\\Capabilities\\ApplicationName</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="4e1fd7e9-214b-4a8d-83ff-d712aa3c8bb1" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\monthnum\\direction\\authorized\\(?:sgen\.exe|DbgUrtMui\.dll)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

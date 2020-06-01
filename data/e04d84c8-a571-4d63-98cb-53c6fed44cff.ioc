@@ -1,0 +1,148 @@
+<?xml version="1.0" ?><OpenIOC id="e04d84c8-a571-4d63-98cb-53c6fed44cff" last-modified="2020-05-25T12:06:06" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_zusy</short_description>
+    <description>
+        Family:
+            zusy
+        SHA-256:
+            83974ac1bae2c8e8a3057031a7df7de2d8a5d15fa38f96ca3db0c35f7d2117c4
+            ed6e411ae8109ee07e15c437c858fac59c077d2d60eb22b3e5ede3943c1ce71a
+            8d9c6c1df6b8853fbc2a2541ad3fcbc6ec750dc6bf63fc16a19c71bfd013275d
+            fc025d60e2803ee6a0a24e09bda00dd64a6463d1ead5350de2b5d32058b248cc
+            5f0e714bb7d6e802e7890ca51b270108244a91a3008590a3dc916d0b596c72ca
+            25aeacf174fa767c6d4c3f5e3a4da5995da2773da7f62b6573191a08336d8c61
+            bc933d220edd0a971790e7f8618f337bf1245d79541da728ba347b8b78d57159
+            435e5e89c47dc3497ab956d17ec9c878b5d8f00b173772699183747618e9ffb8
+            01600bfac0c9673294e081181dccb8e0f0280311b6ec1de3317b1d1130c68581
+            eedbbbd8337c2d528c35feeb8bc10ef25600d1e4b8960c2d8db15c9de4bee8e6
+            61b6cabb12b81dd6fe9a7ef9975d52d4fce77e22eb07572aca633c618984a506
+            b05b365554206e2c0361fef9e21db4d94f8401fe938481b8c6faa56df59c2962
+            22d47c6058192c7bd1af7c26de4561fe4bd46f741303aebe49c943789e5de5d8
+            a71efe16240e13c0681c572dd454c72253584421c835070a4cd005f7ff895f62
+            61d464cad63774fd0a8dca36f87311636a6a1671c1843a88d36e1e0d7d5b3d22
+            8f350ba18528d38faeaea8c25340028cd9cc1b7b6ee4869253d8b4b5450d9a34
+            d89ee84b22ce7840dc6fcd30efdee300bd32cd337121a8e4c3e81dea2d99f8bd
+            88e241757cb69539931290e6f19d2be0514244c2bfcd98a72818b3ae619b6abc
+            b5cacedda55f5cdc6f4133865bd9a1a8a216cb9175e7dc9fed7d9a87450eccee
+            af66f98d7c25844cf9a08035b9a8dc09beef2e6bcfe11714d047c962e65fe077
+            b728748a3acfc5d69488feaaee6d74d3db52e05bf3bf1189057f3a2cf2189e2f
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=zusy
+            https://www.google.com/search?q=zusy
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:06</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="2e8b9349-6057-4e39-a260-b8f7299874c9" operator="OR">
+      <IndicatorItem condition="matches" id="fb9ce0ea-e6e4-423a-a868-d2476e6a29db" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\sfaret</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="f8b8cc25-00aa-4cb7-b0cb-d1d1f78c70f6" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\(?:decoder\.dll|zpar2w9r5t8p1q2w9r5t8p1q\.zip)</Content>
+      </IndicatorItem>
+      
+      <IndicatorItem condition="matches" id="1dfcf815-7def-482c-9979-28f6aeaf2249" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\ptst2w9r5t8p1q2w9r5t8p1q\\General\\(?:passwords\.txt|forms\.txt)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="1046ca1c-9aa4-4fd2-8c34-c0dfeef99c6b" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">Software\\Microsoft\\Windows\\CurrentVersion\\Internet\ Settings\\ZoneMap\\\\(?:AutoDetect|UNCAsIntranet)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e65f13c8-9656-428f-ad03-b1891bbcba82" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\ptst2w9r5t8p1q2w9r5t8p1q\\Files\\pubform\.doc</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="20586c0a-bf68-489e-9d9b-96a4c7a7bb38" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\ NT\\CurrentVersion\\SvcHost\\netgroup</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="39ddb308-ee7c-453c-87d6-8fa478ef02c0" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ cmd\ \/Q\ \/C\ C\:\\Users\\.*\\AppData\\Local\\Temp\/s\.bat</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="272e3504-4646-4bf4-9a79-227bd4a5bf31" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Windows\\system32\\taskkill\.exe\&quot;\ \/f\ \/im\ iFunBox(?:_x64\.exe|\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="8e9b6ca6-81f1-4736-afc0-77ddeae7a86e" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ C\:\\Windows\\system32\\cmd\.exe\ \/c\ if\ not\ exist\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\ztmp\&quot;\ mkdir\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\ztmp\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="55111a69-b45d-4e16-b4ca-5af65c9f79ed" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ C\:\\Windows\\system32\\cmd\.exe\ \/c\ attrib\ \+h\ C\:\\Users\\.*\\AppData\\Local\\Temp\\ztmp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ab18ac11-2589-470b-ac0f-4d6e0d55fb89" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\Adobe\\.*\\(?:scoobeoutro\-vm\.js|vm\.js|atikmdag\-patcher\.msi|llc\.js|node\.js|ServiceMonikerSupport\.dll|index\.js)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="6aeeda04-93df-488f-9f12-03442942a844" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\RKREVEAL150\\(?:ErrorControl|Type|ImagePath|Start)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="2251c9ab-c295-4090-b4b4-fadb3a8d156c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\D97F1A3\\atikmdag\-patcher\.msi</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="4dd13f1b-9a8d-4256-8a84-26034b81333a" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\decoder\.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="1822675e-b579-4db8-94f4-9230b5261c63" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\Adobe\\(?:decoder\.dll|holder0\.aiph|atikmdag\-patcher\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="4ecfff13-0521-42f6-83b4-3666a5426a92" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\L2j\ Community\ Network\\LameUpdater\\\{5B6C414B\-7B6F58CF\-AEC1099A\-393C59E9\-0D746ACA\}\\(?:LastFullCheck|HomeDir)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="461ac59f-4f48-4c74-a6da-f05a9e1ceb5b" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\ptst2w9r5t8p1q2w9r5t8p1q\\History\\Chrome\.txt</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ca1071fc-e7ca-4242-a6fa-292504b3540d" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\ptst2w9r5t8p1q2w9r5t8p1q\\(?:Actions\.txt|Information\.txt)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="de056095-4d26-4eaf-87ed-5e57b2e64146" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\.*\\atikmdag\-patcher\.msi</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="2f64a3ac-d419-4619-b87a-2377949caf8e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\Drivers\\RKREVEAL150\.SYS</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d9dd4829-5c00-4942-87f5-49c6d12f7206" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\d(?:\-(?:shm|wal))?</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="639989fe-ed98-405c-9f3d-0f104233666d" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ C\:\\Windows\\system32\\cmd\.exe\ \/c\ if\ not\ exist\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\afolder\&quot;\ mkdir\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\afolder\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="354e4d1f-c2df-41d5-87ba-06dbde8f25e9" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\C\:\\work\\[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="82961214-0c47-4155-8fce-b5c2b80b64d3" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\ptst2w9r5t8p1q2w9r5t8p1q\\Cookies\\(?:Mozilla_1\.log|Chrome_0\.log)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="7e0aa65e-0e90-4774-b1c0-36444b3c2ff9" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\(?:s\.bat|decoder\.dll|vlmi\{lolz\}yg\.col|Y\.exe|ETR\.exe|IIDIG\.exe|c3096d0e\-87c5\-4a42\-a40b\-217e351fcc69\.exe\.pid)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="fc271f5c-46cf-4ecf-9a58-45e13ab803a7" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Appdater\\hid</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

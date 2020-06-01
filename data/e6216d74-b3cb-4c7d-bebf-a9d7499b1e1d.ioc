@@ -1,0 +1,216 @@
+<?xml version="1.0" ?><OpenIOC id="e6216d74-b3cb-4c7d-bebf-a9d7499b1e1d" last-modified="2020-05-25T12:06:09" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_johnnie</short_description>
+    <description>
+        Family:
+            johnnie
+        SHA-256:
+            8879f3c76da2fc3728cbdae0ed23c5c2617694f5914168742245e89e1105fef0
+            e08e873e877ace2f714f3d8c34bcfc8d87323e2571c2b176828b36316f5d154f
+            b90c906fe2e3d381576ea76bdf67cf433157b69c74b434434a284cd5e38ffda0
+            4a74bcc30a3f362b3e3e8bec5ea1ef6939a6dfc22911a3be3393f99d46b40d87
+            813971c35bd32450e8b8c852c905d44f536e8c1efe25e683014e3e0fd32f94d0
+            d2949d7df46026df4109a64f2f015da2b1f79049ada8c4ad9a183239287c6d69
+            c228ccd26d3266f29b23babaa1f1d75bcee1be5f73e02aba2e80778acd280140
+            cebab75b279dd6d3e2d3a91cccbc3a7f38bb35e308eed22c0945d50376d700a4
+            da4d851dcf41779e2c085fad152ca8296db7a0cf23fd1d9b5118c0617027a211
+            8c94bc34e4558b10c22415df3cdee524b8562a41bdbbd6ea8143247bbe74faa4
+            a86c5ee07dfb0f6b9df89358d3cb4a1830f4c8d48c07aafbcc34991cc5cb7927
+            91f96a278ef447e9021e5e82225b4f369fcea3b3cfdc0602561d5a2d9f2aebe9
+            b93dfd8ae3854ca2cdcaf1c68797982b7527bc2924832013c69da6cf1aedac04
+            a15de5a00bf60271a8163ae46804e3b0f3193bb27c097a2c11dffd0410e02080
+            6da43641a6e89d16c371a84cb9592fa01f122aac964161bd98396ba51d134d04
+            89fc2e592748a5bcd4a9bf1cec95a0a1efd4d29a79aa02d3eba6dc071b50cf4d
+            d48e779e943105cf42607095a9184dfccc6ca4fb810c5f2d9b052b48de0f708c
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=johnnie
+            https://www.google.com/search?q=johnnie
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:09</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="16abb641-f5c6-46c3-b575-2b76e5307c32" operator="OR">
+      <IndicatorItem condition="matches" id="9bebe283-45c2-4aae-8b22-b358ead98244" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\SDRunDebugger_JOLMVDTZ\\(?:DSInfo64\.dll|SD(?:Net\.dll|FileIO(?:\.dll|64\.dll)|Lang\.dll|Debugger\.dll|Surveillant64\.dll|RunDebuggerPacker(?:\.dll|64\.dll)))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="333fda08-963c-4eb2-89b0-61e38530e097" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\CLSID\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\InprocServer32\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="caeb6ea5-9835-4f54-8042-fffffe0d09e7" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\idm\\Toolbar\\PureFlat\.tbi</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="0b970096-dd25-4807-b89b-f9d755888917" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">Env_DX8\\(?:DraKoLa\-Co\.exe\ prohookxx|Conquer\.exe\ blacknull)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="a81d23fe-b35e-4ab5-b68c-dfacdb500b24" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Internet\ Explorer\\Main\\FeatureControl\\FEATURE_BROWSER_EMULATION\\[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="18bcd3c3-19a9-4c8a-b8fb-f4af44a766ca" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\iwqggaa\\data\\times</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="306f44fb-a588-4e00-b362-c887b3628178" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\SDRunDebugger_JOLMVDTZ\\SDRunDebugger\.exe\ \/rundebug\:WinTail\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="2cf0a112-fba8-4ae1-9bdf-5ee5257a7ed1" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\CLSID\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\ProgID\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="941f62d9-2a30-466a-ade2-a35aee3c7777" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\(?:jfiag_gg\.exe|bootsect\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="50b70fc2-b609-4b1a-ae0a-c4053dc787b7" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\StarEditor\\StarEditor[A-Z0-9]{4}.dll\\StarEditorDB64\.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="cad737d7-6572-451a-b17c-541ba5f52bf8" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\\LastVisitedView</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="0e5a8766-a7ed-4036-9df8-516bcf40f8d5" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\CLSID\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\InprocServer32\\(?:ThreadingModel)?</Content>
+      </IndicatorItem>
+      
+      <IndicatorItem condition="matches" id="26dedafd-bf35-4de0-859d-85c0f5f5d4f5" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\idmBroker\.OptionsReader\\CurVer\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="81b314ed-c06d-4659-b0f5-d57aa7d62ab7" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\[A-Z0-9]{4}ECC.[A-Z0-9]{4}EHlprObj\\IDMIECC\.IDMIEHlprObj\\CurVer\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="f97743f6-5bcc-4c86-9865-5bc2be41cd98" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Crashpad\\(?:settings\.dat|metadata)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="f8d95724-b964-48e9-bf7b-c59cf8a6049b" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Microsoft\\Internet\ Explorer\\MenuExt\\\\\ä\½\¿\ç\\¨\ IDM\ \ä\¸\\è\½\½\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="df6576c1-bd0f-43b2-9128-37be6f1445ea" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\idm\\Toolbar\\PureFlat\\PureFlat_(?:Larg\.bmp|Small_Hot\.bmp)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="2f392458-c4ef-4730-a460-1d500e68a583" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\DownloadManager\\menuExt\\(?:ffdownl(?:1(?:_str|0FLV(?:_str|a_str))|All_str|ppFLV_str|FLV(?:_str|a_str))|iedownl(?:1_str|All_str))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="8f96385c-32ad-4f7c-94e7-86849f0e2845" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\Documents\\rr</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ed6fa295-377c-4d33-acd5-bccaeaecc70a" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\SOFTWARE\\Newsoft\\UID</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="2d4edb67-7cf1-49c3-9059-6f990ecc7c6b" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ C\:\\Windows\\system32\\cmd\.exe\ \/c\ taskkill\ \/f\ \/im\ gta_sa\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="49dd2abf-683d-4d5d-b31c-b0e98693f391" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\idm\\Toolbar\\H3M_Glossy\\H3M_Glossy_Small_Hot\.bmp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="3d41d234-06de-4c2b-959d-9ffc0a03fd8d" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\CLSID\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\Elevation\\Enabled</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="85ec9837-bb78-463d-956d-fddda4e793b4" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\CLSID\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\MiscStatus\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c9acaf23-b773-4a65-8142-bb88b54537f2" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\idm\\(?:DisplayName|UninstallString|HelpLink)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c1684f2f-843c-4d69-b878-d9bfe9fe30e0" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\CLSID\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\InProcServer32\\ThreadingModel</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="05c40f10-4e63-40d3-bbdf-2ec3cac32775" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Microsoft\\Internet\ Explorer\\Low\ Rights\\ElevationPolicy\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\AppPath</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="73ccae61-c9d7-4cf9-834a-1c504cf95cc1" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\CLSID\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\InprocServer32\\ThreadingModel</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="84d4a017-c2ca-421f-93f3-53a365ac0b82" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\AppID\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\DllSurrogate</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="a1abf195-76e2-4e1d-a359-fe5b1b317a71" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ C\:\\Windows\\system32\\cmd\.exe\ \/c\ schtasks\ \/create\ \/f\ \/sc\ ONLOGON\ \/RL\ HIGHEST\ \/tn\ NetService_x86\ \/tr\ \&quot;C\:\\Users\\.*\\AppData\\Roaming\\DatabaseBaseEngine\\OfflineInstaller\.exe\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b85ee85e-46f0-41ba-ba80-3abcf08f5bd6" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\CLSID\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\VersionIndependentProgID\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d5bc71f9-ba43-4876-901e-04bb7ceb2613" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">MeGo\.exe\ Conquer\.exe\ blacknull</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="87e8cff4-3129-4d4c-86dc-8668a848f67d" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\SDRunDebugger_EAOCTRRG\\(?:SD(?:Net(?:\.dll|64\.dll)|Debugger\.dll|Surveillant64\.dll|RunDebugger\.log)|Unpack\.zip)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ef3e254f-c045-4e47-b653-e0d43ccb5d3a" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\IDMGetAll\.IDMAllLinksProcessor\\CurVer\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b91c0fc3-c51c-4824-ab5e-f2ec16c0f6fb" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\CLSID\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\TypeLib\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="4426ddd1-af81-4d18-a398-908333ab93ff" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\DownlWithIDM\.V2LinkProcessor\.1\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="062371a4-f93f-4b0c-998c-9d6de64a7064" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\MSComDlg\.CommonDialog\\CurVer\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c08089d7-0f1c-450c-b996-bb5a54ff99bc" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\idm\\Languages\\idm_chn2\.lng</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="13fb1bb6-a4e0-4e33-a61e-9cba58dc3086" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\MSComDlg\.CommonDialog\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="07457a4b-745e-45d9-837d-0e47b8d68b0c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\SDRunDebuggerLog\\Bid documentations for South Carolina thermal power plant project.exe_[A-Z0-9]{4}[A-Z0-9]{4}_[A-Z0-9]{4}30.log\\(?:Bid\ documentations\ for\ South\ Carolina\ thermal\ power\ plant\ project\.exe_20170404_223230\.log|WinTail\.exe_20170404_222800\.log)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="5090db68-58f0-4090-afb8-f6df0745b2c2" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Python27\\pythonw\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="9fadfa5f-6efe-41c6-ab56-5bf73d2edc4e" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\Idmfsa.[A-Z0-9]{4}FSAgent\\Idmfsa\.IDMEFSAgent\\CLSID\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="90776066-0dde-4750-9f4b-6c89b038121e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\idm\\(?:lib(?:ssl\.dll|crypto\.dll)|I(?:EGetVL\.htm|DMG(?:etAll64\.dll|CExt\.crx))|idm(?:mzcc\.xpi|tdi\.inf|wfp\.inf|cchandler(?:7\.dll|2\.dll))|MediumILStart\.exe|Uninstall\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="737cdd4a-1196-4284-a708-1fe13ce7795e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\Documents\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\Browsers\\Google\\History\.log</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

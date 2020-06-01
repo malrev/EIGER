@@ -1,0 +1,35 @@
+<?xml version="1.0" ?><OpenIOC id="dfaff065-e1e1-4f11-8753-3297b0e7a393" last-modified="2020-05-25T12:05:56" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_neshta</short_description>
+    <description>
+        Family:
+            neshta
+        SHA-256:
+            f4fb39e017255da413bbe3db66a8713ebde2cd902fe0361717fa9c4e3f94684a
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=neshta
+            https://www.google.com/search?q=neshta
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:56</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="9e420e35-0e59-45ec-8939-1c15bc4f3808" operator="OR">
+      <IndicatorItem condition="matches" id="4ca9c8ab-e970-4828-be2e-4c2e7443133f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">SiS\\163U\\(?:sis163u\.(?:cat|inf)|SiS163u\.sys)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e3bfeb8b-4176-4329-8782-a0b61e32d142" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Program\ Files\\Google\\Chrome\\Application\\chrome\.exe\&quot;\ \-\-force\-first\-run</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b09a431c-c925-48ee-9842-2dba761184de" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SOFTWARE\\Adobe\\Adobe\ ARM\\1\.0\\ARM\\iCanExit</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

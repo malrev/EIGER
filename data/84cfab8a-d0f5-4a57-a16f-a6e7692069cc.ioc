@@ -1,0 +1,28 @@
+<?xml version="1.0" ?><OpenIOC id="84cfab8a-d0f5-4a57-a16f-a6e7692069cc" last-modified="2020-05-25T12:05:57" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_socelars</short_description>
+    <description>
+        Family:
+            socelars
+        SHA-256:
+            a7c67d2485ff1280e014bd5956b5de40e35e3424032ffe630a27fcdb589d3974
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=socelars
+            https://www.google.com/search?q=socelars
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:57</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="d0cac6e2-a3f5-4176-bc4b-eb9ccd7b299f" operator="OR">
+      
+      <IndicatorItem condition="matches" id="f8a9ff38-db2b-4641-8c62-40ef178ec769" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\ybtickets\\(?:is\-(?:6FOLQ\.tmp|U5FT6\.tmp)|unins000\.dat)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

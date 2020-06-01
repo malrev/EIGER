@@ -1,0 +1,32 @@
+<?xml version="1.0" ?><OpenIOC id="de79fc53-b7f7-4967-b1fa-4daae1f460a0" last-modified="2020-05-25T12:05:59" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_refroso</short_description>
+    <description>
+        Family:
+            refroso
+        SHA-256:
+            ee2886076d9ea84413c287cdabc0ad97eefa1f9e96b08f3ccbb07659aacd91b3
+            e8a0dc07a671107a2872669bfda77c5c4ba9374974ba5e78f29f2f15042758c4
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=refroso
+            https://www.google.com/search?q=refroso
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:59</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="b0516713-712b-4595-9797-54e5813e40f2" operator="OR">
+      <IndicatorItem condition="matches" id="5de3d77b-d351-4711-bac4-c6843fbd17ef" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}.exe-up.txt</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="f20c2bd2-58f1-49df-bb3b-1b0c99112be7" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\[A-Z0-9]{4}[A-Z0-9]{4}.bat\\(?:1652KCPJ\.bat|2523MLSV\.bat)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

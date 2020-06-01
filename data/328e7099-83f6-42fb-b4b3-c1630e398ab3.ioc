@@ -1,0 +1,31 @@
+<?xml version="1.0" ?><OpenIOC id="328e7099-83f6-42fb-b4b3-c1630e398ab3" last-modified="2020-05-25T12:05:57" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_vasal</short_description>
+    <description>
+        Family:
+            vasal
+        SHA-256:
+            ba44b1435586c9cf67517e79c8dfec3d50d929f89ff2157ee0730790a451dd30
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=vasal
+            https://www.google.com/search?q=vasal
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:57</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="54766af2-ee77-4c6f-b94e-7ea9ae5864fc" operator="OR">
+      <IndicatorItem condition="matches" id="952e9ccb-ecb5-462f-98eb-0e7d20d030a5" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\\\ProgramData\\\\(?:s(?:oftokn3\.dll|qlite3\.dll)|m(?:svcp140\.dll|ozglue\.dll)|nss3\.dll|freebl3\.dll|vcruntime140\.dll)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="7727eec5-3dd2-4869-8d65-2076d98805dd" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\oxicoton\.exe</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

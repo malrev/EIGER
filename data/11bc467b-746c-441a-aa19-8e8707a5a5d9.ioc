@@ -1,0 +1,31 @@
+<?xml version="1.0" ?><OpenIOC id="11bc467b-746c-441a-aa19-8e8707a5a5d9" last-modified="2020-05-25T12:05:57" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_berbew</short_description>
+    <description>
+        Family:
+            berbew
+        SHA-256:
+            ef09ef68f0658d22c35fdd56d79f4257191ab4ba8691d49ea9cfef5ebffcc305
+            fd99dc712f2e66f9d38ec988908c058b6fa537dddb7a29c30775c15a3f59c76e
+            f120797b247381368ddca6481a23f0d7824025e3a82bd114f46c92d49fd4d400
+            e470049bad8a240848fba9d97712e53a38b931d45f11e9f2717ec1bc45f615e4
+            fcbcf94607b89940015432cd770a3648f221166801dfc5ff5d8b8d483b18ff7d
+            f9a9e9acbb7c70a66bc6a7ef7181887ef2b1b2c2795e61700618a345f595d455
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=berbew
+            https://www.google.com/search?q=berbew
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:57</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+      <IndicatorItem condition="matches" id="2621f2dc-f4b2-4ee5-ba16-acc05a4ed461" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\(?:P(?:jldgcil\.exe|okhob32\.dll|fpleo32\.dll|qjack32\.exe)|dfflkkkikacm|D(?:ndlihke\.exe|kdepf32\.exe|cigfj32\.exe)|Ff(?:mfkm32\.dll|iohk32\.exe)|L(?:oljnajb\.dll|ikpie32\.exe|bipecfp\.exe|fmief32\.dll)|E(?:n(?:lkmf32\.exe|kdilcb\.dll)|mlpjgok\.dll|hbhcpeg\.dll|bcnbe32\.exe)|Qhmadiga\.dll|kjdhkbaphamq|Glligl32\.dll|Cihnldnn\.exe|A(?:omcnl32\.dll|qfkaa32\.dll|hgblmei\.exe)|surf\.dat|M(?:niipeaj\.exe|ceknelf\.exe|anbgn32\.dll)|O(?:ndknm32\.dll|mepfqpc\.dll|cpcffaf\.exe)|H(?:llkje32\.exe|nkdon32\.dll|bleeh32\.dll)|J(?:pedkcep\.exe|hleggkn\.exe|aojdb32\.dll))</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

@@ -1,0 +1,52 @@
+<?xml version="1.0" ?><OpenIOC id="e5a1fafe-8e86-4511-9bfa-3184d3c00d5b" last-modified="2020-05-25T12:05:57" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_bluteal</short_description>
+    <description>
+        Family:
+            bluteal
+        SHA-256:
+            b0e2ed83d42bf1bf68721e95e1a446aa1c0e46857471a8aa232940dd80348979
+            a475df0d822c49b2b7670c5cdde9358ec3bd8e218c491da7dc170b9c772dd35d
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=bluteal
+            https://www.google.com/search?q=bluteal
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:57</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="f476f8a3-9bac-47c7-9156-9e1396c4c25d" operator="OR">
+      <IndicatorItem condition="matches" id="dea51df4-4ce4-4c4c-bed5-43a565f2879c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Vampire\ and\ Monsters\\MonoBleedingEdge\\etc\\mono\\config</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="8353acea-7a73-44a4-96f2-296385a587f7" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Gema\\(?:sinconexionterminal\.htm|Re(?:portes\.exe|mitosIS\.exe)|pr(?:yVerificarActualizaciones\.exe|oveedores\.chm)|WsConnector\.dll|Validacion(?:Adesfa2\.exe\.config|CloudRp\.exe)|B\.gif|codigodebarras\.exe|Org\.Mentalis\.Security\.dll|e(?:xplorer\.gif|stadisticas\.chm)|libros_iva\.chm|D(?:epurarGema\.exe|iffieHellman\.dll)|messenger\.gif|P(?:roductosPrioridad\.exe|arqueSalud\.exe)|N(?:NA\.gif|SB\.gif)|Hasar\.exe|gestion_obras_sociales\.chm|facebookga\.jpg|E(?:P\.gif|O\.gif|legirValidadorPami\.exe|pson\.exe|V\.gif)|S(?:N(?:A\.gif|N\.gif|M\.gif|E\.gif)|poolFiscal\.exe)|i(?:drsa\-2\.ppk|explore\.gif)|G(?:e(?:ma(?:\.exe|Traza\.exe|Cl(?:oseUp\.exe|ub\.exe))|CROS\.exe)|rabacionAdesfa2\.exe(?:\.config)?)|Centralizador\.exe|AI\.gif|ocx\.exe|M(?:\.gif|V\.gif)|IFConfig\.exe|t(?:razabilidad\.chm|witterga\.jpg))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="21ca4c14-daa8-49c9-b50c-de01eced379c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Vampire\ and\ Monsters\\Vampire\ \&amp;\ Monsters_Data\\Plugins\\(?:steam_api\.dll|ALI213\.ini)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="fa25b765-52d6-4726-a572-3aa9661701a1" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Vampire\ and\ Monsters\\(?:LGames\.txt|Vampire\ \&amp;\ Monsters\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="2d8adc87-ed5f-49bd-86b0-f9d6c6090828" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Vampire\ and\ Monsters\\Vampire\ \&amp;\ Monsters_Data\\level1(?:1)?</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="684ac320-aa55-42a8-99b6-70280df44493" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Vampire\ and\ Monsters\\MonoBleedingEdge\\EmbedRuntime\\MonoPosixHelper\.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d8c45ac6-91b6-4bff-94f6-fa81d71f0616" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Vampire\ and\ Monsters\\Vampire\ \&amp;\ Monsters_Data\\Managed\\(?:mscorlib\.dll|Assembly\-CSharp\-firstpass\.dll|System\.Xml\.dll|UnityEngine\.(?:P(?:erformanceReportingModule\.xml|rofilerModule\.xml|hysics(?:Module\.xml|2DModule\.xml))|DirectorModule\.dll|XRModule\.dll|LocalizationModule\.(?:xml|dll)|JSONSerializeModule\.dll|BaselibModule\.xml|U(?:nity(?:AnalyticsModule\.xml|WebRequest(?:AudioModule\.(?:xml|dll)|Module\.xml))|IElementsModule\.xml|NETModule\.xml)|S(?:ubstanceModule\.xml|creenCaptureModule\.dll|tyleSheetsModule\.(?:xml|dll))|C(?:rashReportingModule\.dll|oreModule\.(?:xml|dll))|A(?:dvertisements\.dll|RModule\.xml|nimationModule\.dll|udioModule\.xml)|T(?:e(?:xtCoreModule\.dll|rrainPhysicsModule\.(?:xml|dll))|i(?:lemapModule\.xml|melineModule\.xml))|I(?:nputModule\.dll|mageConversionModule\.xml)|VRModule\.(?:xml|dll)|WindModule\.(?:xml|dll)))</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

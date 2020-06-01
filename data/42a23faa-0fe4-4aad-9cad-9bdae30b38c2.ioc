@@ -1,0 +1,75 @@
+<?xml version="1.0" ?><OpenIOC id="42a23faa-0fe4-4aad-9cad-9bdae30b38c2" last-modified="2020-05-25T12:06:02" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_flystudio</short_description>
+    <description>
+        Family:
+            flystudio
+        SHA-256:
+            902e31b031f90553782474e3021791e3dba7b7a51adaa1b14f1dfef5189da8b6
+            e254bf07929488a5878d024d623c667009397a563fe13b20474374bf7e53fa80
+            e65c881ae499ca575bc935ce2a327d5f002d41ee1fc593cf3be4237e63c21e8f
+            ee5c1b318810746edbaa78a9a063449201c681b6cd5a4153a5546f9872e99835
+            f01e01380fc682ce1cc9072e1a1aa2c2dcd4eb2768b10c3b7b596cbd69476ee7
+            f8166e1205c9dd0761f42f47c8d3e3c944b72b1fd3713a0383040f263987a649
+            dabe1caac1b22390e21dabc46f2778eee4319d6879f0596a3002e5eb2e3e8784
+            a985d7c5b5991aaa24621ac1e920477b039ab476cb76d80a7e96fad9ac7d40b7
+            78be78886243a3cdfd8bcfd2d225076253127cf97d594d6ae5f7ec7997ea059a
+            e2a565bc88723d99a7d50777ed517312626807a4581ea6a546db6933b36f7b4d
+            c4e577e5bab876c5fce6f825db5cce04a3fb04f1a96b75566d910819a75bd7d2
+            f2df3af906270ebd85f0bae0f988f15b675a2b0d0431e216605e0f836c0446e3
+            bca9822e4055d20d7b138e8522e4f5a48a56f9af9f60b0ef9e58c315450541f2
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=flystudio
+            https://www.google.com/search?q=flystudio
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:02</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="45ca442a-d863-48a5-ade2-cd0db86b8026" operator="OR">
+      <IndicatorItem condition="matches" id="f5bfb260-ed44-49a1-94a1-6be8ff514f06" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\(?:set\.ini|PsyQrDcd\.dll|\Æ\¤\·\ô\.she|WmCode\.dll|dc\.dll|S(?:etting\.ini|kinH_EL\.(?:dll|zip))|zlibwapi\.dll||\Ð\Ä\Ì\ø\¼\ì\²\â\.exe|j(?:edata\.dll|mccc\.jar)|599b4579\-66a2\-4add\-b74b\-84904c13c6ed\.exe|Update\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c1cf813d-fb7c-4e09-ad7f-ddf5d77f197d" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">regsvr32\ C\:\\WINDOWS\\Media\\ActiveX\.ocx\ \/s</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e4e1bf13-3543-4aaf-81d7-8346b97df32f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\E_N{0-9}{5}\\(?:s(?:pec\.fne|hell(?:\.fne|Ex\.fne))|d(?:ownlib\.fne|p1\.fne)|WebBrowser2\.fne|wke\.fne|xplib\.fne|EThread\.fne|BmpOperate\.fnr|krnln\.fnr|i(?:ext(?:\.fnr|3\.fne|2\.fne)|nternet\.fne|conv\.fne)|CefView\.fne|e(?:API\.fne|droptarget\.fne|xui\.fne|DB\.fne|Grid\.fne|2ee\.fne)|HtmlView\.fne|mysql\.fne)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="9d39d84f-9772-4fe7-8cef-300ff8cfade1" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\/(?:\¹\«\¸\æ\.txt|config\.ini)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="7df88982-7343-4a09-bfed-7d2ae2ca0a42" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\data\\Bugreport(?:_error\.ini|\.dll)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ea265c74-b6a9-4032-8001-2a850a78f5e9" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\jmccc_lib\\json\.jar</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="fcd23527-fd9b-4253-bcd4-79502277f49c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\TTSini\\ini\.ini</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="3d9b2145-65fb-4340-be64-46f0cc79df24" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Program\ Files\\Internet\ Explorer\\iexplore\.exe\&quot;\ \-nohome\ C\:\\Users\\.*\\AppData\\Local\\Temp\\02\.gif</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c91648de-1742-4864-98f4-9dbba10f5c04" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\E_4\\(?:shell\.fne|dp1\.fne|krnln\.fnr|iext5\.fne)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="2fc33290-ef21-451b-af90-8c5242f47648" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\64\Â\ë\¸\ß\Ç\å\Í\ø\Â\ç\µ\ç\Ê\Óv2\.4\.2\.exe</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

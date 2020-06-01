@@ -1,0 +1,39 @@
+<?xml version="1.0" ?><OpenIOC id="57d51232-4535-4d91-ad41-2aafcd4ba575" last-modified="2020-05-25T12:05:59" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_nanobot</short_description>
+    <description>
+        Family:
+            nanobot
+        SHA-256:
+            c77fd3bf69ac4a6252423e8d7a74f4293a8679e9cc1acb39f9c26c3b61416009
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=nanobot
+            https://www.google.com/search?q=nanobot
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:59</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="68b768ca-42e4-4155-89df-6597688df0a3" operator="OR">
+      <IndicatorItem condition="matches" id="318f937d-4b57-4928-acc4-eb4c0c78b19d" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\\Fraserendes3</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="f9c6e6f0-a706-4912-baca-7af46de43ad2" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\[A-Z0-9]{4}[A-Z0-9]{4}[A-Z0-9]{4}S.exe &quot;C:\\ASPIRATIONENS\.exe\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\[A-Z0-9]{4}[A-Z0-9]{4}[A-Z0-9]{4}S.exe&quot; \\ASPIRATIONENS\.exe\&quot;\ </Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="96b01a9b-016f-4769-b8f9-e836a7b5367c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\[A-Z0-9]{4}[A-Z0-9]{4}[A-Z0-9]{4}S.exe\\ASPIRATIONENS\.(?:exe|vbs)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="f264c407-0bb5-4ece-89aa-b1c7de8de127" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">Passwords\\(?:AutoUncompressor\.exe|passwords\.pdf)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

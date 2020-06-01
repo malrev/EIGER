@@ -1,0 +1,28 @@
+<?xml version="1.0" ?><OpenIOC id="25a5a96b-51d2-49f1-bf22-4560f096573f" last-modified="2020-05-25T12:05:55" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_dllinject</short_description>
+    <description>
+        Family:
+            dllinject
+        SHA-256:
+            6274d5b746a7f48e42e283f3cf69be3431b1da4e471853634431fbd35e2a2e72
+            ce5f50b9f74892a787c108113be271fe8778039a8d1c4667b1323bb6627ac2bf
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=dllinject
+            https://www.google.com/search?q=dllinject
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:55</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="65a81046-686b-4dbf-b0d6-0304b384737f" operator="OR">
+      <IndicatorItem condition="matches" id="129e1650-f7c5-441c-a883-dfed71b8e90f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\IF{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\(?:Setup\.cab|Variables\.dat|Commands\.dat)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

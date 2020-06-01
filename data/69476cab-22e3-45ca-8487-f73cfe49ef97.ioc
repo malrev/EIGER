@@ -1,0 +1,32 @@
+<?xml version="1.0" ?><OpenIOC id="69476cab-22e3-45ca-8487-f73cfe49ef97" last-modified="2020-05-25T12:05:56" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_xiclog</short_description>
+    <description>
+        Family:
+            xiclog
+        SHA-256:
+            fd6ff0cc7bcd42b9b8dc716ec3a598f3adbef1bd12873bf3a9432d4af9260e8d
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=xiclog
+            https://www.google.com/search?q=xiclog
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:56</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="9d37569a-d6bc-40a6-9bce-4ecc7faddee8" operator="OR">
+      <IndicatorItem condition="matches" id="1373724e-315a-4780-961e-2e05e83fdbb7" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\(?:vnc\.exe|windef\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="42f9e2f5-bc23-4794-99e4-8438af8293d3" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\btpanui\\SystemPropertiesPerformance\.exe</Content>
+      </IndicatorItem>
+      
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

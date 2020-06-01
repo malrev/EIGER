@@ -1,0 +1,74 @@
+<?xml version="1.0" ?><OpenIOC id="def961ac-5422-41ac-844c-26944cc5039e" last-modified="2020-05-25T12:05:58" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_dofoil</short_description>
+    <description>
+        Family:
+            dofoil
+        SHA-256:
+            d403681921e29b80ecef4cca573d105fb0e9d2806e49b285e3e948fea6ab88bb
+            3aa422363670beb74f5c3a3b81c9717c2ce4a3bc6e4df14989c8f1f95f80c480
+            a7e62ad0a493f31bf0fd71019df5dbe7befe8814b5d0a440adcdf196030bc1ae
+            3ff7e4646833274d1e11f28dff0c5038e58787f1e0b4b441089306ac0871a206
+            46a9df469ac1040af9b2a14d531d73e32d9978d447d6abb3848728ffdf1e2f55
+            ad8f5849034aa055119b90c36f9252573c7a055d7aeb89661aeb4d6978680ce8
+            dee7596649dde367865dc981665dd02031e70868733bde16e97539769bf3c536
+            2738fbb251de20cb53421f673392539f6e8c16d9ea0fb25548c5c58e996b1cbf
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=dofoil
+            https://www.google.com/search?q=dofoil
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:58</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="f33c51ef-6dd1-4fb9-ae6d-fff88aba5340" operator="OR">
+      <IndicatorItem condition="matches" id="3637ed2d-4bbd-4d27-ac57-4a42dc07f49b" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;cmd\.exe\&quot;\ \/c\ \&quot;start\ https\:\/\/iplogger\.org\/1E(?:TD67\&quot;|DB37\&quot;)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="fb87190c-3f38-4b01-926e-66d312936279" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\DreamTrips\\lang\\is\-[A-Z0-9]{5}\.tmp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="f257d543-59e6-408a-abb4-6f11450f2d84" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\DreamTrip\\is\-[A-Z0-9]{5}\.tmp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="75e457d4-fa4c-4374-92b4-4a67c5af608a" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Program\ Files\\DreamTrip\\seed\.sfx\.exe\&quot;\ \-p123\ \-s1</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ad36fc3e-95a7-4369-8f2c-049b6ac8e78c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\DreamTrips\\images\\is\-[A-Z0-9]{5}\.tmp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="a3ca864b-cbc9-4109-9827-b8ee39feba9a" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\DreamTrips\\is\-[A-Z0-9]{5}\.tmp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d8ca3b22-9b60-4df4-b5a4-4af7787d0be3" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}_is1\\(?:Publisher|No(?:Repair|Modify)|Display(?:Name|Version)|U(?:ninstallString|RL(?:InfoAbout|UpdateInfo))|M(?:inorVersion|ajorVersion)|EstimatedSize|QuietUninstallString|In(?:stall(?:Location|Date)|no\ Setup\:\ (?:Language|App\ Path|Icon\ Group|Setup\ Version|User))|VersionM(?:inor|ajor)|HelpLink)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="bf0f66e7-0a07-43c6-9125-3a563f1a4172" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\DreamTrip\\images\\is\-[A-Z0-9]{5}\.tmp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="fc47498b-3402-4c91-80df-171a5c1fb482" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Program\ Files\\DreamTrips\\seed\.sfx\.exe\&quot;\ \-p123\ \-s1</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="13576bbb-5bc9-42c3-aadd-83e64112405e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\DreamTrip\\lang\\is\-[A-Z0-9]{5}\.tmp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="edc6fc53-d002-4b88-9c14-aeeadc0cdc71" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\DreamTrips\\DreamTrips\\DreamTrips</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

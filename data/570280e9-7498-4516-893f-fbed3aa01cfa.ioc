@@ -1,0 +1,60 @@
+<?xml version="1.0" ?><OpenIOC id="570280e9-7498-4516-893f-fbed3aa01cfa" last-modified="2020-05-25T12:06:00" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_qhost</short_description>
+    <description>
+        Family:
+            qhost
+        SHA-256:
+            6027630fe6add9ddb608c3b0a5ab4d74adfc99cf0bda3c2dc77e65c0b81df298
+            d7739c96cb243e04244eec8c62b70dac392a297c2a0238f443ff598c96986b93
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=qhost
+            https://www.google.com/search?q=qhost
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:00</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="ba4a95d0-43ec-4e98-968d-4c50f1409c2c" operator="OR">
+      <IndicatorItem condition="matches" id="88108b5b-1d68-4949-b482-7b015526b918" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Progressive\\Toolbar\\Bils_Style\\bils_style\-Large_(?:Normal\.bmp|Hot\.bmp)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="1034e734-05e5-4af8-8b1f-41010f04e267" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Progressive\\Toolbar\\Blue\ Arrow\ Author\\I\.R\.Iran\.gif</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="fde5c963-a936-4f4a-9df8-a7b0f939ac49" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\RarSFX0\\plugin\\Audio\\(?:A(?:ziAudio\.dll|udioHLE\.dll)|No\ Sound\.dll|Jabo_Dsound(?:\.dll|_1\.6\.dll)|Zilmar_Audio\.dll)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="a3e5028d-a8cd-4c17-8d63-c5fb1b1f5db0" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Progressive\\Toolbar\\(?:Akser\.tbi|7\-IDM(?:\.tbi|Hot\.bmp)|3d_(?:small(?:_3\.bmp|Hot_3\.bmp)|large(?:_3_hdpi15\.bmp|Hot_3_hdpi15\.bmp))|apple\.(?:tbi|bmp)|Blue_Arrow(?:_(?:Normal\.bmp|Disable\.bmp)|\.tbi)|H3M_Buttons\.tbi)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="64b68198-f7fe-4cee-8b6a-d78459d86369" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Progressive\\Toolbar\\H3M_BlueSky_Shapes_Toolbar\\H3M_BSS_(?:Large_Normal\.bmp|Small_Hot\.bmp)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c599181b-ed8a-4bac-a6ea-4991267c9167" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Progressive\\Toolbar\\BilsOrbit\\BilsOrbit_SH\.bmp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="11ac3687-d0e4-46b9-b7b7-61ac1ea835e5" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\RarSFX0\\plugin\\RSP\\(?:RSP(?:\.dll|\ 1\.7\.dll)|mupen64_rsp_hle\.dll)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="176fdaff-8c73-4d3a-a1bb-d51d9a646021" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Progressive\\Toolbar\\Dtu_Style\\Dtu_Style\-Small_Hot\.bmp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="24949ec3-0d47-4c16-bdf0-a7ca49df70f2" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Progressive\\idm\.ico</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

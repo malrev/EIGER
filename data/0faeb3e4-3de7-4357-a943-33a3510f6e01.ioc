@@ -1,0 +1,108 @@
+<?xml version="1.0" ?><OpenIOC id="0faeb3e4-3de7-4357-a943-33a3510f6e01" last-modified="2020-05-25T12:06:02" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_hoax</short_description>
+    <description>
+        Family:
+            hoax
+        SHA-256:
+            d51bb92a8df17c2ca5784d2f982c3e4ab31d367629301c90d41ebe531d9769cb
+            87e70efb8011399e537d3fbdd801c906a2ae1968a1ca7fb2abb07affc79b20ff
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=hoax
+            https://www.google.com/search?q=hoax
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:02</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="6560c4a2-d7f9-4b2c-a2d4-6fd8f2b33dd4" operator="OR">
+      <IndicatorItem condition="matches" id="b4d3d53a-0d21-4d9e-a47c-add88d644eec" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\usr\\local\\apache\\conf\\cert\\server\.csr</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="366d7cfc-67a7-4f6a-a2de-a99f2f232f3f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\usr\\local\\apache\\conf\\extra\\httpd\-(?:default\.conf|vhosts\.conf)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="f8486ea1-368a-4f11-8107-12881616cc55" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\denwer\\scripts\\lib\\exe\\(?:mysql5018_9x_patch\.exe|apachesignal\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c6e1bebd-b978-4e0d-a9ae-6b802195005f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\denwer\\scripts\\lib\\Net\\MySQL8\.pm</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="880d8deb-f605-49c4-9a80-8388f095dba4" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\home\\vk\.com\\www\\index\.php</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="57f66c28-1a9c-4eba-96ac-ea34ee5b64e5" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\usr\\local\\php5\\ext\\php_(?:pdo\.dll|mysqli\.dll|gd2\.dll)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="07db89d7-ff3d-4678-849f-d103c5ddb85a" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\denwer\\scripts\\main\\stop\\30_apache</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d99574f8-294c-4558-8bf7-2553bf30bfe6" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\usr\\local\\php5\\license\.txt</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ec6e84f2-5b36-4d94-be38-0a5d4913e63c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\denwer\\scripts\\init\.d\\(?:vdisk\.pl|hosts\.pl)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="152d9632-3012-4a6a-a717-d5739036a455" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\denwer\\scripts\\Control\.pl</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="07fcb782-baa0-47dd-b6f7-7375cf82efe0" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\denwer\\scripts\\main\\restart\\35_sendmail</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="dafaca67-c06b-4021-a8f3-6fac7c25d285" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\denwer\\scripts\\reserve\\stop\\(?:00_vdisk|50_inherited)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="5dd3cc0d-6bf9-4314-afef-0b4fde57c189" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\usr\\local\\apache\\conf\\httpd\.conf</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="23233206-ab79-48d3-8bbb-a13069fde84f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\usr\\local\\apache\\bin\\libapriconv\-1\.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c14b0e75-30a3-4c3c-b985-2df3263b8515" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\usr\\local\\apache\\icons\\small\\(?:sound2\.gif|d(?:oc\.gif|ir2\.png)|generic\.png|burst\.png|uu\.gif|movie\.png|co(?:ntinued\.gif|mp(?:1\.gif|ressed\.png|2\.png))|tar\.png|i(?:ndex\.png|mage2\.(?:png|gif)))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="4987fee8-6411-4eb7-8f1a-6210414719c0" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\usr\\local\\apache\\logs\\(?:error\.log|access\.log)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="5dae932f-5873-49c7-a0b8-9d59186b46be" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\denwer\\scripts\\lib\\(?:VhostTemplate\.pm|StartManager\.pm|In(?:staller\.pm|terface\.pm)|vars\.pm|Exporter\.pm)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="aabedcdc-3709-4a48-af56-54a781d95ec1" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\usr\\local\\miniperl\\[A-Z0-9]{4}ME.txt\\README\.txt</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="7855a469-b498-4a87-b3bd-f8c4b5d65f6b" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\denwer\\scripts\\main\\start\\30_apache</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="774ba81b-1467-4a2a-9f9d-7988715c7288" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\denwer\\[A-Z0-9]{4}[A-Z0-9]{4}[A-Z0-9]{4}N.txt\\CONFIGURATION\.txt</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ffeeaaa3-874e-4118-a783-8a16882c0c69" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\tmp\\control_error_log\.txt</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

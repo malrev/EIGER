@@ -1,0 +1,29 @@
+<?xml version="1.0" ?><OpenIOC id="b4a55aff-888b-43ec-8c6d-452885393112" last-modified="2020-05-25T12:05:56" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_conjar</short_description>
+    <description>
+        Family:
+            conjar
+        SHA-256:
+            742aa299cc90e57cb0ace77eac9d39d3221111505563d4d5ba605c68212504fc
+            fe706f905691c9a4275225556e40cfe02b29cbf7511934fb82e139331657e96c
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=conjar
+            https://www.google.com/search?q=conjar
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:56</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="87430aac-4f53-46f7-933e-ed00c571484c" operator="OR">
+      <IndicatorItem condition="matches" id="a790b693-a54f-4bc8-a099-83e67ab8f6e4" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\WindSolutions\\CopyTransContacts\\Logs\\Log_2017\-04\-04_1\.txt</Content>
+      </IndicatorItem>
+      
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

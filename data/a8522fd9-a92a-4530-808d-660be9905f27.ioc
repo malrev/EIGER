@@ -1,0 +1,51 @@
+<?xml version="1.0" ?><OpenIOC id="a8522fd9-a92a-4530-808d-660be9905f27" last-modified="2020-05-25T12:05:57" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_meterpreter</short_description>
+    <description>
+        Family:
+            meterpreter
+        SHA-256:
+            c186111e8c8dd043ed54298d0f739ac3dc60fc2ae1491c407f262ba694d64a3d
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=meterpreter
+            https://www.google.com/search?q=meterpreter
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:57</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="5d3dc5be-6922-420f-967b-b99dda3228f8" operator="OR">
+      <IndicatorItem condition="matches" id="9ef4ae3a-5b9d-4157-b3c8-ed3df0a01ca7" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\\.vfs\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="3afb312c-1cde-49b3-8cab-627ee0fd9c87" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\PUTTY\.RND</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="17c9a077-50d8-4e84-8010-18024739dc7d" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\Folder\\shell\\Add\ to\ HFS\\command\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="7bd5f499-67f8-41b3-b67c-57336b264b30" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\\*\\shell\\Add\ to\ HFS\\command\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="a646f20f-a20e-4221-a8b0-453c577bbdcd" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\(?:HFS\ last\ update\ check\.tmp\~1790358278\.tmp|SysPreload\.csproj|installer\.bat|test\.tmp\~457908276\.tmp)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="57b08318-a356-4af6-b0f9-f583f9eda719" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\rejetto\\HFS\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="987576e3-842f-4191-a4c2-bfb96aa06263" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\\.vfs\\shell\\Open\\command\\</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

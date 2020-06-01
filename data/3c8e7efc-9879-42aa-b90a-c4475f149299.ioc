@@ -1,0 +1,35 @@
+<?xml version="1.0" ?><OpenIOC id="3c8e7efc-9879-42aa-b90a-c4475f149299" last-modified="2020-05-25T12:05:58" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_predator</short_description>
+    <description>
+        Family:
+            predator
+        SHA-256:
+            902e31b031f90553782474e3021791e3dba7b7a51adaa1b14f1dfef5189da8b6
+            f8166e1205c9dd0761f42f47c8d3e3c944b72b1fd3713a0383040f263987a649
+            f01e01380fc682ce1cc9072e1a1aa2c2dcd4eb2768b10c3b7b596cbd69476ee7
+            e2a565bc88723d99a7d50777ed517312626807a4581ea6a546db6933b36f7b4d
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=predator
+            https://www.google.com/search?q=predator
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:58</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="ba66204c-b7b6-42b9-aaa6-ab7c62da14c6" operator="OR">
+      <IndicatorItem condition="matches" id="ab81090d-a132-4aa1-b024-dc23acb66664" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\cdprt\\c(?:dprt\.vbs|onvertvhd\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="fcf9bc27-6dac-4e8f-a661-b7ac92cefdea" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\Microsoft\\Windows\\Start\ Menu\\Programs\\Startup\\cdprt\.url</Content>
+      </IndicatorItem>
+      
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

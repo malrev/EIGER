@@ -1,0 +1,32 @@
+<?xml version="1.0" ?><OpenIOC id="a9f0e16c-1da7-4cd5-abca-46fd8d72e2a8" last-modified="2020-05-25T12:05:58" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_6c70015e</short_description>
+    <description>
+        Family:
+            6c70015e
+        SHA-256:
+            df08fd99e40c73d19fe016754d9ef5d9d8714c518575e11b6009f418404d482d
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=6c70015e
+            https://www.google.com/search?q=6c70015e
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:58</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="91b07f17-3865-4f1e-8beb-9a5f36cae05c" operator="OR">
+      <IndicatorItem condition="matches" id="09bb894c-2d68-473f-9616-1017f23d17cf" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\cryptography\-2\.7\-py3\.5\.egg\-info\\(?:AUTHORS\.rst|RECORD|WHEEL|METADATA|LICENSE(?:\.(?:PSF|APACHE|BSD))?|INSTALLER|top_level\.txt)</Content>
+      </IndicatorItem>
+      
+      <IndicatorItem condition="matches" id="97359507-0d75-46e6-82f5-3d146e737c45" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\certifi\\cacert\.pem</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

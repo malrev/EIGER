@@ -1,0 +1,61 @@
+<?xml version="1.0" ?><OpenIOC id="a5b42a12-3262-4d50-9350-48c6545e220b" last-modified="2020-05-25T12:06:00" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_black</short_description>
+    <description>
+        Family:
+            black
+        SHA-256:
+            cca30a9bfbe7199100aa65bbd661f6b79c9a68d71c69cf930c62df5fe6378ab2
+            9cb39bdbf610cfb7b0ca6037063ceeea5e0409662eec23d712b73dd19ffbd446
+            a039f26026898a78e5e1261a8cab0a4255d72c8ddebe432b8336623882864945
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=black
+            https://www.google.com/search?q=black
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:00</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="873a46e2-1ada-4a8e-b0cd-91effc5b793a" operator="OR">
+      <IndicatorItem condition="matches" id="f52fd1d2-f43a-467c-83bb-c16caa179ddc" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\[A-Z0-9]{4}[A-Z0-9]{4}P.gif\\MSRPLHELP\.gif</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="5d26c519-1661-43aa-8753-1032eec1ab2b" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\\¡\ù\Å\Ì\¹\Å\Ð\Þ\É\ñ\¡\ù\\[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="07645613-f1ef-45ba-b0e2-a0695ce00667" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\BB\ FlashBack\ Player\.Document\\shell\\open\\command\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="f258b811-ba35-46fd-9fb6-70b1878d248c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\\$inst\\(?:7\.tmp|8\.tmp|4\.tmp|5\.tmp|2\.tmp)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="062a6c08-0f36-4bb7-9600-f6ba9ca31f33" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\CLSID\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\InProcServer32\\(?:ThreadingModel)?</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="8ed66ebd-7f83-42ce-8308-2c196b514b56" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Blueberry\ Consultants\\Free\ FlashBack\ Player\\Asked</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="23a25378-de36-46e8-ab05-a8d8dd01791c" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\BB\ FlashBack\ Player\.Document\\DefaultIcon\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="a2fdbe3e-73fe-41c0-ad27-7f1e12916727" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\(?:gameofmir\.bat|GameLogin_Debug\.txt)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ace5f466-6d9f-4ec3-a806-16ea2a71067c" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\\.fbr\\</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

@@ -1,0 +1,75 @@
+<?xml version="1.0" ?><OpenIOC id="c354ba91-5069-43cb-b8d6-bd339eef5046" last-modified="2020-05-25T12:06:04" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_sality</short_description>
+    <description>
+        Family:
+            sality
+        SHA-256:
+            1c5e9d93f90627f5773f53f72534346c0fecbd02ed5232635ad4c9b07e0d4a84
+            6aeb1bec2735fa58210a548ed85dcf706202e421a5e7f529348cc3019f265022
+            f108bc4d2099c35f2d1284b7d04e802cff869452fc2dafb664aa18ef8c8e0770
+            ff83a9b487dde9cb05997a45474a95d1bf61e9dcb67c14ad1eb5b168bb54106d
+            98281f890c4e20ea156bd5814c26d4bc14327db49a0cbd42881b7bfc6b0f4a1b
+            b493aed40ad55bc800acf93e488dd0284f8a8e631b1f1049915921a594f95eaa
+            578681c181f00e9fcaee55064a307d5257284ce457320b4e1ddb51f3284d028c
+            7434c772779ae6213427e78cab6d8bcac81c5d28950caa84d755b84946c9decf
+            463ced4a5eb0f3ccf5093d5f088e8b15dbb30c262308c038368808e9368d4df2
+            4ecaaebfa2c995a48436ccf1b04bff78b6df68276a83355d8e046c2dd5fa8259
+            547cce1eba3a446019ff7985cde4e95196154254ae8e679620ba855defc311ab
+            666c2e3df709187e54adc7def3161f89c66084b52e484c0aadf5f77c09025d6b
+            27f3954b02067706c096e58995a0fec5ad60624e85b2eaae330b22abc82873d7
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=sality
+            https://www.google.com/search?q=sality
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:04</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="70b041c1-b696-4a38-a190-60e06da7773b" operator="OR">
+      <IndicatorItem condition="matches" id="72c65c2d-0c31-4a5f-9fb3-abfcd804917c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\WINDOWS\\setup\\scrwin\\wimtd\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="85d7696c-180a-475c-b65a-6d5e7847800d" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\PROTECOM\\Uninstall\\(?:IRIMG(?:1\.JPG|2\.JPG)|uninstall\.(?:xml|dat))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="cf197a8c-5d2f-4a26-b7ef-19f4a7e63e7c" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\CLSID\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\ProgID\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c2494f21-0ac5-482a-b383-c93dc57f8faa" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\PROTECOM\\(?:PTC(?:\.(?:exe|ico)|2\.ico)|AV\.exe|systray\.ocx|MSINET\.OCX|lua5\.1\.dll|ftp\.exe|msscript\.ocx|NotifyIcon\.ocx|uninstall\.exe|COMDLG32\.OCX)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="199074d3-2286-4cf5-ae2d-09b85cf29d4e" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\CLSID\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\InprocServer32\\(?:ThreadingModel)?</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="9afe6db0-fac5-4179-8045-dbcb4f72748b" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\Software\\Licenses\\\{[A-Z0-9]{17}\})</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="cab6b50f-82ef-42c6-a3ba-7e5fc166e964" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\CLSID\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\MiscStatus\\1\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b97fdbeb-e4a2-4525-9a53-70a1508dd7b9" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\PROTECOM\ Setup\ Log\.txt</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="fd92cf60-fc5d-454c-ab85-9b6105df5ab6" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\Disk1\\(?:setup\.exe|data1\.(?:cab|hdr)|layout\.bin|ISSetup\.dll|Setup\.bmp)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b500b247-9f49-4601-905d-f72d399e5343" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\CLSID\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\TypeLib\\</Content>
+      </IndicatorItem>      
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

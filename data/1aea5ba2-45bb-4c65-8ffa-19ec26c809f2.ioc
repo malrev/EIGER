@@ -1,0 +1,28 @@
+<?xml version="1.0" ?><OpenIOC id="1aea5ba2-45bb-4c65-8ffa-19ec26c809f2" last-modified="2020-05-25T12:05:59" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_kolab</short_description>
+    <description>
+        Family:
+            kolab
+        SHA-256:
+            9b73fca746b0312dfd53391e0dfd9713230835284302be2d7f3fca31895c4095
+            c36743425a9b44bdaee2004203d8b317f1ba88f57c27dee0af0cfa5eba0e112a
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=kolab
+            https://www.google.com/search?q=kolab
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:59</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="0d42344c-f2a7-4d43-a8a6-912be9bc7dba" operator="OR">
+      <IndicatorItem condition="matches" id="bdc2d559-deb6-47b0-9ad0-25ecdfeba262" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\dw\.log</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

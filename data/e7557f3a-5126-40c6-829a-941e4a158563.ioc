@@ -1,0 +1,118 @@
+<?xml version="1.0" ?><OpenIOC id="e7557f3a-5126-40c6-829a-941e4a158563" last-modified="2020-05-25T12:06:00" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_addrop</short_description>
+    <description>
+        Family:
+            addrop
+        SHA-256:
+            dfe4a4d3ad0c7eceb1344e5dc6b9d56adad83c7afb9454c3fb178e4eeec012aa
+            fd9af12d74edf816e6f87bda0641835b386ef6051914cf2dbd7fc29ef98028ea
+            e7db625b4ca372082890d59ea9104d08f9d7ed4c60da4c29185ef631202e22d8
+            c3428155adbe4b16e02f17666e570223f042eb6d60f047adcf8c674abd11bb51
+            8a8f38859ec34bf9a42d22ef252ec5305361f85963ddf991c203f664ba14ceb9
+            ac874a694243c4b7655b4266240debf52a2a52135c8aa6278cdbda2cb51c3e1f
+            b3d72656ee43fe98e9e67eafab702199b400effa36678b6bf0f8fb4bc77a02aa
+            fe63748a5a5b0c0b74d97f8a06c56c1120a8ba76946a4c0d0d7fdfadca1b1962
+            cc1ea88e6bbb19117f24d48789eac8140a8d6be31093e962f27ef5502f41da87
+            a53fb3a81072164b9494410e3d89ac646b63e6735ad0bbced54344cdbee8fc34
+            b059f93e0801888adf8acf99621bce443a5cef4ece42ac7dc7bce05696b22287
+            ac7d4fa73b70e80a63dff427f7fb370d6f13c987b24e91ddce994eca456f1eca
+            fc6aa8fb17101e5db096decf43a2e9b0e028b46337f0f70508bcb51b412685c8
+            e719864ca844d6a980dabc9e88127dbe3ff1ca39f64fd330aea67781e3768591
+            83b48458b7df96a82be4641eff716b804d5abe3025524155c48ec3750b153ac3
+            a372274a1f3bf23f13bcd4ddf31feb6c62516ace5f037288af046a42c5c41b50
+            c1123bc9ff84f16abb9b5e2e74039490b347483db3d2218eee2ce8383d03f8f9
+            ea7b12907f38442ebf7f58e2fe05f9b1dbfb0d1156613deb91c3ce41a0961bf6
+            c2246e3739d2560964a207773390c3a281f480f530835d7978a5598aeb4e9034
+            becf845071e87229448674a4da121b76924653865c95e8ff8b2dc44f442ed8da
+            fbec30502d4b3592667303657ca821a398ede5b65bce7bfb07c13535af7aeb44
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=addrop
+            https://www.google.com/search?q=addrop
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:00</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="6044a119-ed30-4fea-9d6a-6934e738893e" operator="OR">
+      <IndicatorItem condition="matches" id="846bf549-b63e-4cfc-bd4e-afc472a4d9cc" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\is\-[A-Z0-9]{5}\.tmp\\7za\.exe\&quot;\ x\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\is\-[A-Z0-9]{5}\.tmp\\form\.res\&quot;\ \-p\&quot;b1lig\@n_vl\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e589e071-3a09-4ef8-b459-208849c41aa3" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\Desktop\\Video\ DownloadHelper\ for\ Chrome\ 7\.3\.9\.0\\license\.txt</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="dda3f509-2496-4e51-bb58-ad56a3c317ea" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\is\-[A-Z0-9]{5}\.tmp\\(?:sub\.res|7za\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="6f8d03e4-8a36-4a74-8178-06c62f42e93c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\is\-[A-Z0-9]{5}\.tmp\\7za\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="da6d83d8-9857-4ace-a55a-0c8dbe788bd0" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\TimerUtc\\(?:data|utct\.exe(?:\.config)?)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="2ac493a4-cb22-4ac4-88c9-46fcec76ae7e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\Desktop\\SimCity\ Societies\\license\.txt</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="31febcce-be2d-4d55-8d0c-f7d9305d5b05" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\is\-[A-Z0-9]{5}\.tmp\\form\.res</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="2eea98a6-24d2-4409-98e8-d1967d3933cd" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\UtcTimer\\utc\.exe\.config</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="545efdc6-00cf-4fce-bd68-b86ed33f5283" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\[A-Z0-9]{4}[A-Z0-9]{4}2df28c12af4bfa06d29d[A-Z0-9]{4}.exe\\382426622df28c12af4bfa06d29d0322\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e99bfe57-b85b-48ca-9fdf-3f46496874f5" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\is\-[A-Z0-9]{5}\.tmp\\sub\.res</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e9b3d98a-2190-474e-a23e-3f8f21cec9ab" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\is\-[A-Z0-9]{5}\.tmp\\7za\.exe\&quot;\ x\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\is\-[A-Z0-9]{5}\.tmp\\sub\.res\&quot;\ \-p\&quot;b1lig\@n_vl\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="49dab74c-62cc-4cb8-be83-2dd802fadf6c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\SystemDiag\\(?:sysinfo\.exe(?:\.config)?|data)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="02da518e-5000-4f5a-b766-748fbceba70f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\is\-[A-Z0-9]{5}\.tmp\\misc\.res</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="051d1aff-cc8e-4e1b-98f3-9df466802b12" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\Desktop\\CloudSync\ 2\.2\.327\ _\ 2\.3\.527\ Beta\\license\.txt</Content>
+      </IndicatorItem>
+      
+      <IndicatorItem condition="matches" id="2f038f76-fa78-43b1-ab02-7181e030c78b" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\is\-[A-Z0-9]{5}\.tmp\\7za\.exe\&quot;\ x\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\is\-[A-Z0-9]{5}\.tmp\\(?:form\.res\&quot;\ \-p\&quot;b1lig\@n_vl\&quot;|misc\.res\&quot;\ \-p\&quot;b1lig\@n_vl\&quot;)</Content>
+      </IndicatorItem>
+      
+      <IndicatorItem condition="matches" id="180b48bd-d42d-451b-ba67-b529e84d522a" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;explorer\.exe\&quot;\ \&quot;C\:\\Users\\.*\\Desktop\\(?:Active\@\ KillDisk\ 12\.0\.25\.2\&quot;|NuSphere\ PhpED\ 19\.2\ Build\ 19211\&quot;|World\ Machine\ Basic\ Edition\ 2\.3\.7\.0\&quot;|Melodics\ 1\.0\.4113\&quot;|Luxand\ FaceSDK\ 7\.1\&quot;|Service\ Protector\ 6\.5\.3\.71\&quot;|Diff\ Checker\ 3\.4\.0\&quot;|V(?:ideo\ DownloadHelper\ for\ Chrome\ 7\.3\.9\.0\&quot;|CE\ Exam\ Simulator\ 2\.7\&quot;)|CloudSync\ 2\.2\.327\ _\ 2\.3\.527\ Beta\&quot;)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="48024d18-59b0-4cd5-b211-8bee31033fa4" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\Desktop\\Active\@\ KillDisk\ 12\.0\.25\.2\\license\.txt</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="a1711dc0-4109-4da0-ad8d-b0fe5c425c81" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\is\-[A-Z0-9]{5}\.tmp\\7za\.exe\&quot;\ x\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\is\-[A-Z0-9]{5}\.tmp\\misc\.res\&quot;\ \-p\&quot;b1lig\@n_vl\&quot;</Content>
+      </IndicatorItem>
+      
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

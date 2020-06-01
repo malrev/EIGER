@@ -1,0 +1,51 @@
+<?xml version="1.0" ?><OpenIOC id="f5c14082-27c6-4999-aca9-5685789ee8d3" last-modified="2020-05-25T12:05:57" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_buzus</short_description>
+    <description>
+        Family:
+            buzus
+        SHA-256:
+            b52acc67febd4abb965ab248d4378284724d8342c9b952607e3b45513dd2d209
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=buzus
+            https://www.google.com/search?q=buzus
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:57</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="86beb65c-90bb-42c9-9748-9d3188eb6c14" operator="OR">
+      <IndicatorItem condition="matches" id="cc15fce3-0054-4f39-bd98-13a4ead6bfaf" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\SharedAccess\\Parameters\\FirewallPolicy\\StandardProfile\\AuthorizedApplications\\List\\C\:\\work\\[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="a9a44de6-c82e-4663-8580-1021db68b8c4" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\winsvc32\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="f1f48de9-2da8-4bef-b0cd-291a7dff4bc4" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\ NT\\CurrentVersion\\Terminal\ Server\\Install\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\\\Windows\ Service\ Manager</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="306925a3-a353-4ea7-a1f0-c40a37eecafd" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\tentime\.vbs</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="558ce3e9-b34c-4547-b059-e391c249a11f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\GR\-Launcher\.jpg</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e15e8025-ac12-4cd3-9000-10e8cebe30a0" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\winsvc32\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="873f8bfb-6e64-4d7a-9da7-887646d9eb1f" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">netsh\ firewall\ add\ allowedprogram\ 1\.exe\ 1\ ENABLE</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

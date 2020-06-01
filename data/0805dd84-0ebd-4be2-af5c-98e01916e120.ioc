@@ -1,0 +1,29 @@
+<?xml version="1.0" ?><OpenIOC id="0805dd84-0ebd-4be2-af5c-98e01916e120" last-modified="2020-05-25T12:05:56" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_grandoreiro</short_description>
+    <description>
+        Family:
+            grandoreiro
+        SHA-256:
+            e2e0f4b397bfe9ae59acd26593018133e26764b324fe32dbf337997a2bb065af
+            93595c309a92a7663e8becee3bfd1c53edc0aa346ce5052da6a9ac9358f178d2
+            9bd64bf854b1f8f830c121e36a34afa747567c3333577873311b2154e559826a
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=grandoreiro
+            https://www.google.com/search?q=grandoreiro
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:56</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="861b22f8-6a5b-4136-bbba-8e9e7be43eb3" operator="OR">
+      <IndicatorItem condition="matches" id="1ec040a0-af7d-44eb-8c46-cf952258d085" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\mm\.bat</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

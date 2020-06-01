@@ -1,0 +1,29 @@
+<?xml version="1.0" ?><OpenIOC id="065debbe-8109-4622-b9dd-b2036e8e2d53" last-modified="2020-05-25T12:05:58" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_qqlogger</short_description>
+    <description>
+        Family:
+            qqlogger
+        SHA-256:
+            f47850d966285ea48ebdb73152fee11fca15d9f1a385a3b0409c601d0b217994
+            f4b242bf85e1cfbbdbab39f1945259411dddda0d734a48a47c3561a3e49dc4cb
+            cb8c26bcf0ef52b641c4d89c1fe648543f7fff6e171cb17a4c06f0d28a764f4c
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=qqlogger
+            https://www.google.com/search?q=qqlogger
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:58</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="2cbf9eda-e815-4003-9a1c-ad1e70b8bbab" operator="OR">
+      <IndicatorItem condition="matches" id="48471ffb-4ee0-43a5-b9e5-982e5fffb319" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\jmxc\\(?:EDataStructure\.fne|QQ\å\\ \å\¯\\ç\\¸\å\\\æ\\¥\ç\\\å\\¨\.exe|HtmlView\.fne|iext2\.fne)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

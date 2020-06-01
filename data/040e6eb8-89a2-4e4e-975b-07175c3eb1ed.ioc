@@ -1,0 +1,64 @@
+<?xml version="1.0" ?><OpenIOC id="040e6eb8-89a2-4e4e-975b-07175c3eb1ed" last-modified="2020-05-25T12:05:58" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_cheatengine</short_description>
+    <description>
+        Family:
+            cheatengine
+        SHA-256:
+            3f8e25956d5e2b346a1958329833f851fdcaee2e124f45a68752137df08a1831
+            f137d110356b75905357f2efe02ec08cdf0aea7563825f83afe0b38464b6755a
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=cheatengine
+            https://www.google.com/search?q=cheatengine
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:58</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="ec232434-494e-4ad9-83c3-4b28f3270f0d" operator="OR">
+      <IndicatorItem condition="matches" id="d444a072-11b6-4090-a857-753b0c40ae1e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Windows\ VW\\plugins\\example\-c\\(?:example\-c(?:\.(?:sln|def|vcproj|c)|\-(?:32bit\.dll|64bit\.dll))|bla\.(?:cpp|h))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="fe8fb34c-7c29-4a71-81f0-03a901b4d756" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Windows\ VW\\(?:s(?:peedhack\-(?:x86_64\.dll|i386\.dll)|tandalonephase(?:1\.dat|2\.dat))|d(?:efines\.lua|3dhook\.dll|bk(?:32\.sys|64\.sys))|favicon\.ico|Uninstall\.(?:exe|ini)|xmplayer\.exe|Kernelmoduleunloader\.exe|ce(?:d3d9hook\.dll|regreset\.exe)|CheatEngine\.chm|v(?:ehdebug\-(?:x86_64\.dll|i386\.dll)|mdisk\.img(?:\.sig)?)|tiny\.dat|allochook\-(?:x86_64\.dll|i386\.dll)|11\.exe|Tutorial\-(?:x86_64\.exe|i386\.exe)|overlay\.fx|main\.lua|lua5(?:\.1\-(?:32\.dll|64\.dll)|3\-64\.dll)|unins000\.(?:dat|exe))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="85df81a0-814c-43bf-8807-fd54f216812a" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\WinRAR\ SFX\\C\%\%Program\ Files\%Windows\ VW</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c7cf4cd7-19ce-4360-8c6f-78e30f1182fa" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Windows\ VW\\languages\\Er0x\\(?:lclstrconsts\.po|cheatengine\-x86_64\.po|tutorial\-x86_64\.po)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="6af0434b-4db8-433a-b4d4-e0317271cf7e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Windows\ VW\\plugins\\DebugEventLog\\src\\(?:exportimplementation\.pas|frmEventLogUnit\.(?:lfm|pas)|DebugEventLog\.(?:res|lp(?:r|i)))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="1c76b167-2c97-4c0a-9cac-d737446cd7e2" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Windows\ VW\\autorun\\Lua\ files\ in\ this\ folder\ get\ executed\ automatically\.txt</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="8d80f9eb-9afc-4e08-99d6-2370f6a997b2" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Windows\ VW\\plugins\\cepluginsdk\.(?:pas|h)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e153c6d2-e4ba-46bc-9a2a-0cba1aa02f5a" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Windows\ VW\\win32\\dbghelp\.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="8902b41e-7932-4deb-822b-6df767026b07" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Windows\ VW\\plugins\\example\-lazarus\\(?:exampleplugin\.lp(?:r|i)|Unit1\.pas)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="a9257658-ea6b-478f-9d5e-5415a34e3ffc" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Windows\ VW\\languages\\(?:l(?:clstrconsts\.po|anguage\.ini)|How\ to\ add\ languages\.txt|cheatengine\-x86_64\.po|tutorial\-x86_64\.po)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

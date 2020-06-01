@@ -1,0 +1,40 @@
+<?xml version="1.0" ?><OpenIOC id="c89bbda2-f832-44a2-98e5-d0bd3a977fa1" last-modified="2020-05-25T12:06:01" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_nanocore</short_description>
+    <description>
+        Family:
+            nanocore
+        SHA-256:
+            f1347fb34aa42e2babebbe55a41f673f54772dc9cb9546f9b539faaccefeadaa
+            c16f50b52edbcf1a79cfe619827aa5d2623b6b2ccdb7a57d624271a302f668a0
+            758981eb6876949fc480a3d47b0052c27c16ee5cfa162606adb90ef5a933356e
+            e1e6cdfcc44e61f13e9ee268891daf4ee0cd1062fc75fc8fd73f5cd6db800b42
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=nanocore
+            https://www.google.com/search?q=nanocore
+        Recommended:
+            true
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-26T15:30:00</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="b209dbb9-5aa9-4c98-868c-7fe4f5989686" operator="OR">
+      <IndicatorItem condition="matches" id="022a5330-5cb4-45ff-b6f9-d3a05169fa86" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">\\Device\\Afd\\Endpoint</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ae568c42-4067-41c4-8e4d-dfe871b29edd" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\WinrarPath\\Winrar64Bit\\(?:VoicemodSetup\.exe|Winrar\ Updater\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="527b8688-e9c2-42ab-ae1b-427a3b565ad0" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\is\-[A-Z0-9]{5}\.tmp\\VoicemodSetup\.tmp</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

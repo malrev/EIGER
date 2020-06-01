@@ -1,0 +1,37 @@
+<?xml version="1.0" ?><OpenIOC id="59c55240-34b4-4ff8-8361-13d1a45ef856" last-modified="2020-05-25T12:06:00" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_enigma</short_description>
+    <description>
+        Family:
+            enigma
+        SHA-256:
+            90493b3e680e3d5a6c229122ac730f84ecfd735f39b3cc36aaba177df1daaac8
+            aeb27a8cfb7e73f36bdfcbc26cadc79ba601765acb0475f7f1261d81244aa471
+            d6d6c0d72335923b3c6965880bf249890f97a3a6a2f1d5adf62fb85d813867c0
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=enigma
+            https://www.google.com/search?q=enigma
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:00</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="36c2e761-427d-4382-8f52-9ec83a5fb806" operator="OR">
+      <IndicatorItem condition="matches" id="7515adb8-159a-415d-a229-b454b85a7338" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\RarSFX[0-9]{1}\\\Ð\´\Ð\¾\Ð\¼\Ð\°\Ñ\\Ð\½\Ñ\\Ñ\\ \Ñ\\Ð\°\Ð\±\Ð\¾\Ñ\\Ð\°\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="63b5463d-4f80-434e-934b-3e7082b51d6d" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\[a-z0-9]{8}\\screenshot\.png</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="cc4ede36-335f-409f-8bec-dbf7c95c4f0e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\(?:\Ð\¶\Ð\µ\Ñ\\Ñ\\Ð\º\Ð\¸\Ð\¹\ \Ð\²\Ð\¸\Ñ\\Ñ\\Ñ\\.exe|Login(?:\.dat|Res\.dll)|lc2\.ogg|Versioninfo\.dat|Tip\.dat|Client\.exe)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

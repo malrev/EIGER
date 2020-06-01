@@ -1,0 +1,122 @@
+<?xml version="1.0" ?><OpenIOC id="2eff1a1c-cecb-4c99-b8e5-0e687457a6ca" last-modified="2020-05-25T12:06:02" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_moderate</short_description>
+    <description>
+        Family:
+            moderate
+        SHA-256:
+            3e84412c2b026b51844e2d8e64f0d0de281ad4a349e2c7acdda253e0534d8665
+            630e5408db3ed181b8c7669ca868273cafe86bbb974a8f800f9d17db37d1bf36
+            f8f87a0eba53a367516f4604267f8a5a5f84f122fe8e58141184ef89856737b1
+            cb0dc28fc8e28fb15d5bdc0e72c70ce0d98b7023ff58cfd4da7b4b6a71f6aab8
+            b5fd08d57403e7dcfaecb1122f1e34db55ba90f373f97891a6bbb642e33f39dd
+            1cf9acd7e85eefde91aa8908c81f93fce91ed77edd3f736df478179ef253fa0a
+            c0f286950a4c1f22edd062dc2c6f1525291c2218266a04055eb7c39bd0f54f41
+            d46cf2fc852e5460c856156c6a543f9391e711428b4f1cf607df60704f3b3cd0
+            b183264ea912a58c2181842dc4450dd573c8730d2aed5c48089b5cc5d283cbc9
+            84b8bcc3609705622ae673f4371756737c530f9090635d6ba3f022351b515589
+            d8b37583d335db1dd0b38a07e813c63b4e20dd047035f3a6b197369a6b06d413
+            c6e1a615c3ecdcc274760d801eb20a2bd9072a381ae3975525110e2404bbae1b
+            bd7a66642760cc0180f0bceae6eddd0598ea8592bccfafb918855764f56e9939
+            ebc29271e31c040353ac5b6cf8023cc6c0e87eb6fe9d194d826d99fbbc256734
+            e8567188c0e8a2ad8aaa156f0807368d7b3c9ac314aad6c528b1d4b6c351f8df
+            d44eb8e2ad67d2da6c2db8e53eb869fee7bceb06f2d57da79ace18fd97b4150c
+            da8cc4a74e8dea165899ecc52e7230e12739f4b912dd31193abd24af409c2afe
+            e664626fdf33685877db6371dfefdc9d341fae33b714803b8f88eb1fa01fd7c2
+            ee5e6f9743f59f12af96d7cf082011d9791572655c9d14ab704c4867cf7bad68
+            92fe813aba45e8a9b2cc28759146c4c2b0629fde9eb1c03daedc9df34523d67f
+            ad5daedd39d6e968afbc7fec89ca8d37660b597e5595c131b2c58e1af6652997
+            cc5cca2949cf67c3494c175c4b7ac5983577c7580d353e5a4a218521b4470199
+            c634b4a4c354c47b4a3d8fc93d0a309e5e022e37850284695ad1516bf0d74a5c
+            caf60f73e31d4e3b80430237a02e93252d2a6c3dbce1509640682c2cab56e53e
+            6fa089d4bd0298ae931913941f0aa24bb548dccbeac02c6c6365d885910819f2
+            d22f5ee77bd172d624d52963116e9dc319761463cdb3e2ef492f5c796087f9b6
+            50d21d8291597ee1b94d41d4d0847c240d818e5d525e41456e56d2f5c58f7290
+            f43a1d1f4d3dc54466faab6ae49752d0e10df707727bc0ac87e95d9ac3d7ff45
+            1953e5ab11987a60d9d7b19491a0428478c822344b429fc1cbd487b490fcc13b
+            45d2089b95764278c6e359f92128121ba5fa141f63f60e23baf6e163f70f922e
+            eec1eb336300e96d379c72059a5dcb023df811994d1db3339ffb07867ab86278
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=moderate
+            https://www.google.com/search?q=moderate
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:02</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="4cc34015-2384-4f2b-814e-7e4a1aa2af73" operator="OR">
+      <IndicatorItem condition="matches" id="78e3516a-cb11-442f-9792-4b5df5bd8cab" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\LogFiles\\PunkBuster\\pbsvc\.log</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="7544b251-41cb-4086-a8f8-52fea8957433" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\iwqggaa\\data\\times</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="02e86394-ced5-4dc0-bb8c-46c2faa2e4c2" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\Documents\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\Browsers\\Google\\(?:Autofill\.log|C(?:reditcardsMasked\.log|ookies\.txt))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="4e7bfb9c-bdc1-4d1e-ac0f-60af4f873ee5" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\TeamViewer\\TeamViewer7_Logfile\.log</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="de80e81b-b808-45c1-bdb6-2e2ac163986f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\(?:kissq\.exe|jfiag_gg\.exe|fjgha23_fa\.txt)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c0aa72aa-667e-48ba-a727-de31bf8663c4" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\(?:_(?:s(?:sl\.pyd|ocket\.pyd)|pytransform\.dll|hashlib\.pyd|bz2\.pyd|lzma\.pyd|ctypes\.pyd)|select\.pyd|py(?:expat\.pyd|t(?:ransform\.key|hon37\.dll))|api\-ms\-win\-c(?:rt\-(?:st(?:dio\-l1\-1\-0\.dll|ring\-l1\-1\-0\.dll)|utility\-l1\-1\-0\.dll|process\-l1\-1\-0\.dll|runtime\-l1\-1\-0\.dll|heap\-l1\-1\-0\.dll|environment\-l1\-1\-0\.dll|locale\-l1\-1\-0\.dll|filesystem\-l1\-1\-0\.dll|math\-l1\-1\-0\.dll|con(?:vert\-l1\-1\-0\.dll|io\-l1\-1\-0\.dll)|time\-l1\-1\-0\.dll)|ore\-(?:s(?:y(?:sinfo\-l1\-1\-0\.dll|nch\-l1\-(?:1\-0\.dll|2\-0\.dll))|tring\-l1\-1\-0\.dll)|d(?:ebug\-l1\-1\-0\.dll|atetime\-l1\-1\-0\.dll)|pro(?:file\-l1\-1\-0\.dll|cess(?:environment\-l1\-1\-0\.dll|threads\-l1\-1\-(?:1\.dll|0\.dll)))|h(?:eap\-l1\-1\-0\.dll|andle\-l1\-1\-0\.dll)|rtlsupport\-l1\-1\-0\.dll|interlocked\-l1\-1\-0\.dll|console\-l1\-1\-0\.dll|util\-l1\-1\-0\.dll|errorhandling\-l1\-1\-0\.dll|l(?:ocalization\-l1\-2\-0\.dll|ibraryloader\-l1\-1\-0\.dll)|file\-l(?:1\-(?:1\-0\.dll|2\-0\.dll)|2\-1\-0\.dll)|memory\-l1\-1\-0\.dll|namedpipe\-l1\-1\-0\.dll|timezone\-l1\-1\-0\.dll))|base_library\.zip|li(?:cense\.lic|b(?:ssl\-1_1\.dll|crypto\-1_1\.dll))|VCRUNTIME140\.dll|u(?:nicodedata\.pyd|crtbase\.dll))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d9653886-ce3d-4bb6-a565-fbf81920cd89" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\uTorrent\\settings\.dat\.new</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ce4acb65-5701-421c-8e65-2b5678aafe87" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">c\:\\programi\\Podrska\\AnyDesk\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="90a1efa5-9ad2-41d7-b6d2-2faa5112330e" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\kissq</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="88b9c32d-9a6c-4852-8b27-2caf5bb261b4" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">(?:\!update\.exe|\ RFAMPZv2NEW\.exe|vnc\-4\.zip|hr\-info\.txt)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c3f558e6-e0ed-4554-9a87-b3a22c3413f0" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\htpc\\(?:data(?:1\.dat|7\.dat|3\.dat|6\.dat|2(?:\.dat|0\.dat|2\.dat))|USFile\.dat)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="cbcd0267-4072-445d-b7f4-704691c981b3" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ \/c\ \&quot;reg\ add\ HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\ \/v\ update\ \/t\ REG_SZ\ \/d\ \&quot;C\:\\Users\\.*\\AppData\\Roaming\\Windows\ Explorer\.exe\&quot;\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c9ba8c92-e1af-4945-bc28-8e23f5f8c7b9" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\\$inst\\(?:temp_0\.tmp|2\.tmp)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="766e10c9-85bf-4c00-bbcd-fe09e6f7f2aa" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\filezilla\.log</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="acec1717-8237-4501-9af2-8e99629a66a3" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\Hossam</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="8495576a-21fc-4d8e-9174-9e724a187e42" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\(?:_ctypes\.pyd|VCRUNTIME140\.dll|api\-ms\-win\-crt\-(?:st(?:dio\-l1\-1\-0\.dll|ring\-l1\-1\-0\.dll)|runtime\-l1\-1\-0\.dll|process\-l1\-1\-0\.dll|conio\-l1\-1\-0\.dll|filesystem\-l1\-1\-0\.dll))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="8a2f6d56-fdf2-4c1c-9c5f-11b6be364197" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\ECUFix\ Checksum\ Fixer\\Uninstall\\uninstall\.xml</Content>
+      </IndicatorItem>
+      
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

@@ -1,0 +1,111 @@
+<?xml version="1.0" ?><OpenIOC id="6e3679dd-3abd-4f92-943d-e2ca66665770" last-modified="2020-05-25T12:06:02" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_lazagne</short_description>
+    <description>
+        Family:
+            lazagne
+        SHA-256:
+            a1665b8b567ee5ae0b258736830e5e30f0037a4bc45095fdd35c9c23c8dfec81
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=lazagne
+            https://www.google.com/search?q=lazagne
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:02</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="f3d4fcc3-56f3-472d-ae21-48522aa89242" operator="OR">
+      <IndicatorItem condition="matches" id="5598ed95-075a-4652-8ddf-17ad7bd1e152" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\tzdata\\(?:PST8PDT|Hongkong)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="582f5f41-10dd-468d-8a92-d6057314fb55" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\init\.tcl</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="8f812186-062d-403d-ab8a-8b8a29a77666" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\tzdata\\Asia\\(?:Almaty|Macao|J(?:erusalem|akarta)|Bishkek|Harbin|K(?:olkata|a(?:bul|tmandu)|uching)|Gaza|Ch(?:oibalsan|ungking))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="2935b5bd-b3e5-46b8-8417-5c19e4c14a68" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\(?:_(?:s(?:sl\.pyd|ocket\.pyd|qlite3\.pyd)|decimal\.pyd|queue\.pyd|hashlib\.pyd|bz2\.pyd|ctypes\.pyd|asyncio\.pyd|elementtree\.pyd|lzma\.pyd|overlapped\.pyd|multiprocessing\.pyd|t(?:estcapi\.pyd|kinter\.pyd))|lib(?:ffi\-7\.dll|crypto\-1_1\.dll)|firma\.docx\.exe\.manifest|VCRUNTIME140\.dll)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e2d742c8-e91f-4e57-bf81-7d7de276936f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\tzdata\\US\\Pacific</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="46694fb9-a7f0-4557-9c5e-25ddc3e735fc" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\Crypto\\Cipher\\_raw_(?:ofb\.cp38\-win32\.pyd|c(?:fb\.cp38\-win32\.pyd|tr\.cp38\-win32\.pyd)|aesni\.cp38\-win32\.pyd)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="a0f5f1fb-2803-4638-bde1-0815e55c39e4" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\encoding\\(?:jis02(?:12\.enc|08\.enc)|gb(?:1988\.enc|2312\.enc)|koi8\-r\.enc|macCroatian\.enc|iso8859\-3\.enc|cp1251\.enc)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="eb277ce3-3148-446c-bd37-561e5be36b5a" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\tzdata\\Indian\\(?:Reunion|Kerguelen)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="eafc26c3-e2c4-4c45-939c-f48c1f210ffb" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\Crypto\\Hash\\_BLAKE2b\.cp38\-win32\.pyd</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c04d2d68-f3d2-4993-982c-c493ce5cda61" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\tzdata\\Europe\\(?:Oslo|Uzhgorod|Zurich)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="bdde113c-ef72-405f-8a82-253f3b48f014" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\tzdata\\America\\(?:Porto_Acre|Aruba|Danmarkshavn|Merida|Lo(?:uisville|wer_Princes)|Edmonton|Tijuana|Inuvik)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="1872cb56-c03c-476a-a097-36bedbcdf001" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\tzdata\\Canada\\East\-Saskatchewan</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="7e9fd9b5-0692-4638-9344-3f88dcb7f3db" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\msgs\\(?:de\.msg|ga_ie\.msg|e(?:s(?:_(?:sv\.msg|do\.msg|cr\.msg|gt\.msg)|\.msg)|n_ph\.msg)|f(?:o_fo\.msg|i\.msg|a_in\.msg)|mt\.msg|id_id\.msg|ta_in\.msg)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="29f565ae-7bdb-411b-8077-e33b43e3bc92" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\tzdata\\Africa\\(?:Lusaka|Nairobi|J(?:ohannesburg|uba)|Bamako|Mbabane)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="90d92622-05af-41eb-8d98-40ad976541d3" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\tzdata\\Atlantic\\(?:Stanley|Cape_Verde)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="f27ce69d-45f7-40ee-8cd9-033385198c85" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\tzdata\\Antarctica\\(?:Syowa|Casey)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="da2738eb-ea47-4152-bb60-c8043a84a2cb" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\tzdata\\Pacific\\(?:Auckland|Saipan|Wallis|Guadalcanal)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="5996d42a-c94e-46a6-89bd-2b81700db0dd" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tk\\ttk\\panedwindow\.tcl</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="4887c26e-cbff-4047-87a3-ac119fd66da4" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tk\\listbox\.tcl</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="df315666-8c1e-446d-bcc9-9052c0cd2d57" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tk\\msgs\\en\.msg</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="f7a36f52-4fc2-4e31-a83a-5ba7eab7c708" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\tcl\\tzdata\\Australia\\(?:Lord_Howe|Eucla|Queensland|Hobart)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="44bb2982-9d0d-44c8-8af2-11985eb72acd" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\lib2to3\\tests\\data\\README</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

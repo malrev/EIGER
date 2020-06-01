@@ -1,0 +1,43 @@
+<?xml version="1.0" ?><OpenIOC id="b79371d6-3cb7-4fb3-b650-3e8c0727af5f" last-modified="2020-05-25T12:05:58" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_kilim</short_description>
+    <description>
+        Family:
+            kilim
+        SHA-256:
+            e7b634b8bff928e52fe18fe0c139e54c35b041061e9611250029dadbafcd0205
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=kilim
+            https://www.google.com/search?q=kilim
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:58</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="ea5a1459-508c-4229-a69f-05dc547b76d1" operator="OR">
+      <IndicatorItem condition="matches" id="c7207b06-8b1d-46d8-8179-d8e55d6fa3a7" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SOFTWARE\\Google\\Update\\ClientState\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\ap</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="988fb595-e12b-41ae-ac0a-dc2d7f925065" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ \/c\ taskkill\ \/f\ \/im\ chrome(?:\.exe|e\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="02cff464-1bd5-4105-be9e-d616dea41711" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d97123c2-f8a6-4b9d-bcee-557aa2e420d4" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\my\\(?:128\.png|zip\.(?:exe|crx)|manifest\.json|48\.png|background\.js)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="73a727f3-13b2-4d67-bd82-58f4118df502" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Google\\Chrome\\Application\\chromee\.exe\ \-\-app\-shell\-install\-crx\ \-\-load\-extension\=C\:\\Users\\.*\\AppData\\Roaming\\my</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

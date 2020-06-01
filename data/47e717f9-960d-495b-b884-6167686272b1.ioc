@@ -1,0 +1,39 @@
+<?xml version="1.0" ?><OpenIOC id="47e717f9-960d-495b-b884-6167686272b1" last-modified="2020-05-25T12:05:58" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_perkiler</short_description>
+    <description>
+        Family:
+            perkiler
+        SHA-256:
+            fe87fd0ffcf8705889f0c33e058add8b2e09da5e118f4551f1c15ef6c3a2d603
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=perkiler
+            https://www.google.com/search?q=perkiler
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:58</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="c7df190b-38a7-434f-9f82-fc291c2dddf4" operator="OR">
+      <IndicatorItem condition="matches" id="8460d99a-3ad8-49fa-9382-ab614845c6c3" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\yidao\\ip\å\\ \é\\\å\\¨\\(?:\æ\º\\æ\º\\å\\ \é\\\å\\¨1\.0\.exe|skinh\.she|zipclass\.dll|SkinH\.dll|gamelsp\.dll)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="49a0b656-d4fd-40a9-aaa9-7387082fda49" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\yidao\\\ä\¼\ \å\¥\\é\\\ç\\¨\é\¡\¶\è\\¯\è\\\æ\\¬\\(?:zipclass\.dll|\ä(?:\¼\ \å\¥\\é\\\ç\\¨\é\¡\¶\è\\¯\è\\\æ\\¬\ï\¼\\.0\.exe|\½\¿\ç\\¨\æ\\¹\æ\³\\.txt))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="8bbfb687-1f89-44e7-9065-531a799f8605" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\yidao\\\ä\¼\ \å\¥\\é\\\ç\\¨\é\¡\¶\è\\¯\è\\\æ\\¬\\aupdata\\data02\.zip</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c4b8467e-d93d-4fc3-bbe0-8d1f19dfc304" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\yidao\\(?:yidao76\.exe|zip\.dll|tj\.html\.url|\-8550_2222_mvy\.exe|WinExc\.dll)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

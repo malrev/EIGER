@@ -1,0 +1,37 @@
+<?xml version="1.0" ?><OpenIOC id="2c2a869e-7785-444e-b0d7-97c58d8c49d3" last-modified="2020-05-25T12:05:59" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_uacskip</short_description>
+    <description>
+        Family:
+            uacskip
+        SHA-256:
+            4024e47b116b35053aec5a8758efa92f9738910276ec60381012038e5c4e7ec6
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=uacskip
+            https://www.google.com/search?q=uacskip
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:59</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="509fa796-e931-4e4f-a317-61aec406322f" operator="OR">
+      
+      
+      <IndicatorItem condition="matches" id="7378c93f-05d7-4001-8848-33ddd1c8644c" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\WinRAR\ SFX\\C\%\%Users\%.*\%AppData\%Roaming</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="73187034-0d48-458e-8beb-ca4ac0d80fa6" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\CCFTray</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="56254941-2863-4fca-9dc3-3a456b30b194" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\RarSFX0\\(?:start\.bat|go\.cmd|winmm\.dll|Team(?:viewer_Resource_en\.dll|Viewer\.(?:exe|ini))|DDOS\.sfx\.exe|tv\.ini)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

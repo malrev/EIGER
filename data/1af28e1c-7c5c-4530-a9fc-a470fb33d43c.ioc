@@ -1,0 +1,124 @@
+<?xml version="1.0" ?><OpenIOC id="1af28e1c-7c5c-4530-a9fc-a470fb33d43c" last-modified="2020-05-25T12:06:03" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_sfone</short_description>
+    <description>
+        Family:
+            sfone
+        SHA-256:
+            ba308face5351a18cd7f8aeaaa753ec28905b9e0d938a89fda7c8aea468b5bbc
+            ed03f1d72aded9de17895eebeca3e660ceb76b6458e52004eaabb85943ec15c5
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=sfone
+            https://www.google.com/search?q=sfone
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:03</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="93ed3b73-acb3-4043-b413-9c943ad45699" operator="OR">
+      <IndicatorItem condition="matches" id="c409632f-0755-4d1d-b6b1-312fd0f4d00d" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\Microsoft\\Windows\\Templates\\i(?:ndian\ beastiality\ lesbian\ uncut\ feet\ \.mpg\.exe|talian\ hardcore\ beastiality\ public\ nipples\ \.mpeg\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="2641e133-39cc-4b2b-bbee-426c9ab8461f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Common\ Files\\microsoft\ shared\\(?:swedish\ cumshot\ hardcore\ girls\ ash\ \.avi\.exe|russian\ gang\ bang\ horse\ catfight\ hole\ \.zip\.exe|malaysia\ cumshot\ \[milf\]\ bondage\ \.rar\.exe|handjob\ hardcore\ several\ models\ sm\ \.rar\.exe|italian\ lingerie\ lesbian\ boobs\ lady\ \.rar\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="af75752e-9249-4b44-a55e-975ef93e31a4" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Microsoft\ Office\\Templates\\(?:swedish\ cum\ licking\ \.mpeg\.exe|bukkake\ full\ movie\ cock\ \.zip\.exe|american\ bukkake\ several\ models\ cock\ \.mpg\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="4a94a287-e6a4-46c5-a406-72c0c3b9f782" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\mssrv\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="3c96cb72-10d9-4a30-ada4-7f476eb8b3cc" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Windows\ Sidebar\\Shared\ Gadgets\\(?:fucking\ full\ movie\ shoes\ \.mpeg\.exe|brasilian\ animal\ horse\ sleeping\ ash\ \.avi\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="da4de679-45b4-488b-8554-bd924bed0099" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Google\\Update\\Download\\(?:lingerie\ (?:licking\ bondage\ \.rar\.exe|hidden\ cock\ ash\ \.rar\.exe)|russian\ cumshot\ lingerie\ full\ movie\ \.mpeg\.exe|fucking\ \[free\]\ girly\ \.avi\.exe|horse\ action\ public\ \.rar\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="6711a353-8999-4e59-9a14-f8f2dbc7c2d6" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Adobe\\Reader\ 11\.0\\Reader\\IDTemplates\\(?:xxx\ licking\ wifey\ \.mpg\.exe|fetish\ fetish\ \[milf\]\ redhair\ \.mpg\.exe|brasilian\ fetish\ lingerie\ several\ models\ hairy\ \.zip\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c695f04a-5b7e-4518-8575-3180d2d3efc4" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\DVD\ Maker\\Shared\\(?:swedish\ horse\ gay\ \[milf\]\ \.mpg\.exe|xxx\ \[free\]\ swallow\ \.zip\.exe|russian\ fetish\ hardcore\ \[free\]\ glans\ beautyfull\ \.mpeg\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ab741b88-6f04-4b39-af78-9de137ce13b3" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\mssrv32</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="6432cda5-72d4-4f47-8987-65d02e11eb46" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\Default\\AppData\\Roaming\\Microsoft\\Windows\\Templates\\gang\ bang\ masturbation\ vagina\ \.mpg\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ba38bf55-39fd-4651-98f7-24b1277efdd0" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\All\ Users\\Microsoft\\Search\\Data\\Temp\\(?:kicking\ \[free\]\ \.mpg\.exe|horse\ \[bangbus\]\ balls\ \.mpg\.exe|canadian\ bukkake\ licking\ \.zip\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e72806e2-2b1e-4ce2-9649-7c6462917d20" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\All\ Users\\Microsoft\\Network\\Downloader\\(?:lesbian\ (?:lesbian\ sweet\ \.avi\.exe|uncut\ pregnant\ \.mpeg\.exe)|american\ action\ sperm\ licking\ hole\ gorgeoushorny\ \.mpeg\.exe|tyrkish\ beastiality\ fucking\ uncut\ hole\ \.zip\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="5b4a651a-8e28-465d-8be9-82c11d6847f8" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\All\ Users\\Microsoft\\Windows\\Templates\\(?:lingerie\ \[bangbus\]\ \.mpg\.exe|handjob\ lesbian\ girls\ boots\ \.mpg\.exe|black\ nude\ blowjob\ public\ glans\ \.mpeg\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b72d74a5-0931-444a-ae1e-3ce9282690bf" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\Microsoft\\Network\\Downloader\\(?:beast\ lesbian\ pregnant\ \.avi\.exe|chinese\ sperm\ blowjob\ several\ models\ granny\ \.mpeg\.exe|trambling\ catfight\ \.avi\.exe|hardcore\ catfight\ bondage\ \.mpg\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="559d8d3c-94a4-469f-81ec-031fd8eead7f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\Default\\Downloads\\beast\ nude\ public\ stockings\ \.zip\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="f3957f98-7fc7-4d53-9992-104d98e1b658" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\All\ Users\\Microsoft\\RAC\\Temp\\brasilian\ animal\ lingerie\ public\ feet\ leather\ \.avi\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="1c37d352-b5c4-46dc-ae90-6dd31d3789c8" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\Default\\AppData\\Local\\Temp\\(?:asian\ bukkake\ sleeping\ vagina\ \.avi\.exe|b(?:eastiality\ \[milf\]\ \.rar\.exe|rasilian\ animal\ horse\ girls\ fishy\ \.mpeg\.exe))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="52e69243-1a01-45ff-a159-dd68fafec33e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Microsoft\ Office\\Templates\\1033\\ONENOTE\\15\\Notebook\ Templates\\(?:italian\ (?:lingerie\ lesbian\ cock\ femdom\ \.avi\.exe|animal\ hardcore\ full\ movie\ glans\ \.avi\.exe)|american\ gang\ bang\ fucking\ voyeur\ stockings\ \.rar\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="0c09042e-bda8-4d73-97ea-eba1c90c4eb0" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\Default\\AppData\\Local\\Temporary\ Internet\ Files\\(?:swedish\ horse\ xxx\ uncut\ mature\ \.zip\.exe|asian\ lingerie\ trambling\ lesbian\ \.mpeg\.exe|brasilian\ gang\ bang\ fucking\ full\ movie\ titts\ mature\ \.mpg\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="35f3e6c7-efd0-4080-9298-ec81ab404d77" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\All\ Users\\Templates\\(?:tyrkish\ kicking\ beast\ \[bangbus\]\ glans\ traffic\ \.zip\.exe|indian\ action\ hardcore\ full\ movie\ bedroom\ \.zip\.exe|b(?:east\ catfight\ \.mpeg\.exe|rasilian\ gang\ bang\ beast\ lesbian\ titts\ castration\ \.rar\.exe))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="046e00b7-2436-4f35-baa0-2598fa0275d1" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\Microsoft\\RAC\\Temp\\(?:japanese\ cum\ xxx\ voyeur\ castration\ \.rar\.exe|asian\ blowjob\ hardcore\ lesbian\ glans\ 40\+\ \.zip\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="a05010f8-f491-4aa1-b96a-3b75dfa3899d" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\Default\\AppData\\Local\\Microsoft\\Windows\\Temporary\ Internet\ Files\\(?:c(?:um\ \[bangbus\]\ glans\ pregnant\ \.rar\.exe|anadian\ lesbian\ girls\ 50\+\ \.rar\.exe)|indian\ gang\ bang\ hardcore\ licking\ cock\ bedroom\ \.mpeg\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="89aa3d7d-0dfa-49ab-8be3-46f5aab862c9" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\Microsoft\\Search\\Data\\Temp\\(?:fucking\ gang\ bang\ big\ ash\ high\ heels\ \.avi\.exe|hardcore\ catfight\ feet\ lady\ \.zip\.exe|gay\ \[milf\]\ boots\ \.mpg\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="98ac2577-0541-49da-a230-62e81a919de1" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\Templates\\(?:indian\ fetish\ beast\ several\ models\ \.rar\.exe|tyrkish\ horse\ voyeur\ 50\+\ \.mpeg\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="0908a98d-4d1b-408d-9896-d20a351ab387" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Windows\ Journal\\Templates\\(?:horse\ several\ models\ feet\ \.zip\.exe|beast\ horse\ voyeur\ \.zip\.exe|american\ porn\ horse\ full\ movie\ girly\ \.zip\.exe)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

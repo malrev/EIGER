@@ -1,0 +1,59 @@
+<?xml version="1.0" ?><OpenIOC id="c4a9b38c-9d8a-4538-82fd-19e6fe8ba021" last-modified="2020-05-25T12:06:01" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_banbra</short_description>
+    <description>
+        Family:
+            banbra
+        SHA-256:
+            b97253e2846f4ec0825e989d238367f5937a57ed8b7734d724ecc12eda8fd25d
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=banbra
+            https://www.google.com/search?q=banbra
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:01</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="1315b303-e88b-4b3f-94c5-3e9adf471ac9" operator="OR">
+      <IndicatorItem condition="matches" id="c9630900-f012-45c3-9e50-03cd3db881f9" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\\\(?:No(?:LogOff|Run|Switch|UserSwitch|C(?:lose|hangeStartMenu))|HideFastUserSwitching)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c91119ee-67d6-4a4e-a5d0-36f8fd1b55ee" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\(?:se(?:lect1\.cur|mtitulo\.cur)|link1\.cur|arrow1\.cur)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="49066b5f-4134-41b3-85a1-556ca0b389e9" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}.log</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="0b171169-a05b-4922-9155-0a74abdbb8f5" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\VersionFCLab\\[a-zA-Z0-9]{5}\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="6d738062-5a35-4e8b-9501-18f3a5850269" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\\\(?:Hide(?:UserSwitching|FastUserSwitching)|Disable(?:LockWorkstation|TaskMgr|ChangePassword))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e76ef68e-cab1-4e80-8aeb-dfd4b9dc3a15" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\Windows\ Problem\ Reporting(?:\ Temp)?</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="a2b61b28-6c81-4105-a464-8ce6c5b2960f" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Webzen\\mu\\Config\\(?:Re(?:solution|freshRate)|WindowMode|MusicOnOff|LangSelection|SoundOnOff|VolumeLevel|Co(?:lorDepth|nnectIp))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d1f960b2-a5b4-4d68-b2b8-33d563490ba4" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\Documents\\Ad0be\\[A-Z0-9]{7}\\[a-zA-Z0-9]{5}\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="863da22f-8573-4868-a310-c0d5b4598cf7" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Aplicativo\ NetExpress\\[A-Z0-9]{7}\\[a-zA-Z0-9]{5}\.exe</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

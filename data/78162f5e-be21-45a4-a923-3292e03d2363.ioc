@@ -1,0 +1,39 @@
+<?xml version="1.0" ?><OpenIOC id="78162f5e-be21-45a4-a923-3292e03d2363" last-modified="2020-05-25T12:05:59" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_vobfus</short_description>
+    <description>
+        Family:
+            vobfus
+        SHA-256:
+            cc500e956b4540d526c68d98a7271a73ad29733bb6c5d0baa982068d65e021f3
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=vobfus
+            https://www.google.com/search?q=vobfus
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:59</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="62b37def-82b9-40d4-83ef-6a54bdf39808" operator="OR">
+      <IndicatorItem condition="matches" id="00ca4f33-f039-49ff-9eee-8b4eebc8e50e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\YXLoadDll_[0-9]{4}\\RES\\YXLOADDLL\.DLL</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="56ae5b73-21a6-44be-96bb-0c1ddbc45397" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\RarSFX0\\FILES\\(?:s(?:ystem\.rar|ubinacl\.exe)|INFO\.COD|cons\.exe|baselist(?:\.lst|_flash\.lst))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b197020d-eea3-468a-8c78-8b8cf7fa61b3" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\YXLoadDll_[0-9]{4}\\RES\\YXLOADDLL\.DLL</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="fb086a9e-4bd0-407c-854b-9d1cd6f81580" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\RarSFX0\\FILES\\CURL\\libeay32\.dll</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

@@ -1,0 +1,41 @@
+<?xml version="1.0" ?><OpenIOC id="75f2fd3b-d3d6-443b-b3c3-a63c59783225" last-modified="2020-05-25T12:06:00" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_redcap</short_description>
+    <description>
+        Family:
+            redcap
+        SHA-256:
+            a67448c8557d2d9f325c1ab0d7ccb9c5fd776ced74997b395c9047737384b65c
+            1c34fa981368e54052caad102f9dce4fcc442ea61fc9fadc49e5d4b2d9d665ff
+            e13c60470887718c6861ae84e0dab5af4174417925466a595b7cc106c0631101
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=redcap
+            https://www.google.com/search?q=redcap
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:00</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="96ad8393-7a96-44e6-b9f0-66fda6f4f785" operator="OR">
+      <IndicatorItem condition="matches" id="23729cd8-2eb2-4f46-b5f5-47a556c9f772" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">schtasks\ \/create\ \/sc\ minute\ \/mo\ 1\ \/tn\ Skype\ \/tr\ \&quot;C\:\\ProgramData\\[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}.exe&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b96d49c9-b08b-48b0-b3a2-1ca295d4d129" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;cmd\.exe\&quot;\ \/c\ \&quot;start\ https\:\/\/iplogger\.org\/2Oghx3\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="35272948-7ea4-4807-8593-02845f3ecff8" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\CLSID\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\TreatAs\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="08105877-5b35-42cb-a175-698e149ca8b8" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Program\ Files\\VidBid\\(?:nettraid\.sfx\.exe\&quot;\ \-pDctulf666\ \-s1|VidBit\.exe\&quot;)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

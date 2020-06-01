@@ -1,0 +1,84 @@
+<?xml version="1.0" ?><OpenIOC id="b2bb9840-b46a-42d7-96fa-039ac30d49a5" last-modified="2020-05-25T12:06:00" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_ulise</short_description>
+    <description>
+        Family:
+            ulise
+        SHA-256:
+            e58f4581648011afd8e72e321ae7ca7ba7af2d74a4985539a57a34b737dae6e3
+            85db905aef68b523b97db78ce902163a29dc6dc8df53fae171eafec95cd1c7ee
+            81ea98fa34a5d33ca6c83bc21d62e3b00dd09d1455d07cf9db75bf617d14f25f
+            80630079e5ac13dae73ef6aedbca51dab93f4978092bc09bde5e68969dc52483
+            acb023fec04a4a21a253b3d2f2ce0a75df3b0c397d7c15a2995364f3fdd467dd
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=ulise
+            https://www.google.com/search?q=ulise
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:00</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="40750ea6-d5ca-4389-9259-fe2bfae2c670" operator="OR">
+      <IndicatorItem condition="matches" id="4dd65b1b-d75d-479f-ad59-c19a92847e9b" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\windows\\System32\\drivers\\spo0lve\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="71ff2da5-29f5-47f4-afc4-86a9e6a3168d" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Your\ Product\\Uninstall\\(?:IRIMG1\.JPG|uninstall\.(?:xml|dat))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="02608bb1-b87a-420a-ad1a-5d909eb74f6d" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\(?:ATIWinflash\.exe|innosetup\-6\.1\.0\-dev\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="0ae64165-5e12-4edb-9a67-e70d6ae6d52e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Your\ Product\\uninstall\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b4a717eb-f518-44f9-8bad-1685787209cf" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\(?:NetSystem32\.exe\&quot;|audiodg\.exe\&quot;)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="af051022-17e1-4cd0-952e-d8335ac27d20" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\is\-[A-Z0-9]{5}\.tmp\\innosetup\-6\.1\.0\-dev\.tmp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="4cfb5906-8326-4345-a91f-75c6fadcfa4e" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ C\:\\Windows\\system32\\cmd.exe \/c [A-Z0-9]{4}AT.xla\\cmd\.exe\ \/c\ XLSTAT\.xla</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="77ac726b-4861-4e23-bbd5-e6556a67e3b7" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Your\ Product1\.0\\(?:InstallLocation|NoModify|DisplayIcon|URLInfoAbout)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="5748d4ce-b9a3-450d-a98c-163a19895db5" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\is\-[A-Z0-9]{5}\.tmp\\_isetup\\_isdecmp\.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="5421986a-7e07-4e48-938b-8311792a67b3" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}.exe{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ccfd2314-78ac-4857-bd7d-2daa305df650" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\C\\Users\\.*\\AppData\\Local\\Temp\\[A-Z0-9]{4}inflashfra.dll\\(?:ATIWinflash(?:sve\.dll|de(?:f\.dll|u\.dll)|fra\.dll|ita\.dll|ch(?:s\.dll|t\.dll))|ULPSCtrl\.dll)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="31f82893-cb05-446c-8f63-6f3d33a6eb95" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Adobe\\Reader\ 11\.0\\Reader\\AcroExt\\AcroExt\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c4761467-dfaf-47bf-813a-6d78299db75a" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\software\\microsoft\\windows\\CurrentVersion\\Run\\spron</Content>
+      </IndicatorItem>
+     
+      <IndicatorItem condition="matches" id="63bad148-131b-449c-bad7-c3a33d7965b1" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\HSPoprawkiNew\\(?:AConfig\.dat|WINSADGUARDIB\.pak|aconfig\.dat|SSL10LIB\.pak|HSPlugT(?:ERMINATORIB\.PAK|IRIB\.PAK)|Konfig\.cfg)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

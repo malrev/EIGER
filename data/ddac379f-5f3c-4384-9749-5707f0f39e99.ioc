@@ -1,0 +1,53 @@
+<?xml version="1.0" ?><OpenIOC id="ddac379f-5f3c-4384-9749-5707f0f39e99" last-modified="2020-05-25T12:06:00" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_scrop</short_description>
+    <description>
+        Family:
+            scrop
+        SHA-256:
+            fe87fd0ffcf8705889f0c33e058add8b2e09da5e118f4551f1c15ef6c3a2d603
+            601e3794024335aca8b40db668d42ed4eb8dd8fa5f52f117d48c84f009a58edd
+            acc547b9e99ec8bf38e1280c51b09aff54fe32da836e4259148b7f257b7f5420
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=scrop
+            https://www.google.com/search?q=scrop
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:00</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="fc684ad8-4f58-4c12-a7cf-28f6279355c4" operator="OR">
+      <IndicatorItem condition="matches" id="1eddddb5-ab18-4579-9972-0be72300cecd" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\Realtek\ Sound\ Blaster\\RealtekSb\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d32f765b-99cc-4a89-8679-6df52e4a381e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\Afraid\\Sponsor_36\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="a2baaddd-717b-4333-ac98-6ca2dfa7e235" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\Realtek\ Sound\ Blaster\\RealtekSb\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b179f56f-6b34-46da-a971-e81de859c8de" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\Gotten\\Cousin_28\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ed107e18-b1d3-49e3-81f8-7824d808ef24" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\[A-Z0-9]{4}enter\\PDFCenter\\(?:DisplayName|UninstallString)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="7a837664-07a9-4957-be0c-b3aa0b45b2f2" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\Jeers\\Keen_49\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="092928c8-0677-4ac8-9ce7-1041024af17c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\Software\\(?:Because_76\.exe|Media_59\.exe|Federal_51\.exe)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

@@ -1,0 +1,52 @@
+<?xml version="1.0" ?><OpenIOC id="e5c54fca-6daf-42be-a4c4-8d3d56e812fc" last-modified="2020-05-25T12:05:59" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_autohk</short_description>
+    <description>
+        Family:
+            autohk
+        SHA-256:
+            c58b77964d9b60f994433b51e9e8b7ba4910a0cad9a72ae8bc09c5db45a68ad9
+            e21daf3dd6c447a93d56e839ad62ccd1bc0dc1b9de0772fc9c5fa6768b8ed6c9
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=autohk
+            https://www.google.com/search?q=autohk
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:59</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="0f465840-49db-4043-9c87-84df7fd7c066" operator="OR">
+      <IndicatorItem condition="matches" id="267377c6-3a6f-43ad-a9e6-7d631e09bd96" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\\(?:PgqinPLgXXR73I5Z|qi_3LAaFiJeTcC71|5RPA2EmkYQq7duCh|Q2bP02gwmOkiDnbX|Dy7Ii5eVg1i6iOL4|iRiiuMbniiNLGTjk)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ac161b5d-282a-4cf4-849b-4f17af06b819" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\Vpnsoft\\Intensvpn\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c9fd3650-7ed8-4037-ba03-1ba7b188706a" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\Mont\\Monter\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="557ff06c-341c-4a9b-9002-ce577ba15540" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="23fd58a6-e655-48b4-8534-25cbd3d6e8f8" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\(?:sup\-(?:stream\.txt|30day\.txt)|DB(?:1\.csv|2\.csv)|chest\-(?:day\.txt|ges\.txt)|abonnenten\.txt)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="fb720b46-bc42-4806-817d-a04ac4e9a502" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\Moonvpn\\Moonvpn\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="46f1bafe-a715-4396-8ae6-514623285277" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">(?:Intensvpn\.exe|Mo(?:nter\.exe|onvpn\.exe))</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

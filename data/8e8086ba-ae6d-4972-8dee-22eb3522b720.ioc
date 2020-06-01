@@ -1,0 +1,36 @@
+<?xml version="1.0" ?><OpenIOC id="8e8086ba-ae6d-4972-8dee-22eb3522b720" last-modified="2020-05-25T12:05:58" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_hotkeychick</short_description>
+    <description>
+        Family:
+            hotkeychick
+        SHA-256:
+            e09ff2e134c994ee80ef374d6df0b420f4947b57978b26ea58ebf5895c5565cb
+            d30a5d990026185deaa6603381d7245a323f024299ea23613d469d7a371c8184
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=hotkeychick
+            https://www.google.com/search?q=hotkeychick
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:58</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="5a15d1e7-cf8c-413d-afd2-199bb27f28d5" operator="OR">
+      <IndicatorItem condition="matches" id="ab24a795-79e1-441a-ba9f-012cdd0fde15" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">azofreeware\.com\\7chrome\.exe\ \-\-user\-data\-dir\=\&quot;\.\.\\\.\.\\User\ Data\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="90251175-782f-4cee-89d6-03868010c492" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">schtasks\ \/create\ \/sc\ minute\ \/mo\ 1\ \/tn\ Skype\ \/tr\ \&quot;C\:\\ProgramData\\[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}.exe&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ed5f7293-5614-471c-9e2f-2d4bbc1ec5f9" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\\diSiwHgu_iiJeD6m</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

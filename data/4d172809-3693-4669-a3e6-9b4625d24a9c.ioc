@@ -1,0 +1,27 @@
+<?xml version="1.0" ?><OpenIOC id="4d172809-3693-4669-a3e6-9b4625d24a9c" last-modified="2020-05-25T12:05:58" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_epack</short_description>
+    <description>
+        Family:
+            epack
+        SHA-256:
+            c3438d5ed0e1e34cb327aef6f1bd3ed1765165c74bc9070c3429feec677951e7
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=epack
+            https://www.google.com/search?q=epack
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:58</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="3beaab5c-0bd4-47b4-ae47-7c4095f25636" operator="OR">
+      <IndicatorItem condition="matches" id="cd9c0b7f-5dc6-4c77-8911-5ef0e33da63a" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ C\:\\Windows\\system32\\cmd\.exe\ \/c\ pause</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

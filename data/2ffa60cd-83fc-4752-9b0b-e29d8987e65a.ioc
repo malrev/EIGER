@@ -1,0 +1,38 @@
+<?xml version="1.0" ?><OpenIOC id="2ffa60cd-83fc-4752-9b0b-e29d8987e65a" last-modified="2020-05-25T12:06:00" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_dynamer</short_description>
+    <description>
+        Family:
+            dynamer
+        SHA-256:
+            97d28cf03f2fcaf38b6bb62614c220027f111546d8ee6786b2d93aadc9fd7c10
+            7865a4b4dbfc34d86c5721364919fedfa403dc6f394f04e55e3869503c05bd10
+            df08fd99e40c73d19fe016754d9ef5d9d8714c518575e11b6009f418404d482d
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=dynamer
+            https://www.google.com/search?q=dynamer
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:00</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="c12be4d2-de60-4a65-8776-7ad13c6b734d" operator="OR">
+      <IndicatorItem condition="matches" id="2fc585a3-c184-4319-a14d-48fd0cd07faf" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\7ZipSfx\.000\\(?:setup\.exe|\ä\º\\æ\¬\¡\å\\½\æ\\°\ä\¸\\é\¢\\.gsp|Crk5\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="4d0ca517-ed64-4437-b807-fdcc8d40d93f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\temp\\khaicarrhs\\Jerry\ hack\ rakion\ v1\.6_files\\(?:Thumbs\.db|filelist\.xml|image00(?:1\.jpg|2\.jpg))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="89dc1e3f-409e-47d4-97a5-59ff481e9b3c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\temp\\khaicarrhs\\Jerry\ hack\ rakion\ v1\.6\.htm</Content>
+      </IndicatorItem>
+      
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

@@ -1,0 +1,27 @@
+<?xml version="1.0" ?><OpenIOC id="1e29d12b-52a3-43e5-8e81-eab067d99228" last-modified="2020-05-25T12:05:55" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_guloader</short_description>
+    <description>
+        Family:
+            guloader
+        SHA-256:
+            39f5b281a3e1ceafe7e8df7a17137f20186ba6d3de3cbc3d57c8b60123a46247
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=guloader
+            https://www.google.com/search?q=guloader
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:55</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="cdb33e63-b32e-44df-8ce6-9488233f4a25" operator="OR">
+      <IndicatorItem condition="matches" id="6fc9b837-55db-4ec7-b197-c5ecef003457" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\\SAND</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

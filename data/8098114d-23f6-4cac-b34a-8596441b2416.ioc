@@ -1,0 +1,27 @@
+<?xml version="1.0" ?><OpenIOC id="8098114d-23f6-4cac-b34a-8596441b2416" last-modified="2020-05-25T12:05:56" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_gamania</short_description>
+    <description>
+        Family:
+            gamania
+        SHA-256:
+            f9184998cf63e895ea9126feedd730cce1350b90de777290de1d3046151585ff
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=gamania
+            https://www.google.com/search?q=gamania
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:56</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="c9677a80-e2e8-48cd-8dcb-ab17c4e7c6e2" operator="OR">
+      <IndicatorItem condition="matches" id="c4ddef7d-67d3-489b-ab4d-5cfe49c92993" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\images\\up\.gif</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

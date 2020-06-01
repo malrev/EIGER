@@ -1,0 +1,60 @@
+<?xml version="1.0" ?><OpenIOC id="f1b1511d-cdfa-4fbf-a81f-c6535657f16a" last-modified="2020-05-25T12:05:58" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_runner</short_description>
+    <description>
+        Family:
+            runner
+        SHA-256:
+            ba308face5351a18cd7f8aeaaa753ec28905b9e0d938a89fda7c8aea468b5bbc
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=runner
+            https://www.google.com/search?q=runner
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:58</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="ce1b5ed2-258c-443d-85cd-629d28cf9060" operator="OR">
+      <IndicatorItem condition="matches" id="87c323fe-fb80-43a4-9fb3-a21f6e35b4b4" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\MSDCSC\\msdcsc\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="51cdf975-b9c2-4bc9-89c7-9def9f6839f9" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\WB14\\file\\file\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="099d6ec9-82ae-4ef2-82e5-723c212a8fda" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ \/c\ ping\ 127\.0\.0\.1\ \-n\ 2\&amp;del\ \/f\ \/q\ C\:\\Users\\.*\\AppData\\Local\\Temp\\filedisk\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="0ee533b3-542e-471d-bb6e-540173792429" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\/Windows\/WB144\\(?:set3\.bat|file\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d9e143af-ebda-4ee4-8c5e-d2a722aecdb8" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ \/c\ C\:\\Users\\.*\\AppData\\Local\\Temp\\dsptw\.exe\ (?:1\ \/find\:all\ \/ghoststyle\ \/y|\/a\ \/pdr\ \/y)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="a8fcfcf4-50d2-4ac8-b305-eda105a97c23" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\WB14\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="46fd4017-3a2c-4640-978b-38eb89a50707" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\Windows</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c3302282-2d12-484f-be48-b2fe8cd09402" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\(?:close\-1\.tmp|DataIcon\.dll|help\.tmp|b(?:g\-(?:main\.tmp|gj\.tmp)|tn\-(?:r\-(?:1\.tmp|d\.tmp)|b\-1\.tmp))|dsptw\.exe|filedisk\.exe|ShowDrive\.exe|4\-1\.tmp|tip\-warning\.tmp|g(?:rubinst\.exe|j\-1\.tmp))</Content>
+      </IndicatorItem>
+      
+      <IndicatorItem condition="matches" id="0c50cb51-7be1-4054-9fe2-16481ea74614" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\ShowDrive\.exe\ \*</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

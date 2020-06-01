@@ -1,0 +1,30 @@
+<?xml version="1.0" ?><OpenIOC id="5ce069b1-0aea-4304-a789-ad700a8ab4ff" last-modified="2020-05-25T12:05:57" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_smheist</short_description>
+    <description>
+        Family:
+            smheist
+        SHA-256:
+            b3ca797eee67ef86c3afbecbe8526a3f9fc2ff0a203fbe3348ec238e70ca18f6
+            1eaaf212088109a586389da659c43f04b46447e4f69bdd9082e9509ee68d5100
+            06d34e5e62fd344ccf0b85e9fb1072715ae9a95bc178bcba963066fbf92ba86e
+            4b61823680b06756bca4b3f2c4faf7ac4c4e47fa2903560654e0af59d8f564ff
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=smheist
+            https://www.google.com/search?q=smheist
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:57</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="7b0c784d-b7c2-41b3-b477-7ec1ca627060" operator="OR">
+      <IndicatorItem condition="matches" id="387298fa-dc91-4ec0-9095-ed7d37a17021" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Private\ Dtata\ Cloud\ Makers\ 1\.00\\(?:Publisher|No(?:Repair|Modify)|HelpLink|Display(?:Name|Icon|Version)|U(?:RLInfoAbout|ninstallString)|Language|EstimatedSize|Install(?:Location|Date|Source)|VersionM(?:inor|ajor))</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

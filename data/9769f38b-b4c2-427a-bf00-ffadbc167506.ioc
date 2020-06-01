@@ -1,0 +1,58 @@
+<?xml version="1.0" ?><OpenIOC id="9769f38b-b4c2-427a-bf00-ffadbc167506" last-modified="2020-05-25T12:06:02" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_rasftuby</short_description>
+    <description>
+        Family:
+            rasftuby
+        SHA-256:
+            68c66512e860863451ecc6b6e34c8b07480b55ec9c7bdfb7cedd3175569c44dd
+            c84675926c8c0f95890bda3c8f472331a53546871775a03ade0ce24c51a4fbf4
+            353acc3ab34787e446c745d524fe6bd1ab8b8cf5b1da6037120bebe26103f35d
+            60e3676ee72717fbe4cc544d23c9aef76adad35e6749714706c36e5a46fb6bc0
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=rasftuby
+            https://www.google.com/search?q=rasftuby
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:02</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="fb3c30e4-75f7-49df-a949-3d8b35c10654" operator="OR">
+      <IndicatorItem condition="matches" id="4e7f2fcf-cd8e-4aac-9277-5e1f5df2d5d3" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\/brokerhost\/\\(?:vmcheck32\.dll|monitorhost\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="79cf6fcb-a2a9-46cf-9f10-b1c6e9891644" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\RarSFX0\\(?:s\.bat|1\.sfx\.exe|close\.bat|anbec_movil\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="9c34aedd-9ea8-4851-9e1e-6597c7815e51" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\(?:1(?:\.cpp|23\.bat)|g\+\+\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="544d49bf-5cd5-46f5-85b5-1c130aac41f3" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\/intosvc\/\\(?:vmcheck32\.dll|hostdhcp\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="07d8f48a-8304-48ba-b19a-02a417f3a218" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\WinRAR\ SFX\\C\%\%Users\%.*\%AppData\%Local\%Temp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="78444aae-94cc-4e58-8ecc-a14599f80fc0" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\/reviewref\/\\vmcheck32\.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="3acf3b69-fd39-433b-b494-9e9b9fc9f14f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\/runtimesaves\/\\vmcheck32\.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d677eda9-781d-4339-a12e-7e51e84fbdab" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\/sysruntime\/\\dclib\\AntiVM\.dclib</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

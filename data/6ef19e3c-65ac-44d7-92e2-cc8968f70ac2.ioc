@@ -1,0 +1,36 @@
+<?xml version="1.0" ?><OpenIOC id="6ef19e3c-65ac-44d7-92e2-cc8968f70ac2" last-modified="2020-05-25T12:05:56" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_occamy</short_description>
+    <description>
+        Family:
+            occamy
+        SHA-256:
+            baec515f70fd8aff441c526e4a38e96699f4449f7ebeceb5a05463e12de8268c
+            94fe397af2dc934e8186bf55be3baeac2be31a7b2b20aebef35f8ff2de85ef0c
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=occamy
+            https://www.google.com/search?q=occamy
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:56</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="e50227e5-6b5a-46dd-b2b8-ef401b270a01" operator="OR">
+      <IndicatorItem condition="matches" id="88306823-ceb6-4338-9721-9354e312e607" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\PDFShaperProfessional\\PDFShaperProfessional\\App\\PDFShaper\\PDFShaper\\(?:PD(?:FShaper\.exe|C32\.DLL)|ps9pro\.dll|wpcc\.dll|TXML2\.DLL|ocr\.dll|Start\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="1c4e8cd4-627d-42a2-979d-1212e8c721d4" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Internet\ Download\ Manager\ 6\.36\\(?:Publisher|NoModify|DisplayName|UninstallString|HelpLink|VersionMinor)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="bb183bf4-2c3e-4ff3-8783-9f8e5d13b63b" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Internet\ Download\ Manager\\Languages\\(?:i(?:dm_(?:p(?:l\.lng|tbr\.lng)|vn\.lng|hu\.lng|kr\.lng|fa\.lng|ch(?:n2\.lng|t\.lng)|th\.lng|gr\.lng)|nst_(?:src\.lng|dk\.lng|pl\.lng|hi\.lng|bg\.lng|ru\.lng|it\.lng|uz\.lng|a(?:r\.lng|m\.lng)|lao\.lng|fa\.lng|my\.lng|tr\.lng|g(?:e\.lng|r\.lng)))|tips_(?:sk\.txt|ptbr\.txt|hu\.txt|ru\.txt|kr\.txt|chn\.txt|it\.txt|jp\.txt|ar\.txt|es\.txt|fa\.txt|nl\.txt))</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

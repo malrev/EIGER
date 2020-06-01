@@ -1,0 +1,35 @@
+<?xml version="1.0" ?><OpenIOC id="cc4e5717-7d19-48f7-b95f-d42ddce6f061" last-modified="2020-05-25T12:05:57" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_clyp</short_description>
+    <description>
+        Family:
+            clyp
+        SHA-256:
+            d0491c8ec494fbf90eb509b870dd752aaeab33b2e472efaf5f2c3432a91c65d2
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=clyp
+            https://www.google.com/search?q=clyp
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:57</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="577be5db-d6bf-4314-9c07-5504c111d3bb" operator="OR">
+      <IndicatorItem condition="matches" id="cb646e83-4bdf-4a49-9250-129a60d5d3a4" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ \/c\ \&quot;reg\ add\ HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\ \/v\ \&quot;Windows\ Explorer\&quot;\ \/t\ REG_SZ\ \/d\ \&quot;C\:\\Users\\.*\\AppData\\Roaming\\Windows\ Explorer\.exe\&quot;\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="8612f4e7-d24a-4854-9919-fd4def92960b" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\(?:_(?:s(?:sl\.pyd|ocket\.pyd)|hashlib\.pyd)|select\.pyd|python(?:\.jpg|27\.dll)|b(?:z2\.pyd|ackdoor\.exe\.manifest)|Microsoft\.VC90\.CRT\.manifest|msvc(?:r90\.dll|p90\.dll|m90\.dll)|unicodedata\.pyd)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="fead4cfb-7f67-49e1-9eef-59c323b0862f" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\cmd\.exe\ \/c\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI15\~1\\python\.jpg\&quot;</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

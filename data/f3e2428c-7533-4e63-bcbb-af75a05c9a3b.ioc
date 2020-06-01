@@ -1,0 +1,31 @@
+<?xml version="1.0" ?><OpenIOC id="f3e2428c-7533-4e63-bcbb-af75a05c9a3b" last-modified="2020-05-25T12:05:56" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_sytro</short_description>
+    <description>
+        Family:
+            sytro
+        SHA-256:
+            f098a050486ad6f20509adec56db219b93e17b0bd50edf40b18222504ebb2c88
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=sytro
+            https://www.google.com/search?q=sytro
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:56</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="2a0e4776-8d6a-4f7c-b08d-4fa3336c6481" operator="OR">
+      <IndicatorItem condition="matches" id="1e3dcf90-68b3-4326-8dc9-1a00d95c25cf" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\d(?:extor32\.exe|riv64\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="687c2f51-ddd8-4df1-a698-d40e640cc0eb" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\Temp\\(?:PS1\ Boot\ Disc\ Full\ Dwonloader\.exe|H(?:ow\ To\ Hack\ Websites\.exe|a(?:lf\-life\ (?:ONLINE\ key\ generator\.exe|WON\ key\ generator\.exe)|ck(?:\ into\ any\ computer\!\!\.exe|ing\ Tool\ Collection\.exe)))|W(?:in(?:dows\ XP\ (?:serial\ generator\.exe|key\ generator\.exe|Full\ Downloader\.exe)|rar\ \+\ crack\.exe|zip\ 8\.0\ \+\ serial\.exe)|arcraft\ 3\ (?:ONLINE\ key\ generator\.exe|battle\.net\ serial\ generator\.exe))|K(?:ey\ generator\ for\ all\ windows\ XP\ versions\.exe|aZaA\ media\ desktop\ v2\.0\ UNOFFICIAL\.exe)|Z(?:oneAlarm\ Firewall\ Full\ Downloader\.exe|idane\-ScreenInstaler\.exe)|LordOfTheRings\-FullDownloader\.exe|\[DiVX\]\ (?:Lord\ of\ The\ Rings\ Full\ Downloader\.exe|Harry\ Potter\ And\ The\ Sorcerors\ Stone\ Full\ Downloader\.exe)|Quake\ 4\ BETA\.exe|S(?:ony\ Play\ station\ boot\ disc\ \-\ Downloader\.exe|hakira\ FullDownloader\.exe|piderman\ FullDownloader\.exe|IMS\ FullDownloader\.exe|caryMovie\ 2\ Full\ Downloader\.exe|tar(?:\ (?:Wars\ Episode\ 2\ \-\ Attack\ Of\ The\ Clones\ Full\ Downloader\.exe|wars\ episode\ 2\ downloader\.exe)|Wars2\ \-\ CloneAttack\ \-\ FullDownloader\.exe))|Internet\ and\ Computer\ Speed\ Booster\.exe|G(?:ladiator\ FullDownloader\.exe|TA3\ crack\.exe|rand\ theft\ auto\ 3\ CD1\ crack\.exe)|C(?:KY3\ \-\ Bam\ Margera\ World\ Industries\ Alien\ Workshop\ Full\ Downloader\.exe|at\ Attacks\ Child\ Full\ Downloader\.exe)|A(?:IM\ Account\ Stealer\ Downloader\.exe|ikaQuest3Hentai\ FullDownloader\.exe)|M(?:oviezChannelsInstaler\.exe|SN\ Password\ Hacker\ and\ Stealer\.exe|icrosoft\ (?:key\ generator\ works\ for\ ALL\ microsoft\ products\!\!\.exe|Windows\ XP\ crack\ pack\.exe)|acromedia\ Flash\ 5\.0\ Full\ Downloader\.exe)|D(?:SL\ Modem\ Uncapper\.exe|ivX\.exe)|Jenna\ Jameson\ \-\ Built\ For\ Speed\ Downloader\.exe|B(?:ritney\ spears\ nude\.exe|orland\ Delphi\ 6\ Key\ Generator\.exe)|Xbox\.info\.exe)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

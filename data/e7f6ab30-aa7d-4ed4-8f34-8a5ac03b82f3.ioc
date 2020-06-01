@@ -1,0 +1,146 @@
+<?xml version="1.0" ?><OpenIOC id="e7f6ab30-aa7d-4ed4-8f34-8a5ac03b82f3" last-modified="2020-05-25T12:06:05" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_delf</short_description>
+    <description>
+        Family:
+            delf
+        SHA-256:
+            e6ce392273173b674416305da180fdf4f6527f2d40a2cb5835955f65d1d8ee5e
+            f6838ff65817b713ee3a8c536b012a2d80c9121e6b5dd39fed086161bb2d9b5e
+            e3e04d085fadb41fe1f5dde36a1b0addab5bccf24c6bcdb7c98785f19a79ef8a
+            bdcf204b6a7d184be4335e213ad80ec8cd179271512435f20fb40694ae5eff93
+            2cb89c499d52153426baa0da1dd3cd3879fddbf1cc56724270a2710ea970cf53
+            a52b63449444115d5be68aa809cae73d26d47a426e1ebc76a5ce66ffe94ff87c
+            d40b97eb774848c15d68182e0c8254f1fd013d494a2aafbcd6ec07ce7341471c
+            c155c159d139e3c80aa37801564a35dbbabeae74bd9ee17911f139d054ff6edf
+            bd07e0af1f9c2a5a5489a6f9257d8d59198bba2446fd8507fec411a01777afdc
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=delf
+            https://www.google.com/search?q=delf
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:05</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="db8ab032-7c78-4254-a891-16f9dd790ae4" operator="OR">
+      <IndicatorItem condition="matches" id="81b47941-1e7b-4fe6-8f0a-69c0d70491a9" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Google\\Update\\1\.3\.32\.7\\Google(?:Update(?:\.exe|WebPlugin\.exe|OnDemand\.exe|Broker\.exe|Setup\.exe|Co(?:re\.exe|mRegisterShell64\.exe))|CrashHandler(?:\.exe|64\.exe))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="4ed2b3c2-9951-40b9-8552-5b956a7854ac" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Server\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b12fd697-8edf-4e89-9907-e28c88cc7287" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\Branding\\ShellBrd\\bmp2\\bmp2\.bak</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="f0071488-a1af-4b9e-8b4c-c9c93cbc3c43" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\Yarexs\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="4ca41c30-cd77-42d3-a91c-69604aec9765" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Google\\Chrome\\Application\\57\.0\.2987\.110\\Installer\\(?:setup\.exe|chrmstp\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="7b1507f8-86ab-4221-95d6-a59c98cfc4c1" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\Synaptics\\Synaptics\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="0d973f15-eac5-4df2-a96f-9d9a8188f3a0" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Security\ Center\\[A-Z0-9]{4}isableNotify\\UACDisableNotify</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="cbf1b886-057e-4d76-bf6e-dcb8c3977bcf" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\ NT\\CurrentVersion\\Winlogon\\Notify\\[A-Z0-9]{4}ontrol\\ACLControl\\(?:Logon|Asynchronous|Impersonate|DllName)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d0a35ea0-6e4e-44f8-83a2-21bf151e9664" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Common\ Files\\svchost\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="1dee244a-af62-4455-8fe5-bf28bf2f466f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">c\:\\Program\ Files\\Adobe\\Reader\ 11\.0\\Reader\\(?:LogTransport2\.exe\.buf|AcroTextExtractor\.exe\.buf)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="1a13d838-ce83-457c-b729-eb7d37fb2cb6" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\qqSfLb\\svchost\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="bc24534b-8ab8-4a1d-b8df-bcc902edc0fe" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\mBOJaJn\\(?:srCmIOm\.dll|NBASSwxAr\.tmp|JpVQipS\.dll)</Content>
+      </IndicatorItem>
+      
+      <IndicatorItem condition="matches" id="d3a56f71-9c74-4fbd-ab8c-bf068e5f2777" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Adobe\\Reader\ 11\.0\\Reader\\AcroBroker\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="2ddfa385-bba5-4323-9270-6e7121beed84" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\ NT\\CurrentVersion\\WinLogon\\[A-Z0-9]{4}isable\\SFCDisable</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="1f6b67cb-8eff-46b7-90ed-4803ce2ac0a1" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">expand\.exe\ \-r\ \&quot;C\:\\Users\\.*\\AppData\\Roaming\\safeup\.cab\&quot;</Content>
+      </IndicatorItem>
+      
+      <IndicatorItem condition="matches" id="8ac7f293-8252-44f2-8f41-bbbab023ff30" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Common\ Files\\Sense\\ClearTemp1\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="0799097d-967e-4061-a935-f975c3816a49" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Google\\Chrome\\Application\\57\.0\.2987\.110\\chrome\.exe\.sig</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="fe02c6cc-7f2c-4f98-961e-66ba5d1e708d" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">c\:\\Program\ Files\\Google\\Update\\Download\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\57\.0\.2987\.110\\57\.0\.2987\.110_chrome_installer\.exe\.buf</Content>
+      </IndicatorItem>
+      
+      <IndicatorItem condition="matches" id="2a1a3f4f-b5da-475c-82a9-e3e099f721aa" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}.exe.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="13d32fac-0213-491d-bbe6-727a547ed19e" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SOFTWARE\\SystemCore_093A5F5D\\2_\à\¥\\à\¥\\à\¥\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ed6441af-c83b-4a9c-986f-707689cd0b5f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\(?:ACLControl\.exe|83921748113859_Image0\.png|pmf\.pika|bt4622\.bat)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="34d49a6c-36ec-4474-8a5c-0202f4c280e5" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">GameLogin_Debug\.txt</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="53c838b2-f83e-4dce-aacb-e95cee2a4edb" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\\Á\ú\Ò\÷\´\«\Æ\æ\[\Ð\Â\°\æ\]\\[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="3256973a-1af5-413f-8e48-3edf9f7f540e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\win32dc\\(?:Half\-Life\ 2(?:_(?:patch\.exe|codes\.exe)|\ cheat\.exe)|UT2004\ (?:fix\.exe|cdfix\.exe|\+\ (?:patch\.exe|codes\.exe))|FlatOut\ (?:hack\.exe|\+\ cdfix\.exe)|BattleField\ 1942(?:_(?:fix\.exe|codes\.exe)|\ (?:trainer\.exe|\+\ c(?:rack\.exe|odes\.exe)))|D(?:AoC(?:_(?:patch\.exe|hack\.exe|codes\.exe)|\ (?:serial\.exe|\+\ hack\.exe))|oom\ 3(?:_(?:cdfix\.exe|trainer\.exe)|\ (?:serial\.exe|c(?:odes\.exe|heat\.exe))))|Si(?:lent\ Hill\ 4\ (?:c(?:rack\.exe|odes\.exe)|\+\ c(?:dfix\.exe|heat\.exe))|ms\ 2_codes\.exe)|Quake3\ (?:cheat\.exe|trainer\.exe|\+\ crack\.exe)|Counter\-Strike\ \+\ crack\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="a065b90a-9e73-4ab6-9b16-38c13f7c540a" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Google\\Update\\Download\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\57\.0\.2987\.110\\57\.0\.2987\.110_chrome_installer\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="085ba719-978d-4760-8214-7260054e8415" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\THFXjBkyxq\\cypt\.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="a99169fc-6338-432c-8f62-34fd504801b6" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\[A-Z0-9]{4}ache\\MSOCache\\All\ Users\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}-C\\(?:setup\.exe|ose\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="9572e7d7-b7ba-464d-9599-9fecb1a7027e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\\\tVmPy9sY\.ico</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

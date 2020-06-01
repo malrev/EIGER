@@ -1,0 +1,37 @@
+<?xml version="1.0" ?><OpenIOC id="5d817de8-7dd9-40f3-b2d0-d8d5ba425982" last-modified="2020-05-25T12:05:59" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_vimditator</short_description>
+    <description>
+        Family:
+            vimditator
+        SHA-256:
+            71225199bfb3897c87f07fd26cbc88557de69473abad45da9c19bbc661c580c9
+            92e9f5c484c1769d8f18df1afc9dfa4f4a8b3bbfb055d9851974e1e3c92c335c
+            68867e47796eabb1de832b8cbe8e8f92988dc81a2826db65db129bd4172a81a3
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=vimditator
+            https://www.google.com/search?q=vimditator
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:59</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="64986d98-7f02-40d2-aae1-02930339e033" operator="OR">
+      <IndicatorItem condition="matches" id="a1123807-f289-4959-9dd5-d83105d361dc" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\Package\ Cache\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\\\state\.rsm</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="fa61549d-501a-4552-805c-6cf4864bc92b" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\Package\ Cache\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\DiskDrillSetup\.4\.0\.521\.0\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="5e95dce9-9474-4cf8-9959-7bf3b5804b39" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Mail\.Ru\\FreeuInstaller\\LOADERGUID</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

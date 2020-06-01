@@ -1,0 +1,47 @@
+<?xml version="1.0" ?><OpenIOC id="df26f8fe-a4d3-4b33-8687-664fb8549272" last-modified="2020-05-25T12:05:57" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_removeit</short_description>
+    <description>
+        Family:
+            removeit
+        SHA-256:
+            9bc08c5de454c1b38ffe196f5ccd6c8b3fddda2fb25a2336d89c9c7977191242
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=removeit
+            https://www.google.com/search?q=removeit
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:57</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="8bd73e1e-f86e-41c3-b272-9b4c4645d4e8" operator="OR">
+      <IndicatorItem condition="matches" id="6f35e7dd-e068-4eb5-a261-9452259474c0" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\RemoveIT\ Pro\ v9Ent</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="dd495f92-f87a-41d8-b9cb-00e0b82aaf26" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\\*\\shell\\RemoveITPro_Delete\\command\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="32d6c592-b406-4165-9fc3-2343c5188d66" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CLASSES_ROOT\\\*\\shell\\RemoveITPro_Delete\\</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="8f5b58a3-0305-4953-bed6-e0544366ad7a" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\InCodeSolutions\\RemoveIT\ Pro\ v7Ultra\\Options\\StartupX</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="7be7f9b6-2b6a-4989-8a61-9e6caaf13605" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\InCodeSolutions\\RemoveIT\ Pro\ v9Ent\\Options\\(?:s(?:s(?:ontime|can(?:everyh|o(?:nstartup|pt)|mindelay)?)|ysdirn|can(?:sysdir|onlymain|pfdir|windir))|days(?:7|3|6|5|1|4|2)|R(?:emote(?:Folder|Control)|unWhenWinStart)|p(?:roc_firewall|fdirn)|windirn|L(?:evelOfProtection|iveUpdate)|InfOn(?:New(?:StartupF|clsidF|F)|UnProc)|reg_firewall|Show(?:Splash|UpdateMessage)|in(?:fOnDangerousSites|t_firewall)|C(?:leanHt|heckUpdate(?:On(?:Start|Clock)|X|Min|After))|Fi(?:rstTimeMain|leExts)|fGuard|monDelThreatsAtOnce|net(?:ScanDrives|FullScan)|HideInSystemTray)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="7834f069-52ee-4422-adb4-c221ddfc11d0" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\InCode\ Solutions\\RemoveIT\ Pro\ Security\\Settings\\(?:list\.htm|SendLog\.zip)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

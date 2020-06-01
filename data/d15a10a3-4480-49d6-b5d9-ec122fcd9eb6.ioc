@@ -1,0 +1,152 @@
+<?xml version="1.0" ?><OpenIOC id="d15a10a3-4480-49d6-b5d9-ec122fcd9eb6" last-modified="2020-05-25T12:06:04" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_razy</short_description>
+    <description>
+        Family:
+            razy
+        SHA-256:
+            a862a358dfd6d5062f83dbf81ebdc4fa4b0e4ba6570439f4c023288f4036a23e
+            5772ef323676e6635b205a4e09064c65954643aff7153705afeb1d5804f96c65
+            e634a197b1480874bbe7f23967f6789067288c1dccde9e66c36985403dc6725a
+            dbd048abd4b5381d03726c0a760b6e93560f4f6fb5415627789908348c92b624
+            babba7829c0d067483cf41f3f460778e7a9792f3b97854ea53485fe42c56ecc8
+            ae42c4c0d32b4fe782fb8035710f4f1b1f349045475ce691eb1891b1e7147beb
+            bc99cf8b85e90d311dcecd0215665622b02092cff99c0e1497c70be205118db8
+            fc62b9c5ebfe824af73f059eb1394f4b42caaad42f23de28bd6689ab4b29b65f
+            e963148c2aaf4c0a7426b342396d20c1b26b33cadcffaf46129802f0ee0e9ef8
+            e5833f39f3f5665408d3d5d51ecc14f9c23566565459d4535e0463467fa92046
+            cb75209fe603db41ac6ddb4c374bc37c6be5d20650ad5edeb8a52d2decd31a82
+            c7d858e2340226e38a58bc2781a0997f193364973c6fcc7d72c6c0e0cbca5593
+            d6d02619ce63490f32149fd71356959f0d0315069a77e6930404d52be7dd88a4
+            e4c186608a105d8d7bf479e7f978937adddf1e694cac5af888d4640af44db4f1
+            d9a1f5e09998776b35f06854ed2338ff0e0a4b5a90f3ef7d2e221fe2f563963b
+            8163d40be516167979a98497e2bb7903b66678605147366ff7f9b3360d9f8dcc
+            ef62ace6507d7b5190b21902a862eab6c86c30e04591d42ff1fe3f688e1f1166
+            f714e46979efb499ca30d0decf711b5ce2268ff27aa277f6cf9d03aaca37248e
+            d14421590692dd751c00dcd7a610113d4165794785202363e0d9eef0e097dfef
+            af2409b28b647d3aadabd8bed7ea400a9e91a9e234e7dcdbd9ae645a8608b94c
+            6e1f8272e693e0974176873952242d36252f537dcea024596bad7d68ae51275f
+            233bc8dd27b983e838848623e8b1eda3724fa0722ce2187e60a54e7bb82d6505
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=razy
+            https://www.google.com/search?q=razy
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:04</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="fea6cbdc-0336-452c-b6ab-99a8a1518a36" operator="OR">
+      <IndicatorItem condition="matches" id="fb74a0dc-f491-41d1-9869-dd704cdd02a3" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Emoticons\ Mail\\unins000\.dat</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ae0cd84f-d75e-4a85-8cb9-629eff21fe09" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\MRP_QT\\(?:RCodes\.ini|pkconfig\.ini|FRead\.exe|msvcr110\.dll|IsSSD\.exe|Q(?:TOEMTest\.ini|ueryDisks\.vbs)|Ge(?:neric_(?:4\.exe|2\.exe)|tInstDate\.vbs)|M(?:RP(?:_VMDetect\.Exe|\-QT2\-Fread\.cmd)|BRGPT\.exe)|O(?:ECodes\.ini|ldSKU\.ini|ffice\.vbs)|DiskModelNameW7\.vbs|VbsMem\.vbs|BDTBT\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="2c60780d-38c5-4e1c-b74e-a95988969b46" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\mntemp</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="9938427c-2548-4917-a0cf-848ef1bd0116" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\[A-Za-z]{16}\\mocc\.db(?:\-shm)?</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="1117d56c-b9d5-4820-94d2-1c93830ea582" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\AnyDesk\\(?:s(?:ystem\.conf|ervice\.conf)|user\.conf|ad\.trace)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d6610706-f996-45df-a8e6-6ce3d27361a0" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\Software\\MaxPlugs\\Emmail\\Packs\\General\\(?:Pack(?:Position|Name|SelectedCategory)|ImagesSite)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c1d7061a-3058-43d5-a2a9-26a9a92225a1" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\[A-Za-z]{16}\\Files\\Browsers\\_File(?:Passwords\.txt|Forms\.txt|C(?:ookies\.txt|C\.txt))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="6fb53fc3-e421-4e04-9a89-5a5ea53cdb59" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\[A-Za-z0-9]{7}\\Files\\(?:Passwords_List\.txt|Information\.txt|Forms_List\.txt|C(?:ookies_List\.txt|C_List\.txt))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c10abfc9-ee23-4f9e-aca8-e77b59a4bea1" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\Microsoft\\Windows\\Start\ Menu\\Programs\\Startup\\QQPCRealTimeSpeedup\.vbs</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="148f57ce-8d41-4262-a030-a96cb865d45b" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\Software\\MaxPlugs\\Emmail\\Generator\\(?:ErrorFileName|ImagesStatisticDir|SkinDir)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e3997706-a7f1-4c13-a703-fadfa6e771b2" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\(?:_(?:s(?:sl\.pyd|ocket\.pyd)|hashlib\.pyd)|pyexpat\.pyd|unicodedata\.pyd)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="364926c2-e75b-4c4b-8aa0-be467d83ed3d" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">(?:error\.log|TraceLog\.txt|key_log\.txt)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="86ab1753-6c8a-43b9-b942-a1a1483d13c0" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\MRP_QT\\MRP\-QT2\-Fread\.cmd\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="61ba91a9-ba7e-4d07-9981-e857f03cd032" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Google\\Chrome\\User\ Data\\Default\\(?:LoginDataCopy|WebDataCopy|CookiesCopy)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="878ea0d9-18e8-489a-b3ce-bac67af74516" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\DataTable\\svchost\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="37cb9b82-5e54-4833-9c37-a6099f60f8d5" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Smart\ CD\ Catalog\ PRO\\unins000\.dat</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="2879a8b5-457b-47d2-9d9b-58c77240363d" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\Public\\Music\\[0-9]{7}\\(?:101(?:1956\.t2|2012\.h6)|why3\.tmp)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ff39aaf9-961d-4b89-be0e-a4d022968ca2" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\[A-Za-z0-9]{7}\\moz_cookies\.db(?:\-shm)?</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="74cef2e6-af33-4308-bf92-a9ad599a010f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\crashpad_roblox\\settings\.dat</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="3e356596-e819-4382-824e-6afa6d49c073" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\Software\\Multi\ Theft\ Auto\:\ ProvinceXAll\\1\.5\\Settings\\general\\pending\-browse\-to\-solution</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ad7a77ac-d79b-4b24-8b74-52e203744267" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Program\ Files\\Emoticons\ Mail\\emomail\.exe\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="aa0d09be-b641-47c8-b5fc-bc635ff34a7e" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\Software\\MaxPlugs\\Emmail\\InternalSettings\\ProgramPath</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="89c31a8e-506a-431c-a2ae-cacb5467c58a" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Emoticons\ Mail_is1\\(?:NoModify|Display(?:Name|Icon)|UninstallString|EstimatedSize|QuietUninstallString|In(?:stallLocation|no\ Setup\:\ (?:Language|App\ Path|Icon\ Group|Setup\ Version|User)))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="859b38fd-b7f1-4bb3-b119-a564743d3ed9" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\(?:_(?:s(?:sl\.pyd|ocket\.pyd)|lzma\.pyd|queue\.pyd|hashlib\.pyd|bz2\.pyd)|select\.pyd|pyexpat\.pyd|base_library\.zip|libcrypto\-1_1\.dll|VCRUNTIME140\.dll|unicodedata\.pyd)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c505598c-cd31-408b-9278-2e7710de7ac3" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\MTA\ San\ Andreas\ All\\1\.5\\report\.log</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e0e199a1-052d-4d40-9f86-a2777ba124c7" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\[A-Za-z]{16}\\Files\\_Info\.txt</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="41eb760c-5745-48ec-8795-bf7a1c50acc7" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\Software\\MaxPlugs\\Emmail\\Settings\\(?:IsDisplayPacks|CurrentPack)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

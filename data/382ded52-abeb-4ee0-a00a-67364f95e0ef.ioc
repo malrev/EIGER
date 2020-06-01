@@ -1,0 +1,31 @@
+<?xml version="1.0" ?><OpenIOC id="382ded52-abeb-4ee0-a00a-67364f95e0ef" last-modified="2020-05-25T12:05:57" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_siscos</short_description>
+    <description>
+        Family:
+            siscos
+        SHA-256:
+            c3438d5ed0e1e34cb327aef6f1bd3ed1765165c74bc9070c3429feec677951e7
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=siscos
+            https://www.google.com/search?q=siscos
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:57</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="a1be4c29-f9ca-4ead-b8bf-9a0c551ebd06" operator="OR">
+      <IndicatorItem condition="matches" id="778acca5-369b-4154-9deb-2648540bf5cd" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\Public\\Pictures\\(?:dpay\.doc|nw(?:\.exe|_elf\.dll))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="4ecfff99-763e-4dc0-b1dc-a4a343416bd2" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Users\\Public\\Pictures\\nw\.exe\ C\:\\Users\\Public\\Pictures\\nw\.exe\ \-\-type\=crashpad\-handler\ \/prefetch\:7\ \-\-no\-rate\-limit\ \-\-database\=C\:\\Users\\.*\\AppData\\Local\\Crashpad\ \-\-annotation\=channel\=\ \-\-annotation\=plat\=Win32\ \-\-annotation\=prod\=shaozi\ \-\-annotation\=ver\=\-devel\ \-\-handshake\-handle\=0x16c</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

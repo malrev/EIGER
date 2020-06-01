@@ -1,0 +1,35 @@
+<?xml version="1.0" ?><OpenIOC id="0de7fb9a-88f6-4e19-8070-6f47e11b5d29" last-modified="2020-05-25T12:06:00" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_nitol</short_description>
+    <description>
+        Family:
+            nitol
+        SHA-256:
+            fea91f4d58cd97a755b66a38300958a2b3a99a5df7dc74e5c02b8abf209ba522
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=nitol
+            https://www.google.com/search?q=nitol
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:00</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="d51616fb-b4d4-4634-9b39-afb9b1fbbe05" operator="OR">
+      <IndicatorItem condition="matches" id="4f921390-f023-442c-ab53-318aab6f4452" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Serbien\\Description</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c18d8043-58d4-49a9-a2bd-0e58a47fa612" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\Serpiei\\Description</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="4b47e3e0-da5c-4574-8675-932628f8e61a" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\Debug\\(?:soehost\.exe|cwihost\.exe|bqshost\.exe)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

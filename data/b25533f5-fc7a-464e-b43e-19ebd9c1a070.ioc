@@ -1,0 +1,79 @@
+<?xml version="1.0" ?><OpenIOC id="b25533f5-fc7a-464e-b43e-19ebd9c1a070" last-modified="2020-05-25T12:06:02" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_fugrafa</short_description>
+    <description>
+        Family:
+            fugrafa
+        SHA-256:
+            62ac07128817ba80a3fcdd67e8f6c9ba4a11a284ca59184737863f0b6c618c43
+            15cfa91941167e705246c8815d73037cac5490c0b8b6d2e347139fa62bd42cec
+            b2d2c7ca231679025e4bc7667a284cabd81310caf106ce48cbb4b35b9774bce9
+            b36aeedc59a5afec409312a1321c45d8670d55dc89429f8ba8d2d03148b03473
+            e5a8b0486acdc06433b255a35db635945cdec669e5466bdb84c4bb54eb1447b0
+            fe013a099152757ac34dc88a4abadecb876ebf3caea2c5266e8a6bbde0e49a09
+            ce2913a2c907f2e793e8643e92f8df1eec6d4f5281de45dfc538610962a6217a
+            7bb8196a1eafc27855e8b161c7252e9cb92d4927f3e5204e798556c2b41788b4
+            aba8beb7725de3f58b53955bd087a965b74cc6c8158f43e18607c3350814cf00
+            eb5541efecf3b2449dd2f97b4241f380daad5dd781ea706de92914f64c50c793
+            8cb11ba23c8f195da00557ed9df426588848cca39ba0c7e85edbbf8459146d9e
+            58276670e7efaf1f9e6f3d0bc7a43f07e5c669c587962059f4d18f70355201dc
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=fugrafa
+            https://www.google.com/search?q=fugrafa
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:02</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="c8627cf8-5be9-4927-98ab-0ac6f0296391" operator="OR">
+      <IndicatorItem condition="matches" id="98066525-f8e0-4569-95ae-570c06d4cc69" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\RarSFX0\\liuxing_second_official\\liuxing_cata\\net\\(?:l(?:jlocal\.exe|ibcurl\.dll)|HookProxy\.dll|JDGame\.exe)</Content>
+      </IndicatorItem>
+      
+      <IndicatorItem condition="matches" id="d9112772-88c4-40a6-852d-45b8d5cfbd8e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\RarSFX0\\liuxing_second_official\\liuxing_cata\\(?:li(?:bcurl\.dll|uxing\.exe)|o(?:em_file_name\.ini|penclient\.exe)|monitor\.exe|config\.ini|u(?:ninstall\.exe|pdate\.exe))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="5c86e9f4-52a7-4073-8d4d-5ceec133f55e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\RarSFX0\\liuxing_second_official\\liuxing_cata\\bin\\driver_x86\\(?:deltapall\.bat|addtap\.bat|OemVista\.inf)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="92898ae4-26cb-4f5c-826a-e5147e9f5416" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\RarSFX0\\liuxing_second_official\\liuxing_cata\\liuxing_second\\(?:l(?:v_(?:speedup_detail\.xml|downloadgame_module\.xml|allgame_module\.xml|Message\.xml|rewared_price\.xml|monitor\.xml|test\.xml|hotgame_module\.xml)|ist_module\.xml)|combobox_(?:sex\.xml|mode_module\.xml)|ui_(?:s(?:et\.xml|peed_tips\.xml|ubmit_game\.xml|tart(?:\.xml|_gif\.xml))|download_popup\.xml|popup\.xml|W(?:ePlacard_Show\.xml|orkorder\.xml)|wechat_share\.xml|register\.xml|corner_popups\.xml|userinfo\.xml|award\.xml|eggs\.xml|l(?:eader\.xml|ogin\.xml|v_selgame\.xml)|forget\.xml|main\.xml|netmonitor\.xml|t(?:est\.xml|ooltip\.xml|icket\.xml)))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c9bf7f92-d74b-449a-923e-dc556f50c9fd" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\ACEUI\\BoltStep\\(?:shadow\.png|Progress(?:LastPoint(?:1\.png|2\.png)|Bar(?:LastPoint\.png|\.png|Bg\.png)|FirstPoint\.png)|NormalBtn(?:Pushed\.png|Normal\.png|Hover\.png|Disabled\.png)|WNormalBtn(?:Pushed\.png|Normal\.png|Hover\.png)|M(?:sgLogo\.png|essageBox(?:\.xml|Bg\.png))|mui_unicon\.ico|SysCloseBtn(?:Pressed\.png|Normal\.png|Hover\.png)|c(?:ombox(?:_(?:pressed\.png|hover\.png)|\.png)|heck(?:_(?:d(?:own\.png|isable\.png)|normal\.png|hover\.png)|ed_(?:d(?:own\.png|isable\.png)|normal\.png|hover\.png)))|uninstall_avatar\.png|UninstallPackages\.xml)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="1772f682-cdea-49ad-8583-940a0af34824" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\RarSFX0\\liuxing_second_official\\liuxing_cata\\liuxing_uninstall_second\\(?:style\.css|ui_uninstall\.xml)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="65b7e6bb-6eab-4677-915b-d8aa8fc59596" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\RarSFX0\\liuxing_second_official\\liuxing_install_third\\(?:style\.css|ui_(?:popup\.xml|install\.xml))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="6943abe9-52ff-4058-967e-ed8657615e07" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\RarSFX0\\liuxing_second_official\\(?:lib(?:eay32\.dll|curl\.dll)|install\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e9d2695f-a313-439f-9509-7f609711df5d" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\RarSFX0\\liuxing_second_official\\liuxing_cata\\bin\\driver_x64\\(?:deltapall\.bat|addtap\.bat|tapinstall64\.exe|OemVista\.inf)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="41882eb6-4ff0-4922-b4aa-9d753b934031" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\RarSFX0\\liuxing_second_official\\liuxing_cata\\run\\(?:LXProxy\.exe|OpenProxy\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="510d2218-a475-4cef-b3ce-7897def629a4" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\Documents\\rr</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

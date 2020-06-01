@@ -1,0 +1,80 @@
+<?xml version="1.0" ?><OpenIOC id="7eead5dc-281c-40e9-aadd-985bb13f74e6" last-modified="2020-05-25T12:06:00" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_chindo</short_description>
+    <description>
+        Family:
+            chindo
+        SHA-256:
+            cfa583940785698ff465f9101d67190f53fe2dd6c7b06cebc27c22b1d2b74a0c
+            e91c90442cf2d31e021982233e590cdbb9113becef8ec208040fdd6dd63d249b
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=chindo
+            https://www.google.com/search?q=chindo
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:00</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="51aad0d8-7544-48b4-81e0-1b27ee3e5932" operator="OR">
+      <IndicatorItem condition="matches" id="4afa78f8-66c6-447c-bc32-56d66857bc72" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\SOFTWARE\\GifRecord\\ID</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="8963801b-72f9-4dcc-a079-a2adb2efbc77" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\SOFTWARE\\StarEditor\\ID</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="87c9734d-f80d-4f1b-9e7b-750c8c0bd70c" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\Explorer\+\+\\Explorer\+\+\.exe\ \-brun</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ec4ee57d-e771-4313-bd7f-847233e326a8" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\software\\KochWare\\StarEditor\\FileManager\\ActiveTab</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="28907789-9ef4-4894-b335-0c3f57d2d742" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Explorer\+\+\\(?:Publisher|Display(?:Name|Icon|Version)|UninstallString)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="2a745306-3e07-4af5-9dc2-893f57fa235a" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\StarEditor\\(?:StarEditor(?:\.exe|DB(?:32\.dll|64\.dll))|Uninst\.exe)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="46dd738c-45c9-49ba-84c4-ef981d9680f2" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\StarEditor\\(?:Publisher|Display(?:Name|Icon|Version)|UninstallString)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="02cb7084-ce5c-4169-9028-313bf74dc55d" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\GifRecord\\GifRecord\.exe\ \-run</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="3ae30bbe-a6af-45e1-abe9-c74cc17c8726" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\GNU\\OpenEditor\\(?:settings\.xml|languages\.xml|custom\.keymap|templates\.xml)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b71a7dd2-68e6-4341-9135-b52feb85c28e" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\StarEditor\\StarEditor\.exe\ \-run</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="cbe98567-aad7-4269-b03c-1a4e5d5f0640" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\SOFTWARE\\Explorer\+\+\\ID</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b8ea7531-ed2c-40e2-bc3a-d5333aaae1d1" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\GifRecord\\(?:Publisher|Display(?:Name|Icon|Version)|UninstallString)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d48e8bcf-1153-4eef-9852-b4b398dec775" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\GifRecord\\(?:Uninst\.exe|GifRecord(?:\.exe|32\.dll|64\.dll))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="90633dde-9a2c-4163-8d2e-0f6ca3275abf" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\Explorer\+\+\\(?:Explorer(?:Module(?:32\.dll|64\.dll)|\+\+\.(?:dll|exe))|uninst\.exe)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

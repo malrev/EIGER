@@ -1,0 +1,44 @@
+<?xml version="1.0" ?><OpenIOC id="38934107-03c3-48da-b879-9632b25e8cd9" last-modified="2020-05-25T12:05:59" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_jacard</short_description>
+    <description>
+        Family:
+            jacard
+        SHA-256:
+            cb19057eacad252d0f70c627baa6b6bdfd4315c50a18dcf76aabca91877a654f
+            bb983cda8df467a1c5c6ac6c02f49e98c4fd3016be117e32b03b95e4e3dbd9a0
+            5ecda22940f3a9b29cfd2e2fa5e2bc5ff67654b89c1cbfadcea8445322404082
+            fbbd0f03b7524c4b5d79ec858935388620dcc3cef7d57a6e9d0b75c1c1cd4fc5
+            dd0c8802ce9d7fed238cb4b4b0f0eb00fe82dee1c9928441a652e501c7bc8f2f
+            ea55f71c37a3d3f4d3eb6e550b030c8307011bcec189d4be6b870b9988d3cc80
+            7abaf0ff776e9747e09fa810223f4583f6dc5c9791f2c345b3fb37700402b3de
+            3c9cf309f92023db4f6dc6aa13d00549d816950c197ea2dd10cb55c1fcc0a389
+            5d270ebab65322effc596dda78fd6e727ac6a54223656fdb46bb886ad2aaa256
+            d01e5f78c1272e9b589fd16547f8bbf95952846475dad9d2308e7f438af46a3a
+            3fc1fce8c1ceacb256bae0144072fe280628db0fe2ac430fa5741db8a91fe2e7
+            281f7a4965da42a1df7103bde920f82c5741e4600e1cfc1fd54430f62309c795
+            a01e9f36d4263b86651007ffbc73a9b679f6a39bc363e80f608488b743372064
+            8cb0fade971d4e3c937c6fb643451fdb721ea672c66c2c37a042411d7d83ee02
+            c6e17fdffd14ede3f6338670e9d0c520c4c3a05a1b6fafb1a9aaa5fce6e81766
+            f8179b58bf59d4421f3d72303d27cd0a4b6586c59fe3ffb95ec832ac445fc4ea
+            889e7fc580a4b93842e70f1ac6d7e9c12e7f1322754ee2fc07cc30875eccaedd
+            b6d754eb8881eb3e7b88dd97c15582b1bff4f3a5b0e327cb580b8fabdce0eaef
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=jacard
+            https://www.google.com/search?q=jacard
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:59</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="ea75dc11-2457-48db-bb16-adeeaeb354df" operator="OR">
+      <IndicatorItem condition="matches" id="d62fc826-cd2a-4ef2-9750-75258a9615d6" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\LatoSoft\\Eversheet\\LatoBosZip\.(?:temp|Zip)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

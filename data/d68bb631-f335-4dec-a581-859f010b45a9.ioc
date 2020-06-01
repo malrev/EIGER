@@ -1,0 +1,78 @@
+<?xml version="1.0" ?><OpenIOC id="d68bb631-f335-4dec-a581-859f010b45a9" last-modified="2020-05-25T12:05:59" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_virut</short_description>
+    <description>
+        Family:
+            virut
+        SHA-256:
+            db68ddceeeebe2a1c57f3e2f5894ce9b7e5321a575d5644a7a8e692da101d204
+            8024ec5c45f01e96b420307bc9fb4c165fbb38bb690f0d7fb056b39d8e94feb8
+            c9ae8fca17a3de599e5b0e38a12300e49b0a0280b78f980702bc49c877e429ef
+            e4d052d08c08cb09bf6600e4a843da7c475a91db1d8e6eb2c75ded06e13f086f
+            96b86eec4285f615ddca87496287be6309f9f0c95b7cd04c1a4086c6c3ae8d22
+            b1186322e2a18745ac77e8b2e3ee0950928044a7dc272fa005012524cbe7bdb8
+            cf3064f241d023695cf793ca8c4d6a2a37e8b68cf58c02614933f59426a99bf3
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=virut
+            https://www.google.com/search?q=virut
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:59</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="48d33706-9aa7-4f1a-bc18-c2c84b457894" operator="OR">
+      <IndicatorItem condition="matches" id="95a32081-9591-4188-99f1-b193c980098a" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\(?:dummy\.bin|FileZilla\ Server\ Interface\.xml)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="9f464209-9320-45ab-9d72-9b25a74014af" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\SOFTWARE\\PSP\ Content\ Manager\\Setting\\(?:LanID|AppQuitGracefully|Tab(?:Order|State)|ViewIconSize|WndState)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="618e54aa-15d7-48bf-adb2-d653ede91525" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\[E0-9]{8}\\x64\\regsvr32\.exe</Content>
+      </IndicatorItem>
+      
+      <IndicatorItem condition="matches" id="e7311f32-acbc-4f1f-9025-3ad621615931" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\ NT\\CurrentVersion\\DiskDiagnostics\\FailingDiskList\\RunCount</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="28a0f4fc-4565-4e29-8864-651fcef9bae3" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SYSTEM\\ControlSet001\\Control\\MUI\\Settings\\Next[A-Z0-9]{4}ollection\\NextSQMCollection</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="33efa441-a501-4b27-8002-50bbe785b76e" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\LocalLow\\Sun\\Java\\jre1\.6\.0_07\\jre1\.6\.0_07\.msi</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="4e796a09-6286-4c55-8368-ca1fc4df92a3" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\[E0-9]{8}\\(?:_Setup\.dll|Setup\.(?:exe|ico))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="84291143-7e8e-4eda-a113-936b083bd813" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">Software\\Microsoft\\Windows\\CurrentVersion\\Internet\ Settings\\ZoneMap\\\\(?:AutoDetect|UNCAsIntranet)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="f1a8b48f-f5ea-4011-bf74-e150689f7098" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Windows\\system32\\\\msiexec\.exe\&quot;\ \/i\ \&quot;C\:\\Users\\.*\\AppData\\LocalLow\\Sun\\Java\\jre1\.6\.0_07\\jre1\.6\.0_07\.msi\&quot;\ </Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="cce4c370-a21d-4c44-9d4c-4527bd27e489" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\[E0-9]{8}\\x86\\regsvr32\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="7c2066ec-a848-41f0-8a00-d54bf1dae0ed" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\ProgramData\\InstallMate\\{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}\\(?:_Setup\.dll|TsuDll\.dll|Setup\.(?:exe|ico))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="e601c527-c628-470f-bdcc-7aa62a822bc3" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\Salaat\ Time\\SalaatTime\.exe\._tm</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

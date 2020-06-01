@@ -1,0 +1,65 @@
+<?xml version="1.0" ?><OpenIOC id="2af37bcc-f765-44f1-9957-a3fb70d36c17" last-modified="2020-05-25T12:06:01" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_veil</short_description>
+    <description>
+        Family:
+            veil
+        SHA-256:
+            e41dbdd24d2734debe4878d0049dc94cfadf850114eb9e5d877258e01eb9fd9b
+            bdfaccabf1ee496e58d3210175462825404d543095bf6ccdc164459472b957b7
+            df0a13b775109ca5e5d2c3294717274c532774805205590e596b5f27343108df
+            f6e23bce007cd6b5cba09f1b866a54d59fdfd81d46c42b7aebbfe0c4abd546aa
+            730e184f2c8d3fcd9172a6d4163ca4c343bc753e400582e25610cf58571c7797
+            781d46d783b47d6cce49c78449e65442457bfcbd0d4faf5612f1fedaccb1876a
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=veil
+            https://www.google.com/search?q=veil
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:01</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="119b49f6-1424-4bcd-8d1d-e29284f769d8" operator="OR">
+      
+      <IndicatorItem condition="matches" id="4163192d-0f07-4c75-ac91-ac01f54abbee" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\(?:_(?:s(?:sl\.pyd|ocket\.pyd)|hashlib\.pyd)|unicodedata\.pyd|select\.pyd|python27\.dll|Microsoft\.VC90\.CRT\.manifest|bz2\.pyd|msvc(?:r90\.dll|p90\.dll|m90\.dll)|tnsee\.exe\.manifest)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="47ba0a61-9990-46c2-81b7-ed18a467e2be" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\ocrA6C\.tmp\\bin\\rubyw\.exe\ rubyw\.exe\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\ocrA6C\.tmp\\src\\ruby2\.rb\&quot;\ </Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="73d72e3f-1b58-4efc-9ad6-36af8dfa4e7a" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\[a-z]{3}[0-9A-Z]{4}\.tmp\\bin\\rubyw\.exe\ rubyw\.exe\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\[a-z]{3}[0-9A-Z]{4}\.tmp\\src\\onuralpulker\.rb\&quot;\ </Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="4b55295c-300f-40b6-bf7a-0fdf78cbdb11" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\[a-z]{3}[0-9A-Z]{4}\.tmp\\bin\\rubyw\.exe\ rubyw\.exe\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\[a-z]{3}[0-9A-Z]{4}\.tmp\\src\\payload1\.rb\&quot;\ </Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="c9975bce-5b1a-4f12-b442-157567a729e2" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\(?:_(?:s(?:sl\.pyd|ocket\.pyd)|hashlib\.pyd)|select\.pyd|python27\.dll|bz2\.pyd|Microsoft\.VC90\.CRT\.manifest|msvc(?:r90\.dll|p90\.dll|m90\.dll)|unicodedata\.pyd|get2\.exe\.manifest)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="2882edca-7d27-46ee-a63f-3c461b32d87a" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\[a-z]{3}[0-9A-Z]{4}\.tmp\\bin\\rubyw\.exe\ rubyw\.exe\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\[a-z]{3}[0-9A-Z]{4}\.tmp\\src\\installx\.rb\&quot;\ </Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d35adcfc-6ac2-4845-b17e-b8e6380b5fcf" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\[a-z]{3}[0-9A-Z]{4}\.tmp\\bin\\rubyw\.exe\ rubyw\.exe\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\[a-z]{3}[0-9A-Z]{4}\.tmp\\src\\deneme3\.rb\&quot;\ </Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="4c8c38e1-422a-471d-8c82-223d59d5d646" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\[a-z]{3}[0-9A-Z]{4}\.tmp\\bin\\rubyw\.exe\ rubyw\.exe\ \&quot;C\:\\Users\\.*\\AppData\\Local\\Temp\\[a-z]{3}[0-9A-Z]{4}\.tmp\\src\\melih\.rb\&quot;\ </Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="6bdd3b46-5a1e-4f02-8faa-a7b3ef1b47b4" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\_MEI[0-9]{4,5}\\(?:_(?:s(?:sl\.pyd|ocket\.pyd)|hashlib\.pyd)|select\.pyd|python27\.dll|Microsoft\.VC90\.CRT\.manifest|bz2\.pyd|EnumADUser\.exe\.manifest|msvc(?:r90\.dll|p90\.dll|m90\.dll)|unicodedata\.pyd)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

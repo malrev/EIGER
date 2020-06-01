@@ -1,0 +1,97 @@
+<?xml version="1.0" ?><OpenIOC id="34b313d9-cd90-4590-bfaa-1babc07ece86" last-modified="2020-05-25T12:06:01" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_dapato</short_description>
+    <description>
+        Family:
+            dapato
+        SHA-256:
+            ee09d24e5231bc9a02c65e1fc52e797802f709c98226eea4adfcf56084d934ce
+            e7ca19177b9cfdee4467e146855f94038c162737dcf33ef8134f9aca326d5ba5
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=dapato
+            https://www.google.com/search?q=dapato
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:06:01</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="d3f309db-b539-495c-8ded-6d0e07be7c2c" operator="OR">
+      <IndicatorItem condition="matches" id="5635ed41-1a9e-45c8-bb3a-ec077a0a7036" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Users\\.*\\AppData\\Roaming\\curll\.exe\&quot;\ \-k\ https\:\/\/yip\.su\/1OGFY</Content>
+      </IndicatorItem>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b6adb069-56f3-4e40-9050-d6d6c4b31c51" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\main\\iw_nosteam\.iwd</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="6636077d-b928-4b28-80f6-478fa9c2450a" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\drivers\\PnkBstrK\.sys</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="f1d6f64c-ce73-4440-ada7-44b449b084c5" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Users\\.*\\AppData\\Local\\LogMeIn\ Rescue\ Applet\\[A-Z0-9]{4}[A-Z0-9]{4}[A-Z0-9]{4}.tmp\\[A-Z0-9]{12}\.tmp\\LMI_InstantChat\.exe\&quot;</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="4562f5ee-4145-4c42-83ef-440202081230" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\main\\video\\(?:s(?:implecredits_load\.bik|coutsniper_fade\.bik)|d(?:efault\.bik|og_vs_player_load\.bik)|hunted_fade\.bik|black\.bik|killhouse_fade\.bik|Killhouse_monitor1\.bik|icbm_fade\.bik|Aftermath_fade\.bik|jeepride_fade\.bik|village_(?:defend_fade\.bik|assault_fade\.bik)|ac130_fade\.bik|l(?:egal\.bik|aunchfacility_(?:a_fade\.bik|b_fade\.bik))|IW_logo\.bik)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="134641d6-c4d6-4fa8-9ec5-332c5e6b2d68" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\LogMeIn\ Rescue\ Applet\\[A-Z0-9]{4}[A-Z0-9]{4}[A-Z0-9]{4}.tmp\\LMIR13C7C001\.tmp\\(?:session\.log|RescueWinRTLib\.dll|params\.txt|LMI_(?:RescueRC\.exe|InstantChat(?:_srv\.exe|\.exe))|r(?:escue\.(?:log|i(?:nfo|co))|a(?:hook\.dll|64app\.exe))|chatlog\.dat)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="a3fd94bd-b133-4e4a-bfa2-1cb38dc781b1" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\(?:PnkBstr(?:B\.exe|K\.sys)|curl(?:\.exe|l\.exe))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="778afa5f-b96d-4d2c-9b03-450662f1df50" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;laun\.dll\&quot;\ \-s\ \-pfhnrstya4rfhjnterast24wrhetfygr</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="275d247b-3ce7-42f9-80e0-ea01ca913c29" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\PnkBstrB\\Description</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="01a00aff-a83d-41e9-9f39-a777cd4fd3b7" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\PunkBusterSvc\\\\(?:Publisher|HelpLink|Display(?:Name|Version)|U(?:RLInfoAbout|ninstallString))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="16be55d5-551f-4ff6-a3b4-3a1e37f91e00" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SOFTWARE\\Even\ Balance\\PnkBstrB\\(?:Port|Instance)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="a4032e6a-afb7-42e4-901a-82f685126427" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce\\\*LogMeInRescue_3980864606</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b82200ef-e010-437c-9e71-5df756db589f" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\(?:1072bf9b\-be28\-4b4f\-a13a\-0a8f36385222\.exe|PnkBstr(?:A\.exe|B\.exe))</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="8708d004-12fc-4040-9653-a3b029590c99" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SOFTWARE\\Even\ Balance\\PnkBstrA\\(?:Port|Version)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="b6e4728b-45ad-4c8a-8c88-3592cb3e0a5d" negate="false" preserve-case="false">
+        <Context document="RegistryItem" search="RegistryItem/Path" type="mir"/>
+        <Content type="string">HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\PnkBstrA\\Description</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="7d637ddb-19b8-4119-b291-9fa0e6b8b461" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Windows\\system32\\LogFiles\\PunkBuster\\(?:PnkBstr(?:A\.log|B\.log)|pbsvc\.log)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="ee627dbe-6b57-4ac6-a557-d5be1ff1c558" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\pb\\dll\\wc[A-Z0-9]{4}58.dll\\w(?:c002258\.dll|a001407\.dll)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="d1116c4a-e983-4a92-bb93-eb1c0ff24223" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\work\\miles\\m(?:ss(?:eax\.flt|voice\.asi|ds(?:p\.flt|3d\.flt))|ilesEq\.flt)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

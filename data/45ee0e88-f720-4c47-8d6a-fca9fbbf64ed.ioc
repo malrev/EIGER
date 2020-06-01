@@ -1,0 +1,27 @@
+<?xml version="1.0" ?><OpenIOC id="45ee0e88-f720-4c47-8d6a-fca9fbbf64ed" last-modified="2020-05-25T12:05:56" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_sperano</short_description>
+    <description>
+        Family:
+            sperano
+        SHA-256:
+            e91b1b166b3a15dc4472d8c396c75f4d793b4c403e6e94e8a25efd86ffa5796c
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=sperano
+            https://www.google.com/search?q=sperano
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:56</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="f6e0afa6-963c-417d-811f-36d71bf0c89f" operator="OR">
+      <IndicatorItem condition="matches" id="bfe978c1-e5d6-4ed7-ac73-1f22f327c0b4" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\(?:belkalzi\.exe|anti\-malware\-setup\.exe)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

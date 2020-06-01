@@ -1,0 +1,43 @@
+<?xml version="1.0" ?><OpenIOC id="1216663d-c3b2-4563-bc4c-7d22ca5aad9d" last-modified="2020-05-25T12:05:58" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_formbook</short_description>
+    <description>
+        Family:
+            formbook
+        SHA-256:
+            dbfa283c5c2952606e5320013691aa62f481cd21b9cdfbb0e2c15272d90bff4a
+            6d15e8c5e474afa9a5a86223cb28090ed152659e8a225e55470317ec99dddc32
+            d07396040efdd9f7c600059a4023866f28d19268e46612a26bfe72464b54e6ec
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=formbook
+            https://www.google.com/search?q=formbook
+        Recommended:
+            true
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-26T11:00:00</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="c0d8de58-a70e-49b7-95aa-e2cf8f4ff2de" operator="OR">
+      <IndicatorItem condition="matches" id="c779c2dc-db93-4d86-8af9-224afb01d338" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\[A-Za-z0-9]{5}_[A-Za-z]{2,3}\\ngen(?:servicelock\.dat|rootstorelock\.dat)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="fa804e34-8df7-46ba-ac65-557845dbfe90" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\[A-Za-z0-9]{5}_[A-Za-z]{2,3}\\[a-z0-9]{11,13}\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="638a901b-f0db-4643-ae6b-78b1dd42f67c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Local\\Temp\\[A-Za-z0-9]{7}\\[A-Za-z0-9]{7}\.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="98f2e693-fbda-4a6e-8e04-b4cd8bec56f8" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Program\ Files\\[A-Za-z0-9]{7}\\ngen(?:servicelock\.dat|rootstorelock\.dat)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>

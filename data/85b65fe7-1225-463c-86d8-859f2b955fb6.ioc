@@ -1,0 +1,35 @@
+<?xml version="1.0" ?><OpenIOC id="85b65fe7-1225-463c-86d8-859f2b955fb6" last-modified="2020-05-25T12:05:58" published-date="2020-05-25T00:00:00" xmlns="http://openioc.org/schemas/OpenIOC_1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata>
+    <short_description>EIGER_yakes</short_description>
+    <description>
+        Family:
+            yakes
+        SHA-256:
+            a842286fb47c752c7d6036b19266cd34e75d6fe1c870ac30c1ce31365f3033a5
+        Reference:
+            https://www.microsoft.com/en-us/wdsi/threats/threat-search?query=yakes
+            https://www.google.com/search?q=yakes
+    </description>
+    <keywords/>
+    <authored_by>EIGER - Exhaustive IOC Generator</authored_by>
+    <authored_date>2020-05-25T12:05:58</authored_date>
+    <links/>
+  </metadata>
+  <criteria>
+    <Indicator id="4bb2ff97-03a8-4a41-8f6c-1f615b75c52a" operator="OR">
+      <IndicatorItem condition="matches" id="7b0ea571-458e-4322-bf81-6527a9d5ab4c" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">\\DEVICE\\NETBT_TCPIP_{[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}}</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="33a84be4-1580-4e9f-a036-8bb49d9ab6c3" negate="false" preserve-case="false">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir"/>
+        <Content type="string">C\:\\Users\\.*\\AppData\\Roaming\\Other\.(?:res|ico)</Content>
+      </IndicatorItem>
+      <IndicatorItem condition="matches" id="6d8f69cb-d1a3-4fc6-8535-7bb5a02608c5" negate="false" preserve-case="false">
+        <Context document="ProcessItem" search="ProcessItem/arguments" type="mir"/>
+        <Content type="string">\&quot;C\:\\Program\ Files\\VidBid\\(?:VidBit\.exe\&quot;|tptr\.exe\&quot;\ \-pDctulf666\ \-s1)</Content>
+      </IndicatorItem>
+    </Indicator>
+  </criteria>
+  <parameters/>
+</OpenIOC>
